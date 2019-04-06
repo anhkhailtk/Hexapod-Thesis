@@ -1,0 +1,199 @@
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+45
+3403
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+dda_module
+# storage
+db|test.(3).cnf
+db|test.(3).cnf
+# case_insensitive
+# source_file
+dda_module.bdf
+4845ddf1d6aa7563b5281b8b45b169e
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+dda_module:inst5
+}
+# macro_sequence
+
+# end
+# entity
+74373b
+# storage
+db|test.(2).cnf
+db|test.(2).cnf
+# case_insensitive
+# source_file
+d:|software|quartus|quartus|libraries|others|maxplus2|74373b.bdf
+d7cf7a2eb6287c239633702b398a51cd
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+74138
+# storage
+db|test.(4).cnf
+db|test.(4).cnf
+# case_insensitive
+# source_file
+d:|software|quartus|quartus|libraries|others|maxplus2|74138.bdf
+32dc8fd1db23180dae8214abe35379
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+test
+# storage
+db|test.(1).cnf
+db|test.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+test.v
+4a182e67121dfdfd5f8c5e13fe9055c
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+Nmax
+50
+PARAMETER_SIGNED_DEC
+USR
+Nmax1
+48
+PARAMETER_SIGNED_DEC
+USR
+Nmax2
+100
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+dda_module:inst5|test:inst
+dda_module:inst5|test:inst4
+dda_module:inst5|test:inst5
+dda_module:inst5|test:inst11
+dda_module:inst5|test:inst13
+dda_module:inst5|test:inst14
+}
+# macro_sequence
+
+# end
+# entity
+74373b
+# storage
+db|test.(5).cnf
+db|test.(5).cnf
+# case_insensitive
+# source_file
+|software|quartus|quartus|libraries|others|maxplus2|74373b.bdf
+d7cf7a2eb6287c239633702b398a51cd
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+dda_module:inst5|74373b:inst2
+dda_module:inst5|74373b:inst7
+dda_module:inst5|74373b:inst18
+dda_module:inst5|74373b:inst20
+dda_module:inst5|74373b:inst28
+dda_module:inst5|74373b:inst30
+74373b:inst1
+}
+# macro_sequence
+
+# end
+# entity
+74138
+# storage
+db|test.(6).cnf
+db|test.(6).cnf
+# case_insensitive
+# source_file
+|software|quartus|quartus|libraries|others|maxplus2|74138.bdf
+32dc8fd1db23180dae8214abe35379
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+dda_module:inst5|74138:inst41
+74138:inst10
+}
+# macro_sequence
+
+# end
+# entity
+xuat_xung
+# storage
+db|test.(0).cnf
+db|test.(0).cnf
+# case_insensitive
+# source_file
+xuat_xung.bdf
+33c45812f8b463bf66c1c7c52e28d7a8
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

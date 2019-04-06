@@ -1,0 +1,836 @@
+Simulator report for test
+Mon Jan 14 08:07:12 2019
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 2.0 ms       ;
+; Simulation Netlist Size     ; 323 nodes    ;
+; Simulation Coverage         ;      64.53 % ;
+; Total Number of Transitions ; 455017       ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; MAX II       ;
+; Device                      ; EPM570T100C5 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      64.53 % ;
+; Total nodes checked                                 ; 323          ;
+; Total output ports checked                          ; 499          ;
+; Total output ports with complete 1/0-value coverage ; 322          ;
+; Total output ports with no 1/0-value coverage       ; 163          ;
+; Total output ports with no 1-value coverage         ; 163          ;
+; Total output ports with no 0-value coverage         ; 177          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                 ;
++----------------------------------------------------------+---------------------------------------------------------------+------------------+
+; Node Name                                                ; Output Port Name                                              ; Output Port Type ;
++----------------------------------------------------------+---------------------------------------------------------------+------------------+
+; |xuat_xung|dda_module:inst5|test:inst4|pulse             ; |xuat_xung|dda_module:inst5|test:inst4|pulse                  ; regout           ;
+; |xuat_xung|inst15                                        ; |xuat_xung|inst15                                             ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst5|pulse             ; |xuat_xung|dda_module:inst5|test:inst5|pulse                  ; regout           ;
+; |xuat_xung|inst16                                        ; |xuat_xung|inst16                                             ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|pulse            ; |xuat_xung|dda_module:inst5|test:inst11|pulse                 ; regout           ;
+; |xuat_xung|inst                                          ; |xuat_xung|inst                                               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst13|pulse            ; |xuat_xung|dda_module:inst5|test:inst13|pulse                 ; regout           ;
+; |xuat_xung|inst12                                        ; |xuat_xung|inst12                                             ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|pulse            ; |xuat_xung|dda_module:inst5|test:inst14|pulse                 ; regout           ;
+; |xuat_xung|inst13                                        ; |xuat_xung|inst13                                             ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst|pulse              ; |xuat_xung|dda_module:inst5|test:inst|pulse                   ; regout           ;
+; |xuat_xung|inst14                                        ; |xuat_xung|inst14                                             ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[5]    ; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[5]         ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[6]    ; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[6]         ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[4]    ; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[4]         ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[1]    ; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[1]         ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk20u           ; |xuat_xung|dda_module:inst5|test:inst14|clk20u                ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[2]    ; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[2]         ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[3]    ; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[3]         ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst11|LessThan1~1      ; |xuat_xung|dda_module:inst5|test:inst11|LessThan1~1           ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|LessThan1~2      ; |xuat_xung|dda_module:inst5|test:inst11|LessThan1~2           ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|LessThan1~4      ; |xuat_xung|dda_module:inst5|test:inst11|LessThan1~4           ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[0]       ; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[0]~7          ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[0]       ; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[0]~7COUT1_32  ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[1]       ; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[1]~9          ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[1]       ; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[1]~9COUT1_34  ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[2]       ; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[2]~11         ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[2]       ; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[2]~11COUT1_36 ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|LessThan0~1      ; |xuat_xung|dda_module:inst5|test:inst11|LessThan0~1           ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[3]       ; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[3]~13         ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[3]       ; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[3]~13COUT1_38 ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[4]       ; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[4]~15         ; cout             ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[5]       ; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[5]~17COUT1_40 ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|LessThan0~2      ; |xuat_xung|dda_module:inst5|test:inst11|LessThan0~2           ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[6]       ; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[6]~19COUT1_42 ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[7]       ; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[7]~21COUT1_44 ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|LessThan0~3      ; |xuat_xung|dda_module:inst5|test:inst11|LessThan0~3           ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|pre_WR           ; |xuat_xung|dda_module:inst5|test:inst11|Equal0~0              ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|pre_WR           ; |xuat_xung|dda_module:inst5|test:inst14|pre_WR                ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add2~0            ; |xuat_xung|dda_module:inst5|test:inst4|Add2~0                 ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add2~10           ; |xuat_xung|dda_module:inst5|test:inst4|Add2~10                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add2~10           ; |xuat_xung|dda_module:inst5|test:inst4|Add2~12                ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add2~10           ; |xuat_xung|dda_module:inst5|test:inst4|Add2~12COUT1_52        ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add2~15           ; |xuat_xung|dda_module:inst5|test:inst4|Add2~15                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add2~15           ; |xuat_xung|dda_module:inst5|test:inst4|Add2~17                ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add2~15           ; |xuat_xung|dda_module:inst5|test:inst4|Add2~17COUT1_54        ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst4|LessThan2~0       ; |xuat_xung|dda_module:inst5|test:inst4|LessThan2~0            ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add2~20           ; |xuat_xung|dda_module:inst5|test:inst4|Add2~20                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add2~25           ; |xuat_xung|dda_module:inst5|test:inst4|Add2~25                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add2~25           ; |xuat_xung|dda_module:inst5|test:inst4|Add2~27COUT1_56        ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add2~30           ; |xuat_xung|dda_module:inst5|test:inst4|Add2~30                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add2~30           ; |xuat_xung|dda_module:inst5|test:inst4|Add2~32                ; cout             ;
+; |xuat_xung|dda_module:inst5|test:inst4|LessThan2~1       ; |xuat_xung|dda_module:inst5|test:inst4|LessThan2~1            ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst4|LessThan2~2       ; |xuat_xung|dda_module:inst5|test:inst4|LessThan2~2            ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add2~0            ; |xuat_xung|dda_module:inst5|test:inst5|Add2~0                 ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add2~10           ; |xuat_xung|dda_module:inst5|test:inst5|Add2~10                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add2~10           ; |xuat_xung|dda_module:inst5|test:inst5|Add2~12                ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add2~10           ; |xuat_xung|dda_module:inst5|test:inst5|Add2~12COUT1_52        ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add2~15           ; |xuat_xung|dda_module:inst5|test:inst5|Add2~15                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add2~15           ; |xuat_xung|dda_module:inst5|test:inst5|Add2~17                ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add2~15           ; |xuat_xung|dda_module:inst5|test:inst5|Add2~17COUT1_54        ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst5|LessThan2~0       ; |xuat_xung|dda_module:inst5|test:inst5|LessThan2~0            ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add2~20           ; |xuat_xung|dda_module:inst5|test:inst5|Add2~20                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add2~20           ; |xuat_xung|dda_module:inst5|test:inst5|Add2~22                ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add2~20           ; |xuat_xung|dda_module:inst5|test:inst5|Add2~22COUT1_50        ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add2~25           ; |xuat_xung|dda_module:inst5|test:inst5|Add2~25                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add2~25           ; |xuat_xung|dda_module:inst5|test:inst5|Add2~27COUT1_56        ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add2~30           ; |xuat_xung|dda_module:inst5|test:inst5|Add2~30                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add2~30           ; |xuat_xung|dda_module:inst5|test:inst5|Add2~32                ; cout             ;
+; |xuat_xung|dda_module:inst5|test:inst5|LessThan2~1       ; |xuat_xung|dda_module:inst5|test:inst5|LessThan2~1            ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst5|LessThan2~2       ; |xuat_xung|dda_module:inst5|test:inst5|LessThan2~2            ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add2~0           ; |xuat_xung|dda_module:inst5|test:inst11|Add2~0                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add2~10          ; |xuat_xung|dda_module:inst5|test:inst11|Add2~10               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add2~10          ; |xuat_xung|dda_module:inst5|test:inst11|Add2~12               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add2~10          ; |xuat_xung|dda_module:inst5|test:inst11|Add2~12COUT1_52       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add2~15          ; |xuat_xung|dda_module:inst5|test:inst11|Add2~15               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add2~15          ; |xuat_xung|dda_module:inst5|test:inst11|Add2~17               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add2~15          ; |xuat_xung|dda_module:inst5|test:inst11|Add2~17COUT1_54       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|LessThan2~0      ; |xuat_xung|dda_module:inst5|test:inst11|LessThan2~0           ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add2~20          ; |xuat_xung|dda_module:inst5|test:inst11|Add2~20               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add2~25          ; |xuat_xung|dda_module:inst5|test:inst11|Add2~25               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add2~25          ; |xuat_xung|dda_module:inst5|test:inst11|Add2~27COUT1_56       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add2~30          ; |xuat_xung|dda_module:inst5|test:inst11|Add2~30               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add2~30          ; |xuat_xung|dda_module:inst5|test:inst11|Add2~32               ; cout             ;
+; |xuat_xung|dda_module:inst5|test:inst11|LessThan2~1      ; |xuat_xung|dda_module:inst5|test:inst11|LessThan2~1           ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|LessThan2~2      ; |xuat_xung|dda_module:inst5|test:inst11|LessThan2~2           ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add2~10          ; |xuat_xung|dda_module:inst5|test:inst13|Add2~10               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add2~10          ; |xuat_xung|dda_module:inst5|test:inst13|Add2~12               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add2~10          ; |xuat_xung|dda_module:inst5|test:inst13|Add2~12COUT1_52       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add2~15          ; |xuat_xung|dda_module:inst5|test:inst13|Add2~15               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add2~15          ; |xuat_xung|dda_module:inst5|test:inst13|Add2~17               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add2~15          ; |xuat_xung|dda_module:inst5|test:inst13|Add2~17COUT1_54       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst13|LessThan2~0      ; |xuat_xung|dda_module:inst5|test:inst13|LessThan2~0           ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add2~20          ; |xuat_xung|dda_module:inst5|test:inst13|Add2~20               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add2~20          ; |xuat_xung|dda_module:inst5|test:inst13|Add2~22               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add2~20          ; |xuat_xung|dda_module:inst5|test:inst13|Add2~22COUT1_50       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add2~25          ; |xuat_xung|dda_module:inst5|test:inst13|Add2~25               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add2~25          ; |xuat_xung|dda_module:inst5|test:inst13|Add2~27COUT1_56       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add2~30          ; |xuat_xung|dda_module:inst5|test:inst13|Add2~30               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add2~30          ; |xuat_xung|dda_module:inst5|test:inst13|Add2~32               ; cout             ;
+; |xuat_xung|dda_module:inst5|test:inst13|LessThan2~1      ; |xuat_xung|dda_module:inst5|test:inst13|LessThan2~1           ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst13|LessThan2~2      ; |xuat_xung|dda_module:inst5|test:inst13|LessThan2~2           ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add2~0           ; |xuat_xung|dda_module:inst5|test:inst14|Add2~0                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add2~10          ; |xuat_xung|dda_module:inst5|test:inst14|Add2~10               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add2~10          ; |xuat_xung|dda_module:inst5|test:inst14|Add2~12               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add2~10          ; |xuat_xung|dda_module:inst5|test:inst14|Add2~12COUT1_52       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add2~15          ; |xuat_xung|dda_module:inst5|test:inst14|Add2~15               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add2~15          ; |xuat_xung|dda_module:inst5|test:inst14|Add2~17               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add2~15          ; |xuat_xung|dda_module:inst5|test:inst14|Add2~17COUT1_54       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst14|LessThan2~0      ; |xuat_xung|dda_module:inst5|test:inst14|LessThan2~0           ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add2~20          ; |xuat_xung|dda_module:inst5|test:inst14|Add2~20               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add2~20          ; |xuat_xung|dda_module:inst5|test:inst14|Add2~22               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add2~20          ; |xuat_xung|dda_module:inst5|test:inst14|Add2~22COUT1_50       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add2~25          ; |xuat_xung|dda_module:inst5|test:inst14|Add2~25               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add2~25          ; |xuat_xung|dda_module:inst5|test:inst14|Add2~27COUT1_56       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add2~30          ; |xuat_xung|dda_module:inst5|test:inst14|Add2~30               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add2~30          ; |xuat_xung|dda_module:inst5|test:inst14|Add2~32               ; cout             ;
+; |xuat_xung|dda_module:inst5|test:inst14|LessThan2~1      ; |xuat_xung|dda_module:inst5|test:inst14|LessThan2~1           ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|LessThan2~2      ; |xuat_xung|dda_module:inst5|test:inst14|LessThan2~2           ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst|Add2~0             ; |xuat_xung|dda_module:inst5|test:inst|Add2~0                  ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst|Add2~10            ; |xuat_xung|dda_module:inst5|test:inst|Add2~10                 ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst|Add2~15            ; |xuat_xung|dda_module:inst5|test:inst|Add2~15                 ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst|Add2~15            ; |xuat_xung|dda_module:inst5|test:inst|Add2~17                 ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst|Add2~15            ; |xuat_xung|dda_module:inst5|test:inst|Add2~17COUT1_54         ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst|LessThan2~0        ; |xuat_xung|dda_module:inst5|test:inst|LessThan2~0             ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst|Add2~20            ; |xuat_xung|dda_module:inst5|test:inst|Add2~20                 ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst|Add2~25            ; |xuat_xung|dda_module:inst5|test:inst|Add2~25                 ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst|Add2~25            ; |xuat_xung|dda_module:inst5|test:inst|Add2~27                 ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst|Add2~30            ; |xuat_xung|dda_module:inst5|test:inst|Add2~30                 ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst|Add2~30            ; |xuat_xung|dda_module:inst5|test:inst|Add2~32                 ; cout             ;
+; |xuat_xung|dda_module:inst5|test:inst|LessThan2~1        ; |xuat_xung|dda_module:inst5|test:inst|LessThan2~1             ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst|LessThan2~2        ; |xuat_xung|dda_module:inst5|test:inst|LessThan2~2             ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~20          ; |xuat_xung|dda_module:inst5|test:inst11|Add1~20               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~20          ; |xuat_xung|dda_module:inst5|test:inst11|Add1~22               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~25          ; |xuat_xung|dda_module:inst5|test:inst11|Add1~25               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~30          ; |xuat_xung|dda_module:inst5|test:inst11|Add1~30               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~30          ; |xuat_xung|dda_module:inst5|test:inst11|Add1~32               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~35          ; |xuat_xung|dda_module:inst5|test:inst11|Add1~35               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~35          ; |xuat_xung|dda_module:inst5|test:inst11|Add1~37               ; cout             ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~40          ; |xuat_xung|dda_module:inst5|test:inst11|Add1~40               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~40          ; |xuat_xung|dda_module:inst5|test:inst11|Add1~42               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~40          ; |xuat_xung|dda_module:inst5|test:inst11|Add1~42COUT1_88       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~45          ; |xuat_xung|dda_module:inst5|test:inst11|Add1~45               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~45          ; |xuat_xung|dda_module:inst5|test:inst11|Add1~47               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~50          ; |xuat_xung|dda_module:inst5|test:inst11|Add1~50               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~50          ; |xuat_xung|dda_module:inst5|test:inst11|Add1~52               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst4|acc[2]            ; |xuat_xung|dda_module:inst5|test:inst4|acc[2]                 ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst4|acc[3]            ; |xuat_xung|dda_module:inst5|test:inst4|acc[3]                 ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst4|acc[1]            ; |xuat_xung|dda_module:inst5|test:inst4|acc[1]                 ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst4|acc[5]            ; |xuat_xung|dda_module:inst5|test:inst4|acc[5]                 ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst4|acc[4]            ; |xuat_xung|dda_module:inst5|test:inst4|acc[4]                 ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst5|acc[2]            ; |xuat_xung|dda_module:inst5|test:inst5|acc[2]                 ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst5|acc[3]            ; |xuat_xung|dda_module:inst5|test:inst5|acc[3]                 ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst5|acc[1]            ; |xuat_xung|dda_module:inst5|test:inst5|acc[1]                 ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst5|acc[5]            ; |xuat_xung|dda_module:inst5|test:inst5|acc[5]                 ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst5|acc[4]            ; |xuat_xung|dda_module:inst5|test:inst5|acc[4]                 ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst11|acc[2]           ; |xuat_xung|dda_module:inst5|test:inst11|acc[2]                ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst11|acc[3]           ; |xuat_xung|dda_module:inst5|test:inst11|acc[3]                ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst11|acc[1]           ; |xuat_xung|dda_module:inst5|test:inst11|acc[1]                ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst11|acc[5]           ; |xuat_xung|dda_module:inst5|test:inst11|acc[5]                ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst11|acc[4]           ; |xuat_xung|dda_module:inst5|test:inst11|acc[4]                ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst13|acc[2]           ; |xuat_xung|dda_module:inst5|test:inst13|acc[2]                ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst13|acc[3]           ; |xuat_xung|dda_module:inst5|test:inst13|acc[3]                ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst13|acc[1]           ; |xuat_xung|dda_module:inst5|test:inst13|acc[1]                ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add2~35          ; |xuat_xung|dda_module:inst5|test:inst13|Add2~35               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add2~35          ; |xuat_xung|dda_module:inst5|test:inst13|Add2~37               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add2~35          ; |xuat_xung|dda_module:inst5|test:inst13|Add2~37COUT1_48       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst13|acc[5]           ; |xuat_xung|dda_module:inst5|test:inst13|acc[5]                ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst13|acc[4]           ; |xuat_xung|dda_module:inst5|test:inst13|acc[4]                ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|acc[2]           ; |xuat_xung|dda_module:inst5|test:inst14|acc[2]                ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|acc[3]           ; |xuat_xung|dda_module:inst5|test:inst14|acc[3]                ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|acc[1]           ; |xuat_xung|dda_module:inst5|test:inst14|acc[1]                ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add2~35          ; |xuat_xung|dda_module:inst5|test:inst14|Add2~35               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add2~35          ; |xuat_xung|dda_module:inst5|test:inst14|Add2~37               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add2~35          ; |xuat_xung|dda_module:inst5|test:inst14|Add2~37COUT1_48       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst14|acc[5]           ; |xuat_xung|dda_module:inst5|test:inst14|acc[5]                ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|acc[4]           ; |xuat_xung|dda_module:inst5|test:inst14|acc[4]                ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst|acc[2]             ; |xuat_xung|dda_module:inst5|test:inst|acc[2]                  ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst|acc[3]             ; |xuat_xung|dda_module:inst5|test:inst|acc[3]                  ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst|acc[1]             ; |xuat_xung|dda_module:inst5|test:inst|acc[1]                  ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst|acc[5]             ; |xuat_xung|dda_module:inst5|test:inst|acc[5]                  ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst|acc[4]             ; |xuat_xung|dda_module:inst5|test:inst|acc[4]                  ; regout           ;
+; |xuat_xung|dda_module:inst5|inst22~0                     ; |xuat_xung|dda_module:inst5|inst22~0                          ; combout          ;
+; |xuat_xung|dda_module:inst5|inst8                        ; |xuat_xung|dda_module:inst5|inst8                             ; combout          ;
+; |xuat_xung|dda_module:inst5|inst10                       ; |xuat_xung|dda_module:inst5|inst10                            ; combout          ;
+; |xuat_xung|dda_module:inst5|inst21                       ; |xuat_xung|dda_module:inst5|inst21                            ; combout          ;
+; |xuat_xung|dda_module:inst5|inst22                       ; |xuat_xung|dda_module:inst5|inst22                            ; combout          ;
+; |xuat_xung|dda_module:inst5|inst31                       ; |xuat_xung|dda_module:inst5|inst31                            ; combout          ;
+; |xuat_xung|dda_module:inst5|inst32                       ; |xuat_xung|dda_module:inst5|inst32                            ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add3~0            ; |xuat_xung|dda_module:inst5|test:inst4|Add3~0                 ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add3~0            ; |xuat_xung|dda_module:inst5|test:inst4|Add3~2                 ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add3~0            ; |xuat_xung|dda_module:inst5|test:inst4|Add3~2COUT1_50         ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst4|acc[4]~0          ; |xuat_xung|dda_module:inst5|test:inst4|acc[4]~0               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add3~5            ; |xuat_xung|dda_module:inst5|test:inst4|Add3~5                 ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add3~10           ; |xuat_xung|dda_module:inst5|test:inst4|Add3~10                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add3~10           ; |xuat_xung|dda_module:inst5|test:inst4|Add3~12                ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add3~10           ; |xuat_xung|dda_module:inst5|test:inst4|Add3~12COUT1_44        ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst4|LessThan2~3       ; |xuat_xung|dda_module:inst5|test:inst4|LessThan2~3            ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add3~15           ; |xuat_xung|dda_module:inst5|test:inst4|Add3~15                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add3~15           ; |xuat_xung|dda_module:inst5|test:inst4|Add3~17                ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add3~15           ; |xuat_xung|dda_module:inst5|test:inst4|Add3~17COUT1_46        ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add3~20           ; |xuat_xung|dda_module:inst5|test:inst4|Add3~20                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add3~20           ; |xuat_xung|dda_module:inst5|test:inst4|Add3~22                ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add3~20           ; |xuat_xung|dda_module:inst5|test:inst4|Add3~22COUT1_42        ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add3~25           ; |xuat_xung|dda_module:inst5|test:inst4|Add3~25                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add3~25           ; |xuat_xung|dda_module:inst5|test:inst4|Add3~27                ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add3~30           ; |xuat_xung|dda_module:inst5|test:inst4|Add3~30                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add3~30           ; |xuat_xung|dda_module:inst5|test:inst4|Add3~32                ; cout             ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add3~0            ; |xuat_xung|dda_module:inst5|test:inst5|Add3~0                 ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add3~0            ; |xuat_xung|dda_module:inst5|test:inst5|Add3~2                 ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add3~0            ; |xuat_xung|dda_module:inst5|test:inst5|Add3~2COUT1_50         ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add3~5            ; |xuat_xung|dda_module:inst5|test:inst5|Add3~5                 ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add3~10           ; |xuat_xung|dda_module:inst5|test:inst5|Add3~10                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add3~10           ; |xuat_xung|dda_module:inst5|test:inst5|Add3~12                ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add3~10           ; |xuat_xung|dda_module:inst5|test:inst5|Add3~12COUT1_44        ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst5|LessThan2~3       ; |xuat_xung|dda_module:inst5|test:inst5|LessThan2~3            ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add3~15           ; |xuat_xung|dda_module:inst5|test:inst5|Add3~15                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add3~15           ; |xuat_xung|dda_module:inst5|test:inst5|Add3~17                ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add3~15           ; |xuat_xung|dda_module:inst5|test:inst5|Add3~17COUT1_46        ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add3~20           ; |xuat_xung|dda_module:inst5|test:inst5|Add3~20                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add3~20           ; |xuat_xung|dda_module:inst5|test:inst5|Add3~22                ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add3~20           ; |xuat_xung|dda_module:inst5|test:inst5|Add3~22COUT1_42        ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add3~25           ; |xuat_xung|dda_module:inst5|test:inst5|Add3~25                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add3~25           ; |xuat_xung|dda_module:inst5|test:inst5|Add3~27                ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add3~30           ; |xuat_xung|dda_module:inst5|test:inst5|Add3~30                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add3~30           ; |xuat_xung|dda_module:inst5|test:inst5|Add3~32                ; cout             ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add3~0           ; |xuat_xung|dda_module:inst5|test:inst11|Add3~0                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add3~0           ; |xuat_xung|dda_module:inst5|test:inst11|Add3~2                ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add3~0           ; |xuat_xung|dda_module:inst5|test:inst11|Add3~2COUT1_50        ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add3~5           ; |xuat_xung|dda_module:inst5|test:inst11|Add3~5                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add3~10          ; |xuat_xung|dda_module:inst5|test:inst11|Add3~10               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add3~10          ; |xuat_xung|dda_module:inst5|test:inst11|Add3~12               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add3~10          ; |xuat_xung|dda_module:inst5|test:inst11|Add3~12COUT1_44       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|LessThan2~3      ; |xuat_xung|dda_module:inst5|test:inst11|LessThan2~3           ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add3~15          ; |xuat_xung|dda_module:inst5|test:inst11|Add3~15               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add3~15          ; |xuat_xung|dda_module:inst5|test:inst11|Add3~17               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add3~15          ; |xuat_xung|dda_module:inst5|test:inst11|Add3~17COUT1_46       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add3~20          ; |xuat_xung|dda_module:inst5|test:inst11|Add3~20               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add3~20          ; |xuat_xung|dda_module:inst5|test:inst11|Add3~22               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add3~20          ; |xuat_xung|dda_module:inst5|test:inst11|Add3~22COUT1_42       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add3~25          ; |xuat_xung|dda_module:inst5|test:inst11|Add3~25               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add3~25          ; |xuat_xung|dda_module:inst5|test:inst11|Add3~27               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add3~30          ; |xuat_xung|dda_module:inst5|test:inst11|Add3~30               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add3~30          ; |xuat_xung|dda_module:inst5|test:inst11|Add3~32               ; cout             ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add3~0           ; |xuat_xung|dda_module:inst5|test:inst13|Add3~0                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add3~0           ; |xuat_xung|dda_module:inst5|test:inst13|Add3~2                ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add3~5           ; |xuat_xung|dda_module:inst5|test:inst13|Add3~5                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add3~10          ; |xuat_xung|dda_module:inst5|test:inst13|Add3~10               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add3~10          ; |xuat_xung|dda_module:inst5|test:inst13|Add3~12               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add3~10          ; |xuat_xung|dda_module:inst5|test:inst13|Add3~12COUT1_44       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst13|LessThan2~3      ; |xuat_xung|dda_module:inst5|test:inst13|LessThan2~3           ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add3~15          ; |xuat_xung|dda_module:inst5|test:inst13|Add3~15               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add3~15          ; |xuat_xung|dda_module:inst5|test:inst13|Add3~17               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add3~15          ; |xuat_xung|dda_module:inst5|test:inst13|Add3~17COUT1_46       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add3~20          ; |xuat_xung|dda_module:inst5|test:inst13|Add3~20               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add3~20          ; |xuat_xung|dda_module:inst5|test:inst13|Add3~22               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add3~20          ; |xuat_xung|dda_module:inst5|test:inst13|Add3~22COUT1_42       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst13|acc[0]           ; |xuat_xung|dda_module:inst5|test:inst13|acc[0]                ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add3~25          ; |xuat_xung|dda_module:inst5|test:inst13|Add3~25               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add3~25          ; |xuat_xung|dda_module:inst5|test:inst13|Add3~27               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add3~30          ; |xuat_xung|dda_module:inst5|test:inst13|Add3~30               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add3~30          ; |xuat_xung|dda_module:inst5|test:inst13|Add3~32               ; cout             ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add3~0           ; |xuat_xung|dda_module:inst5|test:inst14|Add3~0                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add3~0           ; |xuat_xung|dda_module:inst5|test:inst14|Add3~2                ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add3~0           ; |xuat_xung|dda_module:inst5|test:inst14|Add3~2COUT1_50        ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add3~5           ; |xuat_xung|dda_module:inst5|test:inst14|Add3~5                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add3~10          ; |xuat_xung|dda_module:inst5|test:inst14|Add3~10               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add3~10          ; |xuat_xung|dda_module:inst5|test:inst14|Add3~12               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add3~10          ; |xuat_xung|dda_module:inst5|test:inst14|Add3~12COUT1_44       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst14|LessThan2~3      ; |xuat_xung|dda_module:inst5|test:inst14|LessThan2~3           ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add3~15          ; |xuat_xung|dda_module:inst5|test:inst14|Add3~15               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add3~15          ; |xuat_xung|dda_module:inst5|test:inst14|Add3~17               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add3~15          ; |xuat_xung|dda_module:inst5|test:inst14|Add3~17COUT1_46       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add3~20          ; |xuat_xung|dda_module:inst5|test:inst14|Add3~20               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add3~20          ; |xuat_xung|dda_module:inst5|test:inst14|Add3~22               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add3~20          ; |xuat_xung|dda_module:inst5|test:inst14|Add3~22COUT1_42       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst14|acc[0]           ; |xuat_xung|dda_module:inst5|test:inst14|acc[0]                ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add3~25          ; |xuat_xung|dda_module:inst5|test:inst14|Add3~25               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add3~25          ; |xuat_xung|dda_module:inst5|test:inst14|Add3~27               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add3~30          ; |xuat_xung|dda_module:inst5|test:inst14|Add3~30               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add3~30          ; |xuat_xung|dda_module:inst5|test:inst14|Add3~32               ; cout             ;
+; |xuat_xung|dda_module:inst5|test:inst|Add3~0             ; |xuat_xung|dda_module:inst5|test:inst|Add3~0                  ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst|Add3~0             ; |xuat_xung|dda_module:inst5|test:inst|Add3~2                  ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst|Add3~0             ; |xuat_xung|dda_module:inst5|test:inst|Add3~2COUT1_50          ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst|Add3~5             ; |xuat_xung|dda_module:inst5|test:inst|Add3~5                  ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst|Add3~10            ; |xuat_xung|dda_module:inst5|test:inst|Add3~10                 ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst|Add3~10            ; |xuat_xung|dda_module:inst5|test:inst|Add3~12                 ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst|Add3~10            ; |xuat_xung|dda_module:inst5|test:inst|Add3~12COUT1_44         ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst|LessThan2~3        ; |xuat_xung|dda_module:inst5|test:inst|LessThan2~3             ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst|Add3~15            ; |xuat_xung|dda_module:inst5|test:inst|Add3~15                 ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst|Add3~15            ; |xuat_xung|dda_module:inst5|test:inst|Add3~17                 ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst|Add3~15            ; |xuat_xung|dda_module:inst5|test:inst|Add3~17COUT1_46         ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst|Add3~20            ; |xuat_xung|dda_module:inst5|test:inst|Add3~20                 ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst|Add3~20            ; |xuat_xung|dda_module:inst5|test:inst|Add3~22                 ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst|Add3~20            ; |xuat_xung|dda_module:inst5|test:inst|Add3~22COUT1_42         ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst|Add3~25            ; |xuat_xung|dda_module:inst5|test:inst|Add3~25                 ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst|Add3~25            ; |xuat_xung|dda_module:inst5|test:inst|Add3~27                 ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst|Add3~30            ; |xuat_xung|dda_module:inst5|test:inst|Add3~30                 ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst|Add3~30            ; |xuat_xung|dda_module:inst5|test:inst|Add3~32                 ; cout             ;
+; |xuat_xung|dda_module:inst5|test:inst11|pulse~4          ; |xuat_xung|dda_module:inst5|test:inst11|pulse~4               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[10]~2 ; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[10]~2      ; combout          ;
+; |xuat_xung|74373b:inst1|12                               ; |xuat_xung|74373b:inst1|12                                    ; combout          ;
+; |xuat_xung|74373b:inst1|13                               ; |xuat_xung|74373b:inst1|13                                    ; combout          ;
+; |xuat_xung|74373b:inst1|14                               ; |xuat_xung|74373b:inst1|14                                    ; combout          ;
+; |xuat_xung|74373b:inst1|17                               ; |xuat_xung|74373b:inst1|17                                    ; combout          ;
+; |xuat_xung|74373b:inst1|16                               ; |xuat_xung|74373b:inst1|16                                    ; combout          ;
+; |xuat_xung|CLK                                           ; |xuat_xung|CLK~corein                                         ; combout          ;
+; |xuat_xung|PULSE_WR                                      ; |xuat_xung|PULSE_WR~corein                                    ; combout          ;
+; |xuat_xung|NWE                                           ; |xuat_xung|NWE~corein                                         ; combout          ;
+; |xuat_xung|Data[0]                                       ; |xuat_xung|Data[0]~corein                                     ; combout          ;
+; |xuat_xung|NADV                                          ; |xuat_xung|NADV~corein                                        ; combout          ;
+; |xuat_xung|Data[1]                                       ; |xuat_xung|Data[1]~corein                                     ; combout          ;
+; |xuat_xung|Data[2]                                       ; |xuat_xung|Data[2]~corein                                     ; combout          ;
+; |xuat_xung|Data[5]                                       ; |xuat_xung|Data[5]~corein                                     ; combout          ;
+; |xuat_xung|Data[4]                                       ; |xuat_xung|Data[4]~corein                                     ; combout          ;
+; |xuat_xung|Data[3]                                       ; |xuat_xung|Data[3]~corein                                     ; combout          ;
+; |xuat_xung|pulse1                                        ; |xuat_xung|pulse1                                             ; padio            ;
+; |xuat_xung|pulse2                                        ; |xuat_xung|pulse2                                             ; padio            ;
+; |xuat_xung|pulse3                                        ; |xuat_xung|pulse3                                             ; padio            ;
+; |xuat_xung|pulse4                                        ; |xuat_xung|pulse4                                             ; padio            ;
+; |xuat_xung|pulse5                                        ; |xuat_xung|pulse5                                             ; padio            ;
+; |xuat_xung|pulse0                                        ; |xuat_xung|pulse0                                             ; padio            ;
++----------------------------------------------------------+---------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                 ;
++--------------------------------------------------------+--------------------------------------------------------------+------------------+
+; Node Name                                              ; Output Port Name                                             ; Output Port Type ;
++--------------------------------------------------------+--------------------------------------------------------------+------------------+
+; |xuat_xung|inst3~0                                     ; |xuat_xung|inst3~0                                           ; combout          ;
+; |xuat_xung|inst3~1                                     ; |xuat_xung|inst3~1                                           ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[11] ; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[11]       ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[12] ; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[12]       ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[13] ; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[13]       ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[14] ; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[14]       ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst11|LessThan1~0    ; |xuat_xung|dda_module:inst5|test:inst11|LessThan1~0          ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[7]  ; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[7]        ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[8]  ; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[8]        ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[9]  ; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[9]        ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[10] ; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[10]       ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst11|LessThan1~3    ; |xuat_xung|dda_module:inst5|test:inst11|LessThan1~3          ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[8]     ; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[8]~1         ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[8]     ; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[8]~1COUT1_46 ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[9]     ; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[9]~3         ; cout             ;
+; |xuat_xung|dda_module:inst5|test:inst11|LessThan0~0    ; |xuat_xung|dda_module:inst5|test:inst11|LessThan0~0          ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[5]     ; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[5]~17        ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[6]     ; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[6]~19        ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[7]     ; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[7]~21        ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add2~0          ; |xuat_xung|dda_module:inst5|test:inst4|Add2~2                ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add2~0          ; |xuat_xung|dda_module:inst5|test:inst4|Add2~2COUT1_58        ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add2~5          ; |xuat_xung|dda_module:inst5|test:inst4|Add2~5                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add2~20         ; |xuat_xung|dda_module:inst5|test:inst4|Add2~22               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add2~20         ; |xuat_xung|dda_module:inst5|test:inst4|Add2~22COUT1_50       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add2~25         ; |xuat_xung|dda_module:inst5|test:inst4|Add2~27               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add2~0          ; |xuat_xung|dda_module:inst5|test:inst5|Add2~2                ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add2~0          ; |xuat_xung|dda_module:inst5|test:inst5|Add2~2COUT1_58        ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add2~5          ; |xuat_xung|dda_module:inst5|test:inst5|Add2~5                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add2~25         ; |xuat_xung|dda_module:inst5|test:inst5|Add2~27               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add2~0         ; |xuat_xung|dda_module:inst5|test:inst11|Add2~2               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add2~0         ; |xuat_xung|dda_module:inst5|test:inst11|Add2~2COUT1_58       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add2~5         ; |xuat_xung|dda_module:inst5|test:inst11|Add2~5               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add2~20        ; |xuat_xung|dda_module:inst5|test:inst11|Add2~22              ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add2~20        ; |xuat_xung|dda_module:inst5|test:inst11|Add2~22COUT1_50      ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add2~25        ; |xuat_xung|dda_module:inst5|test:inst11|Add2~27              ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add2~0         ; |xuat_xung|dda_module:inst5|test:inst13|Add2~0               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add2~0         ; |xuat_xung|dda_module:inst5|test:inst13|Add2~2               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add2~0         ; |xuat_xung|dda_module:inst5|test:inst13|Add2~2COUT1_58       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add2~5         ; |xuat_xung|dda_module:inst5|test:inst13|Add2~5               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add2~25        ; |xuat_xung|dda_module:inst5|test:inst13|Add2~27              ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add2~0         ; |xuat_xung|dda_module:inst5|test:inst14|Add2~2               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add2~0         ; |xuat_xung|dda_module:inst5|test:inst14|Add2~2COUT1_58       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add2~5         ; |xuat_xung|dda_module:inst5|test:inst14|Add2~5               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add2~25        ; |xuat_xung|dda_module:inst5|test:inst14|Add2~27              ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst|Add2~0           ; |xuat_xung|dda_module:inst5|test:inst|Add2~2                 ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst|Add2~0           ; |xuat_xung|dda_module:inst5|test:inst|Add2~2COUT1_58         ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst|Add2~5           ; |xuat_xung|dda_module:inst5|test:inst|Add2~5                 ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst|Add2~10          ; |xuat_xung|dda_module:inst5|test:inst|Add2~12                ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst|Add2~10          ; |xuat_xung|dda_module:inst5|test:inst|Add2~12COUT1_52        ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst|Add2~20          ; |xuat_xung|dda_module:inst5|test:inst|Add2~22                ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst|Add2~20          ; |xuat_xung|dda_module:inst5|test:inst|Add2~22COUT1_50        ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst|Add2~25          ; |xuat_xung|dda_module:inst5|test:inst|Add2~27COUT1_56        ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~0         ; |xuat_xung|dda_module:inst5|test:inst11|Add1~0               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~0         ; |xuat_xung|dda_module:inst5|test:inst11|Add1~2               ; cout             ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~5         ; |xuat_xung|dda_module:inst5|test:inst11|Add1~5               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~5         ; |xuat_xung|dda_module:inst5|test:inst11|Add1~7               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~5         ; |xuat_xung|dda_module:inst5|test:inst11|Add1~7COUT1_106      ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~10        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~10              ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~10        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~12              ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~10        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~12COUT1_108     ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~15        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~15              ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~20        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~22COUT1_96      ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~25        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~27              ; cout             ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~30        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~32COUT1_94      ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~45        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~47COUT1_90      ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~50        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~52COUT1_92      ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~55        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~55              ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~55        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~57              ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~55        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~57COUT1_98      ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~60        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~60              ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~60        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~62              ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~60        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~62COUT1_100     ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~65        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~65              ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~65        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~67              ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~65        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~67COUT1_102     ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~70        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~70              ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~70        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~72              ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~70        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~72COUT1_104     ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst4|acc[6]          ; |xuat_xung|dda_module:inst5|test:inst4|acc[6]                ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst4|acc[7]          ; |xuat_xung|dda_module:inst5|test:inst4|acc[7]                ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add2~35         ; |xuat_xung|dda_module:inst5|test:inst4|Add2~35               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add2~35         ; |xuat_xung|dda_module:inst5|test:inst4|Add2~37               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add2~35         ; |xuat_xung|dda_module:inst5|test:inst4|Add2~37COUT1_48       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst5|acc[6]          ; |xuat_xung|dda_module:inst5|test:inst5|acc[6]                ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst5|acc[7]          ; |xuat_xung|dda_module:inst5|test:inst5|acc[7]                ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add2~35         ; |xuat_xung|dda_module:inst5|test:inst5|Add2~35               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add2~35         ; |xuat_xung|dda_module:inst5|test:inst5|Add2~37               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add2~35         ; |xuat_xung|dda_module:inst5|test:inst5|Add2~37COUT1_48       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|acc[6]         ; |xuat_xung|dda_module:inst5|test:inst11|acc[6]               ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst11|acc[7]         ; |xuat_xung|dda_module:inst5|test:inst11|acc[7]               ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add2~35        ; |xuat_xung|dda_module:inst5|test:inst11|Add2~35              ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add2~35        ; |xuat_xung|dda_module:inst5|test:inst11|Add2~37              ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add2~35        ; |xuat_xung|dda_module:inst5|test:inst11|Add2~37COUT1_48      ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst13|acc[6]         ; |xuat_xung|dda_module:inst5|test:inst13|acc[6]               ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst13|acc[7]         ; |xuat_xung|dda_module:inst5|test:inst13|acc[7]               ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|acc[6]         ; |xuat_xung|dda_module:inst5|test:inst14|acc[6]               ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|acc[7]         ; |xuat_xung|dda_module:inst5|test:inst14|acc[7]               ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst|acc[6]           ; |xuat_xung|dda_module:inst5|test:inst|acc[6]                 ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst|acc[7]           ; |xuat_xung|dda_module:inst5|test:inst|acc[7]                 ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst|Add2~35          ; |xuat_xung|dda_module:inst5|test:inst|Add2~35                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst|Add2~35          ; |xuat_xung|dda_module:inst5|test:inst|Add2~37                ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst|Add2~35          ; |xuat_xung|dda_module:inst5|test:inst|Add2~37COUT1_48        ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst4|acc[0]          ; |xuat_xung|dda_module:inst5|test:inst4|acc[0]                ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add3~25         ; |xuat_xung|dda_module:inst5|test:inst4|Add3~27COUT1_48       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst5|acc[0]          ; |xuat_xung|dda_module:inst5|test:inst5|acc[0]                ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add3~25         ; |xuat_xung|dda_module:inst5|test:inst5|Add3~27COUT1_48       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|acc[0]         ; |xuat_xung|dda_module:inst5|test:inst11|acc[0]               ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add3~25        ; |xuat_xung|dda_module:inst5|test:inst11|Add3~27COUT1_48      ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add3~0         ; |xuat_xung|dda_module:inst5|test:inst13|Add3~2COUT1_50       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add3~25        ; |xuat_xung|dda_module:inst5|test:inst13|Add3~27COUT1_48      ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add3~25        ; |xuat_xung|dda_module:inst5|test:inst14|Add3~27COUT1_48      ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst|acc[0]           ; |xuat_xung|dda_module:inst5|test:inst|acc[0]                 ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst|Add3~25          ; |xuat_xung|dda_module:inst5|test:inst|Add3~27COUT1_48        ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst|dir              ; |xuat_xung|dda_module:inst5|test:inst|dir                    ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst4|dir             ; |xuat_xung|dda_module:inst5|test:inst4|dir                   ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst5|dir             ; |xuat_xung|dda_module:inst5|test:inst5|dir                   ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst11|dir            ; |xuat_xung|dda_module:inst5|test:inst11|dir                  ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst13|dir            ; |xuat_xung|dda_module:inst5|test:inst13|dir                  ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|dir            ; |xuat_xung|dda_module:inst5|test:inst14|dir                  ; regout           ;
+; |xuat_xung|74373b:inst1|18                             ; |xuat_xung|74373b:inst1|18                                   ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst4|Ntemp[6]        ; |xuat_xung|dda_module:inst5|test:inst4|Ntemp[6]              ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst4|Ntemp[3]        ; |xuat_xung|dda_module:inst5|test:inst4|Ntemp[3]              ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst4|Ntemp[1]        ; |xuat_xung|dda_module:inst5|test:inst4|Ntemp[1]              ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst4|Ntemp[5]        ; |xuat_xung|dda_module:inst5|test:inst4|Ntemp[5]              ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst5|Ntemp[6]        ; |xuat_xung|dda_module:inst5|test:inst5|Ntemp[6]              ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst5|Ntemp[2]        ; |xuat_xung|dda_module:inst5|test:inst5|Ntemp[2]              ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst5|Ntemp[5]        ; |xuat_xung|dda_module:inst5|test:inst5|Ntemp[5]              ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst5|Ntemp[4]        ; |xuat_xung|dda_module:inst5|test:inst5|Ntemp[4]              ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst11|Ntemp[6]       ; |xuat_xung|dda_module:inst5|test:inst11|Ntemp[6]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst11|Ntemp[3]       ; |xuat_xung|dda_module:inst5|test:inst11|Ntemp[3]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst11|Ntemp[1]       ; |xuat_xung|dda_module:inst5|test:inst11|Ntemp[1]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst11|Ntemp[5]       ; |xuat_xung|dda_module:inst5|test:inst11|Ntemp[5]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst13|Ntemp[6]       ; |xuat_xung|dda_module:inst5|test:inst13|Ntemp[6]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst13|Ntemp[3]       ; |xuat_xung|dda_module:inst5|test:inst13|Ntemp[3]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst13|Ntemp[1]       ; |xuat_xung|dda_module:inst5|test:inst13|Ntemp[1]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst13|Ntemp[5]       ; |xuat_xung|dda_module:inst5|test:inst13|Ntemp[5]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst13|Ntemp[4]       ; |xuat_xung|dda_module:inst5|test:inst13|Ntemp[4]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|Ntemp[6]       ; |xuat_xung|dda_module:inst5|test:inst14|Ntemp[6]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|Ntemp[3]       ; |xuat_xung|dda_module:inst5|test:inst14|Ntemp[3]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|Ntemp[5]       ; |xuat_xung|dda_module:inst5|test:inst14|Ntemp[5]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|Ntemp[4]       ; |xuat_xung|dda_module:inst5|test:inst14|Ntemp[4]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst|Ntemp[6]         ; |xuat_xung|dda_module:inst5|test:inst|Ntemp[6]               ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst|Ntemp[2]         ; |xuat_xung|dda_module:inst5|test:inst|Ntemp[2]               ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst|Ntemp[1]         ; |xuat_xung|dda_module:inst5|test:inst|Ntemp[1]               ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst|Ntemp[4]         ; |xuat_xung|dda_module:inst5|test:inst|Ntemp[4]               ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst4|Ntemp[0]        ; |xuat_xung|dda_module:inst5|test:inst4|Ntemp[0]              ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst5|Ntemp[0]        ; |xuat_xung|dda_module:inst5|test:inst5|Ntemp[0]              ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst11|Ntemp[0]       ; |xuat_xung|dda_module:inst5|test:inst11|Ntemp[0]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst|Ntemp[0]         ; |xuat_xung|dda_module:inst5|test:inst|Ntemp[0]               ; regout           ;
+; |xuat_xung|LIMIT3                                      ; |xuat_xung|LIMIT3~corein                                     ; combout          ;
+; |xuat_xung|LIMIT1                                      ; |xuat_xung|LIMIT1~corein                                     ; combout          ;
+; |xuat_xung|LIMIT6                                      ; |xuat_xung|LIMIT6~corein                                     ; combout          ;
+; |xuat_xung|LIMIT2                                      ; |xuat_xung|LIMIT2~corein                                     ; combout          ;
+; |xuat_xung|LIMIT4                                      ; |xuat_xung|LIMIT4~corein                                     ; combout          ;
+; |xuat_xung|LIMIT5                                      ; |xuat_xung|LIMIT5~corein                                     ; combout          ;
+; |xuat_xung|Data[7]                                     ; |xuat_xung|Data[7]~corein                                    ; combout          ;
+; |xuat_xung|Data[6]                                     ; |xuat_xung|Data[6]~corein                                    ; combout          ;
+; |xuat_xung|dir0                                        ; |xuat_xung|dir0                                              ; padio            ;
+; |xuat_xung|dir1                                        ; |xuat_xung|dir1                                              ; padio            ;
+; |xuat_xung|dir2                                        ; |xuat_xung|dir2                                              ; padio            ;
+; |xuat_xung|dir3                                        ; |xuat_xung|dir3                                              ; padio            ;
+; |xuat_xung|dir4                                        ; |xuat_xung|dir4                                              ; padio            ;
+; |xuat_xung|dir5                                        ; |xuat_xung|dir5                                              ; padio            ;
++--------------------------------------------------------+--------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                 ;
++--------------------------------------------------------+--------------------------------------------------------------+------------------+
+; Node Name                                              ; Output Port Name                                             ; Output Port Type ;
++--------------------------------------------------------+--------------------------------------------------------------+------------------+
+; |xuat_xung|inst3~0                                     ; |xuat_xung|inst3~0                                           ; combout          ;
+; |xuat_xung|inst3~1                                     ; |xuat_xung|inst3~1                                           ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[11] ; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[11]       ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[12] ; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[12]       ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[13] ; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[13]       ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[14] ; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[14]       ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst11|LessThan1~0    ; |xuat_xung|dda_module:inst5|test:inst11|LessThan1~0          ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[7]  ; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[7]        ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[8]  ; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[8]        ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[9]  ; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[9]        ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[10] ; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[10]       ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst11|LessThan1~3    ; |xuat_xung|dda_module:inst5|test:inst11|LessThan1~3          ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[8]     ; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[8]~1         ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[8]     ; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[8]~1COUT1_46 ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[9]     ; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[9]~3         ; cout             ;
+; |xuat_xung|dda_module:inst5|test:inst11|LessThan0~0    ; |xuat_xung|dda_module:inst5|test:inst11|LessThan0~0          ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[5]     ; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[5]~17        ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[6]     ; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[6]~19        ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[7]     ; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[7]~21        ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add2~0          ; |xuat_xung|dda_module:inst5|test:inst4|Add2~2                ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add2~0          ; |xuat_xung|dda_module:inst5|test:inst4|Add2~2COUT1_58        ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add2~5          ; |xuat_xung|dda_module:inst5|test:inst4|Add2~5                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add2~20         ; |xuat_xung|dda_module:inst5|test:inst4|Add2~22               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add2~20         ; |xuat_xung|dda_module:inst5|test:inst4|Add2~22COUT1_50       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add2~25         ; |xuat_xung|dda_module:inst5|test:inst4|Add2~27               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add2~0          ; |xuat_xung|dda_module:inst5|test:inst5|Add2~2                ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add2~0          ; |xuat_xung|dda_module:inst5|test:inst5|Add2~2COUT1_58        ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add2~5          ; |xuat_xung|dda_module:inst5|test:inst5|Add2~5                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add2~25         ; |xuat_xung|dda_module:inst5|test:inst5|Add2~27               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add2~0         ; |xuat_xung|dda_module:inst5|test:inst11|Add2~2               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add2~0         ; |xuat_xung|dda_module:inst5|test:inst11|Add2~2COUT1_58       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add2~5         ; |xuat_xung|dda_module:inst5|test:inst11|Add2~5               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add2~20        ; |xuat_xung|dda_module:inst5|test:inst11|Add2~22              ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add2~20        ; |xuat_xung|dda_module:inst5|test:inst11|Add2~22COUT1_50      ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add2~25        ; |xuat_xung|dda_module:inst5|test:inst11|Add2~27              ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add2~0         ; |xuat_xung|dda_module:inst5|test:inst13|Add2~0               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add2~0         ; |xuat_xung|dda_module:inst5|test:inst13|Add2~2               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add2~0         ; |xuat_xung|dda_module:inst5|test:inst13|Add2~2COUT1_58       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add2~5         ; |xuat_xung|dda_module:inst5|test:inst13|Add2~5               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add2~25        ; |xuat_xung|dda_module:inst5|test:inst13|Add2~27              ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add2~0         ; |xuat_xung|dda_module:inst5|test:inst14|Add2~2               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add2~0         ; |xuat_xung|dda_module:inst5|test:inst14|Add2~2COUT1_58       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add2~5         ; |xuat_xung|dda_module:inst5|test:inst14|Add2~5               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add2~25        ; |xuat_xung|dda_module:inst5|test:inst14|Add2~27              ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst|Add2~0           ; |xuat_xung|dda_module:inst5|test:inst|Add2~2                 ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst|Add2~0           ; |xuat_xung|dda_module:inst5|test:inst|Add2~2COUT1_58         ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst|Add2~5           ; |xuat_xung|dda_module:inst5|test:inst|Add2~5                 ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst|Add2~10          ; |xuat_xung|dda_module:inst5|test:inst|Add2~12                ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst|Add2~10          ; |xuat_xung|dda_module:inst5|test:inst|Add2~12COUT1_52        ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst|Add2~20          ; |xuat_xung|dda_module:inst5|test:inst|Add2~22                ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst|Add2~20          ; |xuat_xung|dda_module:inst5|test:inst|Add2~22COUT1_50        ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst|Add2~25          ; |xuat_xung|dda_module:inst5|test:inst|Add2~27COUT1_56        ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~0         ; |xuat_xung|dda_module:inst5|test:inst11|Add1~0               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~0         ; |xuat_xung|dda_module:inst5|test:inst11|Add1~2               ; cout             ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~5         ; |xuat_xung|dda_module:inst5|test:inst11|Add1~5               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~5         ; |xuat_xung|dda_module:inst5|test:inst11|Add1~7               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~5         ; |xuat_xung|dda_module:inst5|test:inst11|Add1~7COUT1_106      ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~10        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~10              ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~10        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~12              ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~10        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~12COUT1_108     ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~15        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~15              ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~20        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~22COUT1_96      ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~25        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~27              ; cout             ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~30        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~32COUT1_94      ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~45        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~47COUT1_90      ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~50        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~52COUT1_92      ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~55        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~55              ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~55        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~57              ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~55        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~57COUT1_98      ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~60        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~60              ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~60        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~62              ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~60        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~62COUT1_100     ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~65        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~65              ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~65        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~67              ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~65        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~67COUT1_102     ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~70        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~70              ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~70        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~72              ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add1~70        ; |xuat_xung|dda_module:inst5|test:inst11|Add1~72COUT1_104     ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst4|acc[6]          ; |xuat_xung|dda_module:inst5|test:inst4|acc[6]                ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst4|acc[7]          ; |xuat_xung|dda_module:inst5|test:inst4|acc[7]                ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add2~35         ; |xuat_xung|dda_module:inst5|test:inst4|Add2~35               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add2~35         ; |xuat_xung|dda_module:inst5|test:inst4|Add2~37               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add2~35         ; |xuat_xung|dda_module:inst5|test:inst4|Add2~37COUT1_48       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst5|acc[6]          ; |xuat_xung|dda_module:inst5|test:inst5|acc[6]                ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst5|acc[7]          ; |xuat_xung|dda_module:inst5|test:inst5|acc[7]                ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add2~35         ; |xuat_xung|dda_module:inst5|test:inst5|Add2~35               ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add2~35         ; |xuat_xung|dda_module:inst5|test:inst5|Add2~37               ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add2~35         ; |xuat_xung|dda_module:inst5|test:inst5|Add2~37COUT1_48       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|acc[6]         ; |xuat_xung|dda_module:inst5|test:inst11|acc[6]               ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst11|acc[7]         ; |xuat_xung|dda_module:inst5|test:inst11|acc[7]               ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add2~35        ; |xuat_xung|dda_module:inst5|test:inst11|Add2~35              ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add2~35        ; |xuat_xung|dda_module:inst5|test:inst11|Add2~37              ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add2~35        ; |xuat_xung|dda_module:inst5|test:inst11|Add2~37COUT1_48      ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst13|acc[6]         ; |xuat_xung|dda_module:inst5|test:inst13|acc[6]               ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst13|acc[7]         ; |xuat_xung|dda_module:inst5|test:inst13|acc[7]               ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|acc[6]         ; |xuat_xung|dda_module:inst5|test:inst14|acc[6]               ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|acc[7]         ; |xuat_xung|dda_module:inst5|test:inst14|acc[7]               ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst|acc[6]           ; |xuat_xung|dda_module:inst5|test:inst|acc[6]                 ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst|acc[7]           ; |xuat_xung|dda_module:inst5|test:inst|acc[7]                 ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst|Add2~35          ; |xuat_xung|dda_module:inst5|test:inst|Add2~35                ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst|Add2~35          ; |xuat_xung|dda_module:inst5|test:inst|Add2~37                ; cout0            ;
+; |xuat_xung|dda_module:inst5|test:inst|Add2~35          ; |xuat_xung|dda_module:inst5|test:inst|Add2~37COUT1_48        ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst4|acc[0]          ; |xuat_xung|dda_module:inst5|test:inst4|acc[0]                ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst4|Add3~25         ; |xuat_xung|dda_module:inst5|test:inst4|Add3~27COUT1_48       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst5|acc[0]          ; |xuat_xung|dda_module:inst5|test:inst5|acc[0]                ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst5|Add3~25         ; |xuat_xung|dda_module:inst5|test:inst5|Add3~27COUT1_48       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst11|acc[0]         ; |xuat_xung|dda_module:inst5|test:inst11|acc[0]               ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst11|Add3~25        ; |xuat_xung|dda_module:inst5|test:inst11|Add3~27COUT1_48      ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add3~0         ; |xuat_xung|dda_module:inst5|test:inst13|Add3~2COUT1_50       ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst13|Add3~25        ; |xuat_xung|dda_module:inst5|test:inst13|Add3~27COUT1_48      ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst14|Add3~25        ; |xuat_xung|dda_module:inst5|test:inst14|Add3~27COUT1_48      ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst|acc[0]           ; |xuat_xung|dda_module:inst5|test:inst|acc[0]                 ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst|Add3~25          ; |xuat_xung|dda_module:inst5|test:inst|Add3~27COUT1_48        ; cout1            ;
+; |xuat_xung|dda_module:inst5|test:inst|dir              ; |xuat_xung|dda_module:inst5|test:inst|dir                    ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst4|dir             ; |xuat_xung|dda_module:inst5|test:inst4|dir                   ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst5|dir             ; |xuat_xung|dda_module:inst5|test:inst5|dir                   ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst11|dir            ; |xuat_xung|dda_module:inst5|test:inst11|dir                  ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst13|dir            ; |xuat_xung|dda_module:inst5|test:inst13|dir                  ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|dir            ; |xuat_xung|dda_module:inst5|test:inst14|dir                  ; regout           ;
+; |xuat_xung|74373b:inst1|18                             ; |xuat_xung|74373b:inst1|18                                   ; combout          ;
+; |xuat_xung|dda_module:inst5|test:inst4|Ntemp[6]        ; |xuat_xung|dda_module:inst5|test:inst4|Ntemp[6]              ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst4|Ntemp[2]        ; |xuat_xung|dda_module:inst5|test:inst4|Ntemp[2]              ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst4|Ntemp[3]        ; |xuat_xung|dda_module:inst5|test:inst4|Ntemp[3]              ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst4|Ntemp[1]        ; |xuat_xung|dda_module:inst5|test:inst4|Ntemp[1]              ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst4|Ntemp[5]        ; |xuat_xung|dda_module:inst5|test:inst4|Ntemp[5]              ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst4|Ntemp[4]        ; |xuat_xung|dda_module:inst5|test:inst4|Ntemp[4]              ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst5|Ntemp[6]        ; |xuat_xung|dda_module:inst5|test:inst5|Ntemp[6]              ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst5|Ntemp[2]        ; |xuat_xung|dda_module:inst5|test:inst5|Ntemp[2]              ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst5|Ntemp[3]        ; |xuat_xung|dda_module:inst5|test:inst5|Ntemp[3]              ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst5|Ntemp[1]        ; |xuat_xung|dda_module:inst5|test:inst5|Ntemp[1]              ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst5|Ntemp[5]        ; |xuat_xung|dda_module:inst5|test:inst5|Ntemp[5]              ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst5|Ntemp[4]        ; |xuat_xung|dda_module:inst5|test:inst5|Ntemp[4]              ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst11|Ntemp[6]       ; |xuat_xung|dda_module:inst5|test:inst11|Ntemp[6]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst11|Ntemp[2]       ; |xuat_xung|dda_module:inst5|test:inst11|Ntemp[2]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst11|Ntemp[3]       ; |xuat_xung|dda_module:inst5|test:inst11|Ntemp[3]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst11|Ntemp[1]       ; |xuat_xung|dda_module:inst5|test:inst11|Ntemp[1]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst11|Ntemp[5]       ; |xuat_xung|dda_module:inst5|test:inst11|Ntemp[5]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst11|Ntemp[4]       ; |xuat_xung|dda_module:inst5|test:inst11|Ntemp[4]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst13|Ntemp[6]       ; |xuat_xung|dda_module:inst5|test:inst13|Ntemp[6]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst13|Ntemp[2]       ; |xuat_xung|dda_module:inst5|test:inst13|Ntemp[2]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst13|Ntemp[3]       ; |xuat_xung|dda_module:inst5|test:inst13|Ntemp[3]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst13|Ntemp[1]       ; |xuat_xung|dda_module:inst5|test:inst13|Ntemp[1]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst13|Ntemp[5]       ; |xuat_xung|dda_module:inst5|test:inst13|Ntemp[5]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst13|Ntemp[4]       ; |xuat_xung|dda_module:inst5|test:inst13|Ntemp[4]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|Ntemp[6]       ; |xuat_xung|dda_module:inst5|test:inst14|Ntemp[6]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|Ntemp[2]       ; |xuat_xung|dda_module:inst5|test:inst14|Ntemp[2]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|Ntemp[3]       ; |xuat_xung|dda_module:inst5|test:inst14|Ntemp[3]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|Ntemp[1]       ; |xuat_xung|dda_module:inst5|test:inst14|Ntemp[1]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|Ntemp[5]       ; |xuat_xung|dda_module:inst5|test:inst14|Ntemp[5]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|Ntemp[4]       ; |xuat_xung|dda_module:inst5|test:inst14|Ntemp[4]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst|Ntemp[6]         ; |xuat_xung|dda_module:inst5|test:inst|Ntemp[6]               ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst|Ntemp[2]         ; |xuat_xung|dda_module:inst5|test:inst|Ntemp[2]               ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst|Ntemp[3]         ; |xuat_xung|dda_module:inst5|test:inst|Ntemp[3]               ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst|Ntemp[1]         ; |xuat_xung|dda_module:inst5|test:inst|Ntemp[1]               ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst|Ntemp[5]         ; |xuat_xung|dda_module:inst5|test:inst|Ntemp[5]               ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst|Ntemp[4]         ; |xuat_xung|dda_module:inst5|test:inst|Ntemp[4]               ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst4|Ntemp[0]        ; |xuat_xung|dda_module:inst5|test:inst4|Ntemp[0]              ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst5|Ntemp[0]        ; |xuat_xung|dda_module:inst5|test:inst5|Ntemp[0]              ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst11|Ntemp[0]       ; |xuat_xung|dda_module:inst5|test:inst11|Ntemp[0]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst13|Ntemp[0]       ; |xuat_xung|dda_module:inst5|test:inst13|Ntemp[0]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst14|Ntemp[0]       ; |xuat_xung|dda_module:inst5|test:inst14|Ntemp[0]             ; regout           ;
+; |xuat_xung|dda_module:inst5|test:inst|Ntemp[0]         ; |xuat_xung|dda_module:inst5|test:inst|Ntemp[0]               ; regout           ;
+; |xuat_xung|LIMIT3                                      ; |xuat_xung|LIMIT3~corein                                     ; combout          ;
+; |xuat_xung|LIMIT1                                      ; |xuat_xung|LIMIT1~corein                                     ; combout          ;
+; |xuat_xung|LIMIT6                                      ; |xuat_xung|LIMIT6~corein                                     ; combout          ;
+; |xuat_xung|LIMIT2                                      ; |xuat_xung|LIMIT2~corein                                     ; combout          ;
+; |xuat_xung|LIMIT4                                      ; |xuat_xung|LIMIT4~corein                                     ; combout          ;
+; |xuat_xung|LIMIT5                                      ; |xuat_xung|LIMIT5~corein                                     ; combout          ;
+; |xuat_xung|Data[7]                                     ; |xuat_xung|Data[7]~corein                                    ; combout          ;
+; |xuat_xung|Data[6]                                     ; |xuat_xung|Data[6]~corein                                    ; combout          ;
+; |xuat_xung|busy                                        ; |xuat_xung|busy                                              ; padio            ;
+; |xuat_xung|dir0                                        ; |xuat_xung|dir0                                              ; padio            ;
+; |xuat_xung|dir1                                        ; |xuat_xung|dir1                                              ; padio            ;
+; |xuat_xung|dir2                                        ; |xuat_xung|dir2                                              ; padio            ;
+; |xuat_xung|dir3                                        ; |xuat_xung|dir3                                              ; padio            ;
+; |xuat_xung|dir4                                        ; |xuat_xung|dir4                                              ; padio            ;
+; |xuat_xung|dir5                                        ; |xuat_xung|dir5                                              ; padio            ;
++--------------------------------------------------------+--------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Mon Jan 14 08:07:07 2019
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off test -c test
+Info: Using vector source file "C:/Users/anhkh/OneDrive/Máy tính/xuat xung/CPLD/test.vwf"
+Info: Inverted registers were found during simulation
+    Info: Register: |xuat_xung|dda_module:inst5|test:inst4|acc[5]
+    Info: Register: |xuat_xung|dda_module:inst5|test:inst4|acc[4]
+    Info: Register: |xuat_xung|dda_module:inst5|test:inst5|acc[5]
+    Info: Register: |xuat_xung|dda_module:inst5|test:inst5|acc[4]
+    Info: Register: |xuat_xung|dda_module:inst5|test:inst11|acc[5]
+    Info: Register: |xuat_xung|dda_module:inst5|test:inst11|acc[4]
+    Info: Register: |xuat_xung|dda_module:inst5|test:inst13|acc[5]
+    Info: Register: |xuat_xung|dda_module:inst5|test:inst13|acc[4]
+    Info: Register: |xuat_xung|dda_module:inst5|test:inst14|acc[5]
+    Info: Register: |xuat_xung|dda_module:inst5|test:inst14|acc[4]
+    Info: Register: |xuat_xung|dda_module:inst5|test:inst|acc[5]
+    Info: Register: |xuat_xung|dda_module:inst5|test:inst|acc[4]
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      64.53 %
+Info: Number of transitions in simulation is 455017
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 169 megabytes
+    Info: Processing ended: Mon Jan 14 08:07:12 2019
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:06
+
+
