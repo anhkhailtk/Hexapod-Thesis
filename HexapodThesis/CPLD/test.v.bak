@@ -12,7 +12,7 @@ output reg busy;
 parameter Nmax  = 50;	// chu ky dieu khien 1ms, xung 20us -> Nmax = 499
 parameter Nmax1 = 48;	// tre 1 chu ky -> so xung max xuat ra 498
 parameter Nmax2 = 100;
-
+//sdfhdsuhfksjf
 reg [7:0] Ntemp;
 reg [7:0] acc = Nmax1;
 
