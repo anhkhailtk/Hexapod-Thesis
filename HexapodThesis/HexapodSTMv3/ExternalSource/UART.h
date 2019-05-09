@@ -14,14 +14,18 @@
 
 extern uint8_t 	txbuff[BUFF_TX];
 extern uint8_t 	rxbuff[BUFF_RX];
-extern char str_tx_uart[500];
+extern uint8_t 	txbuff_android[BUFF_TX];
+extern uint8_t 	rxbuff_android[BUFF_RX];
 
+extern char str_tx_uart[500];
+extern char str_tx_uart_android[500];
 
 void UART_DMA_Init(void);
+void UART_DMA_Init_android(void);
 void Ex_Usart_SendData(char* UsartData);
 void UART_Send_PC_Encoder_Pos(void);
-void UART_trimline_tx_data(char* dis, char* src);
 void Uart_Cmd_Update(const char* strInput);
+void Uart_Cmd_Update_android(const char* strInput);
 
 #ifdef __cplusplus
 }

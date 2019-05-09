@@ -82,6 +82,7 @@
             this.txb_status_system = new System.Windows.Forms.TextBox();
             this.timeroutScanHome = new System.Windows.Forms.Timer(this.components);
             this.btnSavePos = new System.Windows.Forms.Button();
+            this.btnConnectToSTM = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -599,11 +600,22 @@
             this.btnSavePos.UseVisualStyleBackColor = true;
             this.btnSavePos.Click += new System.EventHandler(this.btnSavePos_Click);
             // 
+            // btnConnectToSTM
+            // 
+            this.btnConnectToSTM.Location = new System.Drawing.Point(154, 487);
+            this.btnConnectToSTM.Name = "btnConnectToSTM";
+            this.btnConnectToSTM.Size = new System.Drawing.Size(120, 52);
+            this.btnConnectToSTM.TabIndex = 29;
+            this.btnConnectToSTM.Text = "Connect to STM";
+            this.btnConnectToSTM.UseVisualStyleBackColor = true;
+            this.btnConnectToSTM.Click += new System.EventHandler(this.btnConnectToSTM_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1026, 576);
+            this.Controls.Add(this.btnConnectToSTM);
             this.Controls.Add(this.btnSavePos);
             this.Controls.Add(this.txb_status_system);
             this.Controls.Add(this.groupBox5);
@@ -683,6 +695,7 @@
         private System.Windows.Forms.TextBox txb_status_system;
         private System.Windows.Forms.Timer timeroutScanHome;
         private System.Windows.Forms.Button btnSavePos;
+        private System.Windows.Forms.Button btnConnectToSTM;
     }
 }
 

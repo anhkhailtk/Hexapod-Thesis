@@ -14,6 +14,7 @@ uint32_t ui_delay;
 void TestingMode(void)
 {
 	Uart_Cmd_Update("lI am in Testing Mode-");
+	Uart_Cmd_Update_android("s_lI am in Testing Mode-");
 	
   TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
 	TIM_Cmd(TIM2, ENABLE);
@@ -37,6 +38,7 @@ void HomeScanMode(void)
 {
 				//Send status
 				Uart_Cmd_Update("lI am in Home Scan Mode-");
+				Uart_Cmd_Update_android("s_lI am in Home Scan Mode-");
 				//Disable timer 2
 				TIM_Cmd(TIM2, DISABLE);
 //----------------------------------------------------------------------------------------------				
@@ -98,7 +100,8 @@ void HomeScanMode(void)
 				memset(str_tx_uart, 0, strlen(str_tx_uart));
 				
 				//Send Home Finish Flag to GUI
-				Uart_Cmd_Update("hfa-");				
+				Uart_Cmd_Update("hfa-");
+				Uart_Cmd_Update_android("s_hfa-");				
 				Ex_Usart_SendData(str_tx_uart);
 				//Turn off Timer 2
 				TIM_Cmd(TIM2, DISABLE);
@@ -107,7 +110,7 @@ void HomeScanMode(void)
 void InverseKinematicMode(void)
 {
 	Uart_Cmd_Update("lI am in Inverse Kinematic Mode-");
-	
+	Uart_Cmd_Update_android("s_lI am in Inverse Kinematic Mode-");
   TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
 	TIM_Cmd(TIM2, ENABLE);
 	float pos[3];
@@ -131,6 +134,7 @@ void InverseKinematicMode(void)
 	else
 	{
 		Uart_Cmd_Update("lI can not calculate inverse kinematic-");
+		Uart_Cmd_Update_android("s_lI can not calculate inverse kinematic-");
 	}
 
 	
@@ -144,4 +148,5 @@ void IdleMode(void)
 	TIM_Cmd(TIM2, ENABLE);	
 	
 	Uart_Cmd_Update("lI am in Idle Mode-");
+	Uart_Cmd_Update_android("s_lI am in Idle Mode-");
 }

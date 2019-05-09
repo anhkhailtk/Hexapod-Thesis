@@ -16,13 +16,13 @@ namespace HexapodGUI
         public Form1()
         {
             InitializeComponent();
-           
+            isConnectSTM = false;
 
         }
         int intlen = 0;
         string[] dir = new string[6];
         string CmdFrStm;
-
+        bool isConnectSTM = false;
 
         float[] HOME_OFFSET = { 33.65f , 34.29f, 30.39f, 28.73f, 31.57f, 31.77f };
         float[] MAX_OF_TRIP = { 144.977f, 150.024f, 146.865f, 140.612f, 147.100f, 147.818f };
@@ -46,6 +46,7 @@ namespace HexapodGUI
                     lb_ConnectStatus.Text = "Status: Closed";
                     lb_ConnectStatus.ForeColor = Color.Red;
                     btnComOpen.Text = "Open";
+                    btnConnectToSTM.Text = "Connect to STM";
                     txb_status_system.Clear();
 
                 }
@@ -112,8 +113,8 @@ namespace HexapodGUI
 
             try
             {
-                COM.Write("t-" + s[0] + "-" + s[1] + "-" + s[2] + "-"
-                    + s[3] + "-" + s[4] + "-" + s[5] + "-e\n");
+                COM.Write(SendMsgProcessing("p-t-" + s[0] + s[1] + s[2]
+                    + s[3] + s[4] + s[5]));
             }
             catch
             {
@@ -129,14 +130,15 @@ namespace HexapodGUI
             {
 
 
-                        string s;
-                        s = "hs-" + "rlrlrl" + "-----------------------------------------e\n";
-                        COM.Write(s);
-                        btnHomeScan.Enabled = false;
-                        lbHomeStatus.Text = "Scanning Home...";
-                        lbHomeStatus.BackColor = Color.Black;
-                        lbHomeStatus.ForeColor = Color.Yellow;
-                        timeroutScanHome.Enabled = true;
+                string s;
+                s = "p-hs-" + "rlrlrl";
+               
+                COM.Write(SendMsgProcessing(s));
+                btnHomeScan.Enabled = false;
+                lbHomeStatus.Text = "Scanning Home...";
+                lbHomeStatus.BackColor = Color.Black;
+                lbHomeStatus.ForeColor = Color.Yellow;
+                timeroutScanHome.Enabled = true;
 
 
 
@@ -192,7 +194,7 @@ namespace HexapodGUI
 
                                     try
                                     {
-                                        COM.Write("he------------------------------------------------e\n");
+                                        COM.Write(SendMsgProcessing("p-he"));
                                         btnHomeScan.Enabled = true;
                                     }
                                     catch
@@ -223,22 +225,31 @@ namespace HexapodGUI
                         case 'l':
                             {
                                 string s = cmd[i];
-                                string multiline_text = System.DateTime.Now.ToShortTimeString() + ": " + s.Remove(0, 1) + "\r\n";
-
-                                txb_status_system.AppendText(multiline_text);
-
-                                if (s == "lSTM Ready")
+                                string multiline_text = s.Remove(0, 1);
+                                switch (multiline_text)
                                 {
-                                    try
-                                    {
-                                        COM.Write("cr------------------------------------------------e\n");
-                                    }
-                                    catch
-                                    {
-                                        lb_ConnectStatus.ForeColor = Color.Red;
-                                        lb_ConnectStatus.Text = "Error Sending";
-                                    }
+                                    case "STM and VSGUI connected":
+                                        {
+                                            btnConnectToSTM.Text = "Disconnect to STM";
+                                            isConnectSTM = true;
+                                            break;
+                                        }
+                                    case "Android is running":
+                                        {
+                                            btnConnectToSTM.Text = "Connect to STM";
+                                            isConnectSTM = false;
+                                            break;
+                                        }
+                                    case "Tracking Mode activated":
+                                        {
+                                            btnConnectToSTM.Text = "Connect to STM";
+                                            isConnectSTM = false;
+                                            break;
+                                        }
                                 }
+
+                                txb_status_system.AppendText(System.DateTime.Now.ToShortTimeString() + ": " + multiline_text + "\r\n");
+
                             }
                             break;
 
@@ -273,8 +284,8 @@ namespace HexapodGUI
 
             try
             {
-                COM.Write("ki" + s[0] + "-" + s[1] + "-" + s[2] + "-"
-                    + s[3] + "-" + s[4] + "-" + s[5] + "-e\n");
+                COM.Write(SendMsgProcessing("p-ki" + s[0] + s[1] + s[2]
+                    + s[3] + s[4] + s[5]));
             }
             catch
             {
@@ -323,6 +334,19 @@ namespace HexapodGUI
 
             return s_out ;
         }
+        private string SendMsgProcessing(string str_input)
+        {
+            int str_len = str_input.Length;
+            if(str_len < 52)
+            {
+                for(int i = 0; i < 51 - str_len; i++)
+                {
+                    str_input = String.Concat(str_input, "-");
+                }
+                str_input = String.Concat(str_input, "\n");
+            }
+            return str_input;
+        }
 
         private void timeroutScanHome_Tick(object sender, EventArgs e)
         {
@@ -335,13 +359,46 @@ namespace HexapodGUI
         {
             try
             {
-                COM.Write("s-------------------------------------------------e\n");
+                COM.Write(SendMsgProcessing("p-s"));
             }
             catch
             {
                 lb_ConnectStatus.ForeColor = Color.Red;
                 lb_ConnectStatus.Text = "Error Sending";
             }
+        }
+
+        private void btnConnectToSTM_Click(object sender, EventArgs e)
+        {
+            if(isConnectSTM == false)
+            {
+
+                try
+                {
+                    COM.Write(SendMsgProcessing("p-cr"));
+                }
+                catch
+                {
+                    lb_ConnectStatus.ForeColor = Color.Red;
+                    lb_ConnectStatus.Text = "Error Sending";
+                }
+
+            }
+            else
+            {
+                btnConnectToSTM.Text = "Connect to STM";
+                try
+                {
+                    COM.Write(SendMsgProcessing("p-cd"));
+                }
+                catch
+                {
+                    lb_ConnectStatus.ForeColor = Color.Red;
+                    lb_ConnectStatus.Text = "Error Sending";
+                }
+                isConnectSTM = false;
+            }
+
         }
     }
 }

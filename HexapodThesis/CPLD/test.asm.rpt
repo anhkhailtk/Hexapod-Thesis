@@ -1,5 +1,5 @@
 Assembler report for test
-Thu Mar 14 17:16:51 2019
+Wed Mar 27 14:38:36 2019
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -10,7 +10,7 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: D:/Document/Thesis/Software/CPLD/test.pof
+  5. Assembler Device Options: D:/DH Bach Khoa/Luan van/Software_thesis_2019/HexapodThesis-CPLD/test.pof
   6. Assembler Messages
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Mar 14 17:16:51 2019 ;
+; Assembler Status      ; Successful - Wed Mar 27 14:38:36 2019 ;
 ; Revision Name         ; test                                  ;
 ; Top-level Entity Name ; xuat_xung                             ;
 ; Family                ; MAX II                                ;
@@ -75,24 +75,24 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+-----------+---------------+
 
 
-+-------------------------------------------+
-; Assembler Generated Files                 ;
-+-------------------------------------------+
-; File Name                                 ;
-+-------------------------------------------+
-; D:/Document/Thesis/Software/CPLD/test.pof ;
-+-------------------------------------------+
++---------------------------------------------------------------------------+
+; Assembler Generated Files                                                 ;
++---------------------------------------------------------------------------+
+; File Name                                                                 ;
++---------------------------------------------------------------------------+
+; D:/DH Bach Khoa/Luan van/Software_thesis_2019/HexapodThesis-CPLD/test.pof ;
++---------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------+
-; Assembler Device Options: D:/Document/Thesis/Software/CPLD/test.pof ;
-+----------------+----------------------------------------------------+
-; Option         ; Setting                                            ;
-+----------------+----------------------------------------------------+
-; Device         ; EPM570T100C5                                       ;
-; JTAG usercode  ; 0xFFFFFFFF                                         ;
-; Checksum       ; 0x0030D907                                         ;
-+----------------+----------------------------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Assembler Device Options: D:/DH Bach Khoa/Luan van/Software_thesis_2019/HexapodThesis-CPLD/test.pof ;
++----------------+------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                            ;
++----------------+------------------------------------------------------------------------------------+
+; Device         ; EPM570T100C5                                                                       ;
+; JTAG usercode  ; 0xFFFFFFFF                                                                         ;
+; Checksum       ; 0x002E5AA2                                                                         ;
++----------------+------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -101,13 +101,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Mar 14 17:16:51 2019
+    Info: Processing started: Wed Mar 27 14:38:36 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off test -c test
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 207 megabytes
-    Info: Processing ended: Thu Mar 14 17:16:51 2019
+    Info: Peak virtual memory: 193 megabytes
+    Info: Processing ended: Wed Mar 27 14:38:36 2019
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

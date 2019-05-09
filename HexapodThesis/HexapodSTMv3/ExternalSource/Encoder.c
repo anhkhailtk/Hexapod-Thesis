@@ -69,10 +69,7 @@ void TIM2_IRQHandler(void)
 
 				UART_Send_PC_Encoder_Pos();
 
-				if(strlen(str_tx_uart) != 0)
-				{
-					Ex_Usart_SendData(str_tx_uart);
-				}
+				Ex_Usart_SendData(str_tx_uart);			
 				
 				cnt_update_enc = 0;
 			}

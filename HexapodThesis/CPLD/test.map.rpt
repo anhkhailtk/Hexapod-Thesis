@@ -1,5 +1,5 @@
 Analysis & Synthesis report for test
-Thu Mar 14 17:16:48 2019
+Wed Mar 27 14:38:23 2019
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -18,14 +18,50 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
  10. General Register Statistics
  11. Inverted Register Statistics
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Parameter Settings for User Entity Instance: dda_module:inst5|test:inst
- 14. Parameter Settings for User Entity Instance: dda_module:inst5|test:inst4
- 15. Parameter Settings for User Entity Instance: dda_module:inst5|test:inst5
- 16. Parameter Settings for User Entity Instance: dda_module:inst5|test:inst11
- 17. Parameter Settings for User Entity Instance: dda_module:inst5|test:inst13
- 18. Parameter Settings for User Entity Instance: dda_module:inst5|test:inst14
- 19. Analysis & Synthesis Messages
- 20. Analysis & Synthesis Suppressed Messages
+ 13. Source assignments for encoder:inst33|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component
+ 14. Source assignments for encoder:inst33|lpm_counter0:inst3|lpm_counter:lpm_counter_component
+ 15. Source assignments for encoder:inst34|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component
+ 16. Source assignments for encoder:inst34|lpm_counter0:inst3|lpm_counter:lpm_counter_component
+ 17. Source assignments for encoder:inst35|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component
+ 18. Source assignments for encoder:inst35|lpm_counter0:inst3|lpm_counter:lpm_counter_component
+ 19. Source assignments for encoder:inst37|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component
+ 20. Source assignments for encoder:inst37|lpm_counter0:inst3|lpm_counter:lpm_counter_component
+ 21. Source assignments for encoder:inst3|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component
+ 22. Source assignments for encoder:inst3|lpm_counter0:inst3|lpm_counter:lpm_counter_component
+ 23. Source assignments for encoder:inst18|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component
+ 24. Source assignments for encoder:inst18|lpm_counter0:inst3|lpm_counter:lpm_counter_component
+ 25. Parameter Settings for User Entity Instance: dda_module:inst5|test:inst
+ 26. Parameter Settings for User Entity Instance: dda_module:inst5|test:inst4
+ 27. Parameter Settings for User Entity Instance: dda_module:inst5|test:inst5
+ 28. Parameter Settings for User Entity Instance: dda_module:inst5|test:inst11
+ 29. Parameter Settings for User Entity Instance: dda_module:inst5|test:inst13
+ 30. Parameter Settings for User Entity Instance: dda_module:inst5|test:inst14
+ 31. Parameter Settings for User Entity Instance: encoder:inst33|lpm_bustri0:inst2|lpm_bustri:lpm_bustri_component
+ 32. Parameter Settings for User Entity Instance: encoder:inst33|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component
+ 33. Parameter Settings for User Entity Instance: encoder:inst33|encoder_module:inst1|lpm_xor0:inst|lpm_xor:lpm_xor_component
+ 34. Parameter Settings for User Entity Instance: encoder:inst33|lpm_counter0:inst3|lpm_counter:lpm_counter_component
+ 35. Parameter Settings for User Entity Instance: encoder:inst34|lpm_bustri0:inst2|lpm_bustri:lpm_bustri_component
+ 36. Parameter Settings for User Entity Instance: encoder:inst34|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component
+ 37. Parameter Settings for User Entity Instance: encoder:inst34|encoder_module:inst1|lpm_xor0:inst|lpm_xor:lpm_xor_component
+ 38. Parameter Settings for User Entity Instance: encoder:inst34|lpm_counter0:inst3|lpm_counter:lpm_counter_component
+ 39. Parameter Settings for User Entity Instance: encoder:inst35|lpm_bustri0:inst2|lpm_bustri:lpm_bustri_component
+ 40. Parameter Settings for User Entity Instance: encoder:inst35|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component
+ 41. Parameter Settings for User Entity Instance: encoder:inst35|encoder_module:inst1|lpm_xor0:inst|lpm_xor:lpm_xor_component
+ 42. Parameter Settings for User Entity Instance: encoder:inst35|lpm_counter0:inst3|lpm_counter:lpm_counter_component
+ 43. Parameter Settings for User Entity Instance: encoder:inst37|lpm_bustri0:inst2|lpm_bustri:lpm_bustri_component
+ 44. Parameter Settings for User Entity Instance: encoder:inst37|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component
+ 45. Parameter Settings for User Entity Instance: encoder:inst37|encoder_module:inst1|lpm_xor0:inst|lpm_xor:lpm_xor_component
+ 46. Parameter Settings for User Entity Instance: encoder:inst37|lpm_counter0:inst3|lpm_counter:lpm_counter_component
+ 47. Parameter Settings for User Entity Instance: encoder:inst3|lpm_bustri0:inst2|lpm_bustri:lpm_bustri_component
+ 48. Parameter Settings for User Entity Instance: encoder:inst3|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component
+ 49. Parameter Settings for User Entity Instance: encoder:inst3|encoder_module:inst1|lpm_xor0:inst|lpm_xor:lpm_xor_component
+ 50. Parameter Settings for User Entity Instance: encoder:inst3|lpm_counter0:inst3|lpm_counter:lpm_counter_component
+ 51. Parameter Settings for User Entity Instance: encoder:inst18|lpm_bustri0:inst2|lpm_bustri:lpm_bustri_component
+ 52. Parameter Settings for User Entity Instance: encoder:inst18|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component
+ 53. Parameter Settings for User Entity Instance: encoder:inst18|encoder_module:inst1|lpm_xor0:inst|lpm_xor:lpm_xor_component
+ 54. Parameter Settings for User Entity Instance: encoder:inst18|lpm_counter0:inst3|lpm_counter:lpm_counter_component
+ 55. Analysis & Synthesis Messages
+ 56. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -51,13 +87,13 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Mar 14 17:16:48 2019        ;
+; Analysis & Synthesis Status ; Successful - Wed Mar 27 14:38:23 2019        ;
 ; Quartus II Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name               ; test                                         ;
 ; Top-level Entity Name       ; xuat_xung                                    ;
 ; Family                      ; MAX II                                       ;
-; Total logic elements        ; 339                                          ;
-; Total pins                  ; 31                                           ;
+; Total logic elements        ; 590                                          ;
+; Total pins                  ; 53                                           ;
 ; Total virtual pins          ; 0                                            ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                                ;
 +-----------------------------+----------------------------------------------+
@@ -140,17 +176,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                           ;
-+----------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                     ;
-+----------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------+
-; xuat_xung.bdf                    ; yes             ; User Block Diagram/Schematic File        ; D:/Document/Thesis/Software/CPLD/xuat_xung.bdf                   ;
-; test.v                           ; yes             ; User Verilog HDL File                    ; D:/Document/Thesis/Software/CPLD/test.v                          ;
-; dda_module.bdf                   ; yes             ; Auto-Found Block Diagram/Schematic File  ; D:/Document/Thesis/Software/CPLD/dda_module.bdf                  ;
-; 74373b.bdf                       ; yes             ; Megafunction                             ; d:/software/quartus/quartus/libraries/others/maxplus2/74373b.bdf ;
-; 74138.bdf                        ; yes             ; Megafunction                             ; d:/software/quartus/quartus/libraries/others/maxplus2/74138.bdf  ;
-+----------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                ;
++----------------------------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------------+
+; File Name with User-Entered Path                   ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                        ;
++----------------------------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------------+
+; xuat_xung.bdf                                      ; yes             ; User Block Diagram/Schematic File        ; D:/DH Bach Khoa/Luan van/Software_thesis_2019/HexapodThesis-CPLD/xuat_xung.bdf      ;
+; test.v                                             ; yes             ; User Verilog HDL File                    ; D:/DH Bach Khoa/Luan van/Software_thesis_2019/HexapodThesis-CPLD/test.v             ;
+; enc_filter.bdf                                     ; yes             ; User Block Diagram/Schematic File        ; D:/DH Bach Khoa/Luan van/Software_thesis_2019/HexapodThesis-CPLD/enc_filter.bdf     ;
+; encoder_module.bdf                                 ; yes             ; User Block Diagram/Schematic File        ; D:/DH Bach Khoa/Luan van/Software_thesis_2019/HexapodThesis-CPLD/encoder_module.bdf ;
+; encoder.bdf                                        ; yes             ; User Block Diagram/Schematic File        ; D:/DH Bach Khoa/Luan van/Software_thesis_2019/HexapodThesis-CPLD/encoder.bdf        ;
+; lpm_bustri0.v                                      ; yes             ; User Wizard-Generated File               ; D:/DH Bach Khoa/Luan van/Software_thesis_2019/HexapodThesis-CPLD/lpm_bustri0.v      ;
+; ../../Hexapod_K14/CPLD_New/CPLD_New/lpm_counter4.v ; yes             ; User Wizard-Generated File               ; D:/DH Bach Khoa/Luan van/Hexapod_K14/CPLD_New/CPLD_New/lpm_counter4.v               ;
+; lpm_xor0.v                                         ; yes             ; User Wizard-Generated File               ; D:/DH Bach Khoa/Luan van/Software_thesis_2019/HexapodThesis-CPLD/lpm_xor0.v         ;
+; lpm_counter0.v                                     ; yes             ; User Wizard-Generated File               ; D:/DH Bach Khoa/Luan van/Software_thesis_2019/HexapodThesis-CPLD/lpm_counter0.v     ;
+; dda_module.bdf                                     ; yes             ; Auto-Found Block Diagram/Schematic File  ; D:/DH Bach Khoa/Luan van/Software_thesis_2019/HexapodThesis-CPLD/dda_module.bdf     ;
+; 74373b.bdf                                         ; yes             ; Megafunction                             ; e:/installed software/altera/91sp2/quartus/libraries/others/maxplus2/74373b.bdf     ;
+; 74138.bdf                                          ; yes             ; Megafunction                             ; e:/installed software/altera/91sp2/quartus/libraries/others/maxplus2/74138.bdf      ;
+; lpm_bustri.tdf                                     ; yes             ; Megafunction                             ; e:/installed software/altera/91sp2/quartus/libraries/megafunctions/lpm_bustri.tdf   ;
+; lpm_counter.tdf                                    ; yes             ; Megafunction                             ; e:/installed software/altera/91sp2/quartus/libraries/megafunctions/lpm_counter.tdf  ;
+; db/cntr_t2h.tdf                                    ; yes             ; Auto-Generated Megafunction              ; D:/DH Bach Khoa/Luan van/Software_thesis_2019/HexapodThesis-CPLD/db/cntr_t2h.tdf    ;
+; lpm_xor.tdf                                        ; yes             ; Megafunction                             ; e:/installed software/altera/91sp2/quartus/libraries/megafunctions/lpm_xor.tdf      ;
+; db/cntr_g7h.tdf                                    ; yes             ; Auto-Generated Megafunction              ; D:/DH Bach Khoa/Luan van/Software_thesis_2019/HexapodThesis-CPLD/db/cntr_g7h.tdf    ;
++----------------------------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -158,57 +206,125 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 339   ;
-;     -- Combinational with no register       ; 209   ;
-;     -- Register only                        ; 49    ;
-;     -- Combinational with a register        ; 81    ;
+; Total logic elements                        ; 590   ;
+;     -- Combinational with no register       ; 292   ;
+;     -- Register only                        ; 97    ;
+;     -- Combinational with a register        ; 201   ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 69    ;
-;     -- 3 input functions                    ; 128   ;
-;     -- 2 input functions                    ; 86    ;
-;     -- 1 input functions                    ; 7     ;
+;     -- 4 input functions                    ; 141   ;
+;     -- 3 input functions                    ; 230   ;
+;     -- 2 input functions                    ; 109   ;
+;     -- 1 input functions                    ; 13    ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 237   ;
-;     -- arithmetic mode                      ; 102   ;
+;     -- normal mode                          ; 392   ;
+;     -- arithmetic mode                      ; 198   ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
 ;     -- synchronous clear/load mode          ; 43    ;
-;     -- asynchronous clear/load mode         ; 0     ;
+;     -- asynchronous clear/load mode         ; 96    ;
 ;                                             ;       ;
-; Total registers                             ; 130   ;
-; Total logic cells in carry chains           ; 116   ;
-; I/O pins                                    ; 31    ;
+; Total registers                             ; 298   ;
+; Total logic cells in carry chains           ; 224   ;
+; I/O pins                                    ; 53    ;
 ; Maximum fan-out node                        ; CLK   ;
-; Maximum fan-out                             ; 130   ;
-; Total fan-out                               ; 1190  ;
-; Average fan-out                             ; 3.22  ;
+; Maximum fan-out                             ; 142   ;
+; Total fan-out                               ; 2276  ;
+; Average fan-out                             ; 3.54  ;
 +---------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                        ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                       ; Library Name ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------+--------------+
-; |xuat_xung                 ; 339 (6)     ; 130          ; 0          ; 31   ; 0            ; 209 (6)      ; 49 (0)            ; 81 (0)           ; 116 (0)         ; 0 (0)      ; |xuat_xung                                ; work         ;
-;    |74373b:inst1|          ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|74373b:inst1                   ; work         ;
-;    |dda_module:inst5|      ; 327 (7)     ; 130          ; 0          ; 0    ; 0            ; 197 (7)      ; 49 (0)            ; 81 (0)           ; 116 (0)         ; 0 (0)      ; |xuat_xung|dda_module:inst5               ; work         ;
-;       |74373b:inst18|      ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|dda_module:inst5|74373b:inst18 ; work         ;
-;       |74373b:inst20|      ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|dda_module:inst5|74373b:inst20 ; work         ;
-;       |74373b:inst28|      ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|dda_module:inst5|74373b:inst28 ; work         ;
-;       |74373b:inst2|       ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|dda_module:inst5|74373b:inst2  ; work         ;
-;       |74373b:inst30|      ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|dda_module:inst5|74373b:inst30 ; work         ;
-;       |74373b:inst7|       ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|dda_module:inst5|74373b:inst7  ; work         ;
-;       |test:inst11|        ; 62 (62)     ; 17           ; 0          ; 0    ; 0            ; 45 (45)      ; 8 (8)             ; 9 (9)            ; 30 (30)         ; 0 (0)      ; |xuat_xung|dda_module:inst5|test:inst11   ; work         ;
-;       |test:inst13|        ; 36 (36)     ; 17           ; 0          ; 0    ; 0            ; 19 (19)      ; 8 (8)             ; 9 (9)            ; 15 (15)         ; 0 (0)      ; |xuat_xung|dda_module:inst5|test:inst13   ; work         ;
-;       |test:inst14|        ; 65 (65)     ; 45           ; 0          ; 0    ; 0            ; 20 (20)      ; 9 (9)             ; 36 (36)          ; 26 (26)         ; 0 (0)      ; |xuat_xung|dda_module:inst5|test:inst14   ; work         ;
-;       |test:inst4|         ; 37 (37)     ; 17           ; 0          ; 0    ; 0            ; 20 (20)      ; 8 (8)             ; 9 (9)            ; 15 (15)         ; 0 (0)      ; |xuat_xung|dda_module:inst5|test:inst4    ; work         ;
-;       |test:inst5|         ; 36 (36)     ; 17           ; 0          ; 0    ; 0            ; 19 (19)      ; 8 (8)             ; 9 (9)            ; 15 (15)         ; 0 (0)      ; |xuat_xung|dda_module:inst5|test:inst5    ; work         ;
-;       |test:inst|          ; 36 (36)     ; 17           ; 0          ; 0    ; 0            ; 19 (19)      ; 8 (8)             ; 9 (9)            ; 15 (15)         ; 0 (0)      ; |xuat_xung|dda_module:inst5|test:inst     ; work         ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                               ;
++-------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                      ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                         ; Library Name ;
++-------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
+; |xuat_xung                                      ; 590 (6)     ; 298          ; 0          ; 53   ; 0            ; 292 (6)      ; 97 (0)            ; 201 (0)          ; 224 (0)         ; 0 (0)      ; |xuat_xung                                                                                                                  ; work         ;
+;    |74373b:inst1|                               ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|74373b:inst1                                                                                                     ; work         ;
+;    |dda_module:inst5|                           ; 327 (7)     ; 130          ; 0          ; 0    ; 0            ; 197 (7)      ; 49 (0)            ; 81 (0)           ; 116 (0)         ; 0 (0)      ; |xuat_xung|dda_module:inst5                                                                                                 ; work         ;
+;       |74373b:inst18|                           ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|dda_module:inst5|74373b:inst18                                                                                   ; work         ;
+;       |74373b:inst20|                           ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|dda_module:inst5|74373b:inst20                                                                                   ; work         ;
+;       |74373b:inst28|                           ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|dda_module:inst5|74373b:inst28                                                                                   ; work         ;
+;       |74373b:inst2|                            ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|dda_module:inst5|74373b:inst2                                                                                    ; work         ;
+;       |74373b:inst30|                           ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|dda_module:inst5|74373b:inst30                                                                                   ; work         ;
+;       |74373b:inst7|                            ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|dda_module:inst5|74373b:inst7                                                                                    ; work         ;
+;       |test:inst11|                             ; 61 (61)     ; 17           ; 0          ; 0    ; 0            ; 44 (44)      ; 8 (8)             ; 9 (9)            ; 30 (30)         ; 0 (0)      ; |xuat_xung|dda_module:inst5|test:inst11                                                                                     ; work         ;
+;       |test:inst13|                             ; 36 (36)     ; 17           ; 0          ; 0    ; 0            ; 19 (19)      ; 8 (8)             ; 9 (9)            ; 15 (15)         ; 0 (0)      ; |xuat_xung|dda_module:inst5|test:inst13                                                                                     ; work         ;
+;       |test:inst14|                             ; 65 (65)     ; 45           ; 0          ; 0    ; 0            ; 20 (20)      ; 9 (9)             ; 36 (36)          ; 26 (26)         ; 0 (0)      ; |xuat_xung|dda_module:inst5|test:inst14                                                                                     ; work         ;
+;       |test:inst4|                              ; 37 (37)     ; 17           ; 0          ; 0    ; 0            ; 20 (20)      ; 8 (8)             ; 9 (9)            ; 15 (15)         ; 0 (0)      ; |xuat_xung|dda_module:inst5|test:inst4                                                                                      ; work         ;
+;       |test:inst5|                              ; 37 (37)     ; 17           ; 0          ; 0    ; 0            ; 20 (20)      ; 8 (8)             ; 9 (9)            ; 15 (15)         ; 0 (0)      ; |xuat_xung|dda_module:inst5|test:inst5                                                                                      ; work         ;
+;       |test:inst|                               ; 36 (36)     ; 17           ; 0          ; 0    ; 0            ; 19 (19)      ; 8 (8)             ; 9 (9)            ; 15 (15)         ; 0 (0)      ; |xuat_xung|dda_module:inst5|test:inst                                                                                       ; work         ;
+;    |encoder:inst18|                             ; 32 (2)      ; 28           ; 0          ; 0    ; 0            ; 4 (2)        ; 8 (0)             ; 20 (0)           ; 18 (0)          ; 0 (0)      ; |xuat_xung|encoder:inst18                                                                                                   ; work         ;
+;       |enc_filter:inst|                         ; 8 (8)       ; 8            ; 0          ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|encoder:inst18|enc_filter:inst                                                                                   ; work         ;
+;       |encoder_module:inst1|                    ; 20 (3)      ; 18           ; 0          ; 0    ; 0            ; 2 (1)        ; 2 (2)             ; 16 (0)           ; 16 (0)          ; 0 (0)      ; |xuat_xung|encoder:inst18|encoder_module:inst1                                                                              ; work         ;
+;          |lpm_counter4:inst5|                   ; 16 (0)      ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (0)           ; 16 (0)          ; 0 (0)      ; |xuat_xung|encoder:inst18|encoder_module:inst1|lpm_counter4:inst5                                                           ; work         ;
+;             |lpm_counter:lpm_counter_component| ; 16 (0)      ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (0)           ; 16 (0)          ; 0 (0)      ; |xuat_xung|encoder:inst18|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component                         ; work         ;
+;                |cntr_t2h:auto_generated|        ; 16 (16)     ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (16)          ; 16 (16)         ; 0 (0)      ; |xuat_xung|encoder:inst18|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated ; work         ;
+;          |lpm_xor0:inst|                        ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|encoder:inst18|encoder_module:inst1|lpm_xor0:inst                                                                ; work         ;
+;             |lpm_xor:lpm_xor_component|         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|encoder:inst18|encoder_module:inst1|lpm_xor0:inst|lpm_xor:lpm_xor_component                                      ; work         ;
+;       |lpm_counter0:inst3|                      ; 2 (0)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 2 (0)           ; 0 (0)      ; |xuat_xung|encoder:inst18|lpm_counter0:inst3                                                                                ; work         ;
+;          |lpm_counter:lpm_counter_component|    ; 2 (0)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 2 (0)           ; 0 (0)      ; |xuat_xung|encoder:inst18|lpm_counter0:inst3|lpm_counter:lpm_counter_component                                              ; work         ;
+;             |cntr_g7h:auto_generated|           ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 2 (2)           ; 0 (0)      ; |xuat_xung|encoder:inst18|lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_g7h:auto_generated                      ; work         ;
+;    |encoder:inst33|                             ; 96 (1)      ; 28           ; 0          ; 0    ; 0            ; 68 (1)       ; 8 (0)             ; 20 (0)           ; 18 (0)          ; 0 (0)      ; |xuat_xung|encoder:inst33                                                                                                   ; work         ;
+;       |enc_filter:inst|                         ; 8 (8)       ; 8            ; 0          ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|encoder:inst33|enc_filter:inst                                                                                   ; work         ;
+;       |encoder_module:inst1|                    ; 20 (3)      ; 18           ; 0          ; 0    ; 0            ; 2 (1)        ; 2 (2)             ; 16 (0)           ; 16 (0)          ; 0 (0)      ; |xuat_xung|encoder:inst33|encoder_module:inst1                                                                              ; work         ;
+;          |lpm_counter4:inst5|                   ; 16 (0)      ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (0)           ; 16 (0)          ; 0 (0)      ; |xuat_xung|encoder:inst33|encoder_module:inst1|lpm_counter4:inst5                                                           ; work         ;
+;             |lpm_counter:lpm_counter_component| ; 16 (0)      ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (0)           ; 16 (0)          ; 0 (0)      ; |xuat_xung|encoder:inst33|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component                         ; work         ;
+;                |cntr_t2h:auto_generated|        ; 16 (16)     ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (16)          ; 16 (16)         ; 0 (0)      ; |xuat_xung|encoder:inst33|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated ; work         ;
+;          |lpm_xor0:inst|                        ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|encoder:inst33|encoder_module:inst1|lpm_xor0:inst                                                                ; work         ;
+;             |lpm_xor:lpm_xor_component|         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|encoder:inst33|encoder_module:inst1|lpm_xor0:inst|lpm_xor:lpm_xor_component                                      ; work         ;
+;       |lpm_bustri0:inst2|                       ; 65 (0)      ; 0            ; 0          ; 0    ; 0            ; 65 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|encoder:inst33|lpm_bustri0:inst2                                                                                 ; work         ;
+;          |lpm_bustri:lpm_bustri_component|      ; 65 (65)     ; 0            ; 0          ; 0    ; 0            ; 65 (65)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|encoder:inst33|lpm_bustri0:inst2|lpm_bustri:lpm_bustri_component                                                 ; work         ;
+;       |lpm_counter0:inst3|                      ; 2 (0)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 2 (0)           ; 0 (0)      ; |xuat_xung|encoder:inst33|lpm_counter0:inst3                                                                                ; work         ;
+;          |lpm_counter:lpm_counter_component|    ; 2 (0)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 2 (0)           ; 0 (0)      ; |xuat_xung|encoder:inst33|lpm_counter0:inst3|lpm_counter:lpm_counter_component                                              ; work         ;
+;             |cntr_g7h:auto_generated|           ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 2 (2)           ; 0 (0)      ; |xuat_xung|encoder:inst33|lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_g7h:auto_generated                      ; work         ;
+;    |encoder:inst34|                             ; 31 (1)      ; 28           ; 0          ; 0    ; 0            ; 3 (1)        ; 8 (0)             ; 20 (0)           ; 18 (0)          ; 0 (0)      ; |xuat_xung|encoder:inst34                                                                                                   ; work         ;
+;       |enc_filter:inst|                         ; 8 (8)       ; 8            ; 0          ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|encoder:inst34|enc_filter:inst                                                                                   ; work         ;
+;       |encoder_module:inst1|                    ; 20 (3)      ; 18           ; 0          ; 0    ; 0            ; 2 (1)        ; 2 (2)             ; 16 (0)           ; 16 (0)          ; 0 (0)      ; |xuat_xung|encoder:inst34|encoder_module:inst1                                                                              ; work         ;
+;          |lpm_counter4:inst5|                   ; 16 (0)      ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (0)           ; 16 (0)          ; 0 (0)      ; |xuat_xung|encoder:inst34|encoder_module:inst1|lpm_counter4:inst5                                                           ; work         ;
+;             |lpm_counter:lpm_counter_component| ; 16 (0)      ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (0)           ; 16 (0)          ; 0 (0)      ; |xuat_xung|encoder:inst34|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component                         ; work         ;
+;                |cntr_t2h:auto_generated|        ; 16 (16)     ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (16)          ; 16 (16)         ; 0 (0)      ; |xuat_xung|encoder:inst34|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated ; work         ;
+;          |lpm_xor0:inst|                        ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|encoder:inst34|encoder_module:inst1|lpm_xor0:inst                                                                ; work         ;
+;             |lpm_xor:lpm_xor_component|         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|encoder:inst34|encoder_module:inst1|lpm_xor0:inst|lpm_xor:lpm_xor_component                                      ; work         ;
+;       |lpm_counter0:inst3|                      ; 2 (0)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 2 (0)           ; 0 (0)      ; |xuat_xung|encoder:inst34|lpm_counter0:inst3                                                                                ; work         ;
+;          |lpm_counter:lpm_counter_component|    ; 2 (0)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 2 (0)           ; 0 (0)      ; |xuat_xung|encoder:inst34|lpm_counter0:inst3|lpm_counter:lpm_counter_component                                              ; work         ;
+;             |cntr_g7h:auto_generated|           ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 2 (2)           ; 0 (0)      ; |xuat_xung|encoder:inst34|lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_g7h:auto_generated                      ; work         ;
+;    |encoder:inst35|                             ; 31 (1)      ; 28           ; 0          ; 0    ; 0            ; 3 (1)        ; 8 (0)             ; 20 (0)           ; 18 (0)          ; 0 (0)      ; |xuat_xung|encoder:inst35                                                                                                   ; work         ;
+;       |enc_filter:inst|                         ; 8 (8)       ; 8            ; 0          ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|encoder:inst35|enc_filter:inst                                                                                   ; work         ;
+;       |encoder_module:inst1|                    ; 20 (3)      ; 18           ; 0          ; 0    ; 0            ; 2 (1)        ; 2 (2)             ; 16 (0)           ; 16 (0)          ; 0 (0)      ; |xuat_xung|encoder:inst35|encoder_module:inst1                                                                              ; work         ;
+;          |lpm_counter4:inst5|                   ; 16 (0)      ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (0)           ; 16 (0)          ; 0 (0)      ; |xuat_xung|encoder:inst35|encoder_module:inst1|lpm_counter4:inst5                                                           ; work         ;
+;             |lpm_counter:lpm_counter_component| ; 16 (0)      ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (0)           ; 16 (0)          ; 0 (0)      ; |xuat_xung|encoder:inst35|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component                         ; work         ;
+;                |cntr_t2h:auto_generated|        ; 16 (16)     ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (16)          ; 16 (16)         ; 0 (0)      ; |xuat_xung|encoder:inst35|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated ; work         ;
+;          |lpm_xor0:inst|                        ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|encoder:inst35|encoder_module:inst1|lpm_xor0:inst                                                                ; work         ;
+;             |lpm_xor:lpm_xor_component|         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|encoder:inst35|encoder_module:inst1|lpm_xor0:inst|lpm_xor:lpm_xor_component                                      ; work         ;
+;       |lpm_counter0:inst3|                      ; 2 (0)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 2 (0)           ; 0 (0)      ; |xuat_xung|encoder:inst35|lpm_counter0:inst3                                                                                ; work         ;
+;          |lpm_counter:lpm_counter_component|    ; 2 (0)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 2 (0)           ; 0 (0)      ; |xuat_xung|encoder:inst35|lpm_counter0:inst3|lpm_counter:lpm_counter_component                                              ; work         ;
+;             |cntr_g7h:auto_generated|           ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 2 (2)           ; 0 (0)      ; |xuat_xung|encoder:inst35|lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_g7h:auto_generated                      ; work         ;
+;    |encoder:inst37|                             ; 30 (0)      ; 28           ; 0          ; 0    ; 0            ; 2 (0)        ; 8 (0)             ; 20 (0)           ; 18 (0)          ; 0 (0)      ; |xuat_xung|encoder:inst37                                                                                                   ; work         ;
+;       |enc_filter:inst|                         ; 8 (8)       ; 8            ; 0          ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|encoder:inst37|enc_filter:inst                                                                                   ; work         ;
+;       |encoder_module:inst1|                    ; 20 (3)      ; 18           ; 0          ; 0    ; 0            ; 2 (1)        ; 2 (2)             ; 16 (0)           ; 16 (0)          ; 0 (0)      ; |xuat_xung|encoder:inst37|encoder_module:inst1                                                                              ; work         ;
+;          |lpm_counter4:inst5|                   ; 16 (0)      ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (0)           ; 16 (0)          ; 0 (0)      ; |xuat_xung|encoder:inst37|encoder_module:inst1|lpm_counter4:inst5                                                           ; work         ;
+;             |lpm_counter:lpm_counter_component| ; 16 (0)      ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (0)           ; 16 (0)          ; 0 (0)      ; |xuat_xung|encoder:inst37|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component                         ; work         ;
+;                |cntr_t2h:auto_generated|        ; 16 (16)     ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (16)          ; 16 (16)         ; 0 (0)      ; |xuat_xung|encoder:inst37|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated ; work         ;
+;          |lpm_xor0:inst|                        ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|encoder:inst37|encoder_module:inst1|lpm_xor0:inst                                                                ; work         ;
+;             |lpm_xor:lpm_xor_component|         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|encoder:inst37|encoder_module:inst1|lpm_xor0:inst|lpm_xor:lpm_xor_component                                      ; work         ;
+;       |lpm_counter0:inst3|                      ; 2 (0)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 2 (0)           ; 0 (0)      ; |xuat_xung|encoder:inst37|lpm_counter0:inst3                                                                                ; work         ;
+;          |lpm_counter:lpm_counter_component|    ; 2 (0)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 2 (0)           ; 0 (0)      ; |xuat_xung|encoder:inst37|lpm_counter0:inst3|lpm_counter:lpm_counter_component                                              ; work         ;
+;             |cntr_g7h:auto_generated|           ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 2 (2)           ; 0 (0)      ; |xuat_xung|encoder:inst37|lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_g7h:auto_generated                      ; work         ;
+;    |encoder:inst3|                              ; 31 (1)      ; 28           ; 0          ; 0    ; 0            ; 3 (1)        ; 8 (0)             ; 20 (0)           ; 18 (0)          ; 0 (0)      ; |xuat_xung|encoder:inst3                                                                                                    ; work         ;
+;       |enc_filter:inst|                         ; 8 (8)       ; 8            ; 0          ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|encoder:inst3|enc_filter:inst                                                                                    ; work         ;
+;       |encoder_module:inst1|                    ; 20 (3)      ; 18           ; 0          ; 0    ; 0            ; 2 (1)        ; 2 (2)             ; 16 (0)           ; 16 (0)          ; 0 (0)      ; |xuat_xung|encoder:inst3|encoder_module:inst1                                                                               ; work         ;
+;          |lpm_counter4:inst5|                   ; 16 (0)      ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (0)           ; 16 (0)          ; 0 (0)      ; |xuat_xung|encoder:inst3|encoder_module:inst1|lpm_counter4:inst5                                                            ; work         ;
+;             |lpm_counter:lpm_counter_component| ; 16 (0)      ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (0)           ; 16 (0)          ; 0 (0)      ; |xuat_xung|encoder:inst3|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component                          ; work         ;
+;                |cntr_t2h:auto_generated|        ; 16 (16)     ; 16           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (16)          ; 16 (16)         ; 0 (0)      ; |xuat_xung|encoder:inst3|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated  ; work         ;
+;          |lpm_xor0:inst|                        ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|encoder:inst3|encoder_module:inst1|lpm_xor0:inst                                                                 ; work         ;
+;             |lpm_xor:lpm_xor_component|         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |xuat_xung|encoder:inst3|encoder_module:inst1|lpm_xor0:inst|lpm_xor:lpm_xor_component                                       ; work         ;
+;       |lpm_counter0:inst3|                      ; 2 (0)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 2 (0)           ; 0 (0)      ; |xuat_xung|encoder:inst3|lpm_counter0:inst3                                                                                 ; work         ;
+;          |lpm_counter:lpm_counter_component|    ; 2 (0)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 2 (0)           ; 0 (0)      ; |xuat_xung|encoder:inst3|lpm_counter0:inst3|lpm_counter:lpm_counter_component                                               ; work         ;
+;             |cntr_g7h:auto_generated|           ; 2 (2)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; 2 (2)           ; 0 (0)      ; |xuat_xung|encoder:inst3|lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_g7h:auto_generated                       ; work         ;
++-------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -276,165 +392,171 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+-------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                    ;
-+---------------------------------------------+---------------------------------------------------------+
-; Register name                               ; Reason for Removal                                      ;
-+---------------------------------------------+---------------------------------------------------------+
-; dda_module:inst5|test:inst14|Ntemp[7]       ; Stuck at GND due to stuck port data_in                  ;
-; dda_module:inst5|test:inst13|Ntemp[7]       ; Stuck at GND due to stuck port data_in                  ;
-; dda_module:inst5|test:inst11|Ntemp[7]       ; Stuck at GND due to stuck port data_in                  ;
-; dda_module:inst5|test:inst5|Ntemp[7]        ; Stuck at GND due to stuck port data_in                  ;
-; dda_module:inst5|test:inst4|Ntemp[7]        ; Stuck at GND due to stuck port data_in                  ;
-; dda_module:inst5|test:inst|Ntemp[7]         ; Stuck at GND due to stuck port data_in                  ;
-; dda_module:inst5|test:inst|pre_WR           ; Merged with dda_module:inst5|test:inst14|pre_WR         ;
-; dda_module:inst5|test:inst4|pre_WR          ; Merged with dda_module:inst5|test:inst14|pre_WR         ;
-; dda_module:inst5|test:inst5|pre_WR          ; Merged with dda_module:inst5|test:inst14|pre_WR         ;
-; dda_module:inst5|test:inst11|pre_WR         ; Merged with dda_module:inst5|test:inst14|pre_WR         ;
-; dda_module:inst5|test:inst13|pre_WR         ; Merged with dda_module:inst5|test:inst14|pre_WR         ;
-; dda_module:inst5|test:inst11|clk20u         ; Merged with dda_module:inst5|test:inst14|clk20u         ;
-; dda_module:inst5|test:inst13|clk20u         ; Merged with dda_module:inst5|test:inst14|clk20u         ;
-; dda_module:inst5|test:inst4|clk20u          ; Merged with dda_module:inst5|test:inst14|clk20u         ;
-; dda_module:inst5|test:inst5|clk20u          ; Merged with dda_module:inst5|test:inst14|clk20u         ;
-; dda_module:inst5|test:inst|clk20u           ; Merged with dda_module:inst5|test:inst14|clk20u         ;
-; dda_module:inst5|test:inst11|clk20u_cnt[0]  ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[0]  ;
-; dda_module:inst5|test:inst13|clk20u_cnt[0]  ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[0]  ;
-; dda_module:inst5|test:inst4|clk20u_cnt[0]   ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[0]  ;
-; dda_module:inst5|test:inst5|clk20u_cnt[0]   ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[0]  ;
-; dda_module:inst5|test:inst|clk20u_cnt[0]    ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[0]  ;
-; dda_module:inst5|test:inst11|clk20u_cnt[1]  ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[1]  ;
-; dda_module:inst5|test:inst13|clk20u_cnt[1]  ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[1]  ;
-; dda_module:inst5|test:inst4|clk20u_cnt[1]   ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[1]  ;
-; dda_module:inst5|test:inst5|clk20u_cnt[1]   ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[1]  ;
-; dda_module:inst5|test:inst|clk20u_cnt[1]    ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[1]  ;
-; dda_module:inst5|test:inst11|clk20u_cnt[2]  ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[2]  ;
-; dda_module:inst5|test:inst13|clk20u_cnt[2]  ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[2]  ;
-; dda_module:inst5|test:inst4|clk20u_cnt[2]   ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[2]  ;
-; dda_module:inst5|test:inst5|clk20u_cnt[2]   ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[2]  ;
-; dda_module:inst5|test:inst|clk20u_cnt[2]    ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[2]  ;
-; dda_module:inst5|test:inst11|clk20u_cnt[3]  ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[3]  ;
-; dda_module:inst5|test:inst13|clk20u_cnt[3]  ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[3]  ;
-; dda_module:inst5|test:inst4|clk20u_cnt[3]   ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[3]  ;
-; dda_module:inst5|test:inst5|clk20u_cnt[3]   ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[3]  ;
-; dda_module:inst5|test:inst|clk20u_cnt[3]    ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[3]  ;
-; dda_module:inst5|test:inst11|clk20u_cnt[4]  ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[4]  ;
-; dda_module:inst5|test:inst13|clk20u_cnt[4]  ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[4]  ;
-; dda_module:inst5|test:inst4|clk20u_cnt[4]   ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[4]  ;
-; dda_module:inst5|test:inst5|clk20u_cnt[4]   ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[4]  ;
-; dda_module:inst5|test:inst|clk20u_cnt[4]    ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[4]  ;
-; dda_module:inst5|test:inst11|clk20u_cnt[5]  ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[5]  ;
-; dda_module:inst5|test:inst13|clk20u_cnt[5]  ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[5]  ;
-; dda_module:inst5|test:inst4|clk20u_cnt[5]   ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[5]  ;
-; dda_module:inst5|test:inst5|clk20u_cnt[5]   ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[5]  ;
-; dda_module:inst5|test:inst|clk20u_cnt[5]    ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[5]  ;
-; dda_module:inst5|test:inst11|clk20u_cnt[6]  ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[6]  ;
-; dda_module:inst5|test:inst13|clk20u_cnt[6]  ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[6]  ;
-; dda_module:inst5|test:inst4|clk20u_cnt[6]   ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[6]  ;
-; dda_module:inst5|test:inst5|clk20u_cnt[6]   ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[6]  ;
-; dda_module:inst5|test:inst|clk20u_cnt[6]    ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[6]  ;
-; dda_module:inst5|test:inst11|clk20u_cnt[7]  ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[7]  ;
-; dda_module:inst5|test:inst13|clk20u_cnt[7]  ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[7]  ;
-; dda_module:inst5|test:inst4|clk20u_cnt[7]   ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[7]  ;
-; dda_module:inst5|test:inst5|clk20u_cnt[7]   ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[7]  ;
-; dda_module:inst5|test:inst|clk20u_cnt[7]    ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[7]  ;
-; dda_module:inst5|test:inst11|clk20u_cnt[8]  ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[8]  ;
-; dda_module:inst5|test:inst13|clk20u_cnt[8]  ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[8]  ;
-; dda_module:inst5|test:inst4|clk20u_cnt[8]   ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[8]  ;
-; dda_module:inst5|test:inst5|clk20u_cnt[8]   ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[8]  ;
-; dda_module:inst5|test:inst|clk20u_cnt[8]    ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[8]  ;
-; dda_module:inst5|test:inst11|clk20u_cnt[9]  ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[9]  ;
-; dda_module:inst5|test:inst13|clk20u_cnt[9]  ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[9]  ;
-; dda_module:inst5|test:inst4|clk20u_cnt[9]   ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[9]  ;
-; dda_module:inst5|test:inst5|clk20u_cnt[9]   ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[9]  ;
-; dda_module:inst5|test:inst|clk20u_cnt[9]    ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[9]  ;
-; dda_module:inst5|test:inst11|clk20u_cnt[10] ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[10] ;
-; dda_module:inst5|test:inst13|clk20u_cnt[10] ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[10] ;
-; dda_module:inst5|test:inst4|clk20u_cnt[10]  ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[10] ;
-; dda_module:inst5|test:inst5|clk20u_cnt[10]  ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[10] ;
-; dda_module:inst5|test:inst|clk20u_cnt[10]   ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[10] ;
-; dda_module:inst5|test:inst11|clk20u_cnt[11] ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[11] ;
-; dda_module:inst5|test:inst13|clk20u_cnt[11] ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[11] ;
-; dda_module:inst5|test:inst4|clk20u_cnt[11]  ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[11] ;
-; dda_module:inst5|test:inst5|clk20u_cnt[11]  ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[11] ;
-; dda_module:inst5|test:inst|clk20u_cnt[11]   ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[11] ;
-; dda_module:inst5|test:inst11|clk20u_cnt[12] ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[12] ;
-; dda_module:inst5|test:inst13|clk20u_cnt[12] ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[12] ;
-; dda_module:inst5|test:inst4|clk20u_cnt[12]  ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[12] ;
-; dda_module:inst5|test:inst5|clk20u_cnt[12]  ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[12] ;
-; dda_module:inst5|test:inst|clk20u_cnt[12]   ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[12] ;
-; dda_module:inst5|test:inst11|clk20u_cnt[13] ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[13] ;
-; dda_module:inst5|test:inst13|clk20u_cnt[13] ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[13] ;
-; dda_module:inst5|test:inst4|clk20u_cnt[13]  ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[13] ;
-; dda_module:inst5|test:inst5|clk20u_cnt[13]  ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[13] ;
-; dda_module:inst5|test:inst|clk20u_cnt[13]   ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[13] ;
-; dda_module:inst5|test:inst11|clk20u_cnt[14] ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[14] ;
-; dda_module:inst5|test:inst13|clk20u_cnt[14] ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[14] ;
-; dda_module:inst5|test:inst4|clk20u_cnt[14]  ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[14] ;
-; dda_module:inst5|test:inst5|clk20u_cnt[14]  ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[14] ;
-; dda_module:inst5|test:inst|clk20u_cnt[14]   ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[14] ;
-; dda_module:inst5|test:inst11|clk_cnt[0]     ; Merged with dda_module:inst5|test:inst14|clk_cnt[0]     ;
-; dda_module:inst5|test:inst13|clk_cnt[0]     ; Merged with dda_module:inst5|test:inst14|clk_cnt[0]     ;
-; dda_module:inst5|test:inst4|clk_cnt[0]      ; Merged with dda_module:inst5|test:inst14|clk_cnt[0]     ;
-; dda_module:inst5|test:inst5|clk_cnt[0]      ; Merged with dda_module:inst5|test:inst14|clk_cnt[0]     ;
-; dda_module:inst5|test:inst|clk_cnt[0]       ; Merged with dda_module:inst5|test:inst14|clk_cnt[0]     ;
-; dda_module:inst5|test:inst11|clk_cnt[1]     ; Merged with dda_module:inst5|test:inst14|clk_cnt[1]     ;
-; dda_module:inst5|test:inst13|clk_cnt[1]     ; Merged with dda_module:inst5|test:inst14|clk_cnt[1]     ;
-; dda_module:inst5|test:inst4|clk_cnt[1]      ; Merged with dda_module:inst5|test:inst14|clk_cnt[1]     ;
-; dda_module:inst5|test:inst5|clk_cnt[1]      ; Merged with dda_module:inst5|test:inst14|clk_cnt[1]     ;
-; dda_module:inst5|test:inst|clk_cnt[1]       ; Merged with dda_module:inst5|test:inst14|clk_cnt[1]     ;
-; dda_module:inst5|test:inst11|clk_cnt[2]     ; Merged with dda_module:inst5|test:inst14|clk_cnt[2]     ;
-; dda_module:inst5|test:inst13|clk_cnt[2]     ; Merged with dda_module:inst5|test:inst14|clk_cnt[2]     ;
-; dda_module:inst5|test:inst4|clk_cnt[2]      ; Merged with dda_module:inst5|test:inst14|clk_cnt[2]     ;
-; dda_module:inst5|test:inst5|clk_cnt[2]      ; Merged with dda_module:inst5|test:inst14|clk_cnt[2]     ;
-; dda_module:inst5|test:inst|clk_cnt[2]       ; Merged with dda_module:inst5|test:inst14|clk_cnt[2]     ;
-; dda_module:inst5|test:inst11|clk_cnt[3]     ; Merged with dda_module:inst5|test:inst14|clk_cnt[3]     ;
-; dda_module:inst5|test:inst13|clk_cnt[3]     ; Merged with dda_module:inst5|test:inst14|clk_cnt[3]     ;
-; dda_module:inst5|test:inst4|clk_cnt[3]      ; Merged with dda_module:inst5|test:inst14|clk_cnt[3]     ;
-; dda_module:inst5|test:inst5|clk_cnt[3]      ; Merged with dda_module:inst5|test:inst14|clk_cnt[3]     ;
-; dda_module:inst5|test:inst|clk_cnt[3]       ; Merged with dda_module:inst5|test:inst14|clk_cnt[3]     ;
-; dda_module:inst5|test:inst11|clk_cnt[4]     ; Merged with dda_module:inst5|test:inst14|clk_cnt[4]     ;
-; dda_module:inst5|test:inst13|clk_cnt[4]     ; Merged with dda_module:inst5|test:inst14|clk_cnt[4]     ;
-; dda_module:inst5|test:inst4|clk_cnt[4]      ; Merged with dda_module:inst5|test:inst14|clk_cnt[4]     ;
-; dda_module:inst5|test:inst5|clk_cnt[4]      ; Merged with dda_module:inst5|test:inst14|clk_cnt[4]     ;
-; dda_module:inst5|test:inst|clk_cnt[4]       ; Merged with dda_module:inst5|test:inst14|clk_cnt[4]     ;
-; dda_module:inst5|test:inst11|clk_cnt[5]     ; Merged with dda_module:inst5|test:inst14|clk_cnt[5]     ;
-; dda_module:inst5|test:inst13|clk_cnt[5]     ; Merged with dda_module:inst5|test:inst14|clk_cnt[5]     ;
-; dda_module:inst5|test:inst4|clk_cnt[5]      ; Merged with dda_module:inst5|test:inst14|clk_cnt[5]     ;
-; dda_module:inst5|test:inst5|clk_cnt[5]      ; Merged with dda_module:inst5|test:inst14|clk_cnt[5]     ;
-; dda_module:inst5|test:inst|clk_cnt[5]       ; Merged with dda_module:inst5|test:inst14|clk_cnt[5]     ;
-; dda_module:inst5|test:inst11|clk_cnt[6]     ; Merged with dda_module:inst5|test:inst14|clk_cnt[6]     ;
-; dda_module:inst5|test:inst13|clk_cnt[6]     ; Merged with dda_module:inst5|test:inst14|clk_cnt[6]     ;
-; dda_module:inst5|test:inst4|clk_cnt[6]      ; Merged with dda_module:inst5|test:inst14|clk_cnt[6]     ;
-; dda_module:inst5|test:inst5|clk_cnt[6]      ; Merged with dda_module:inst5|test:inst14|clk_cnt[6]     ;
-; dda_module:inst5|test:inst|clk_cnt[6]       ; Merged with dda_module:inst5|test:inst14|clk_cnt[6]     ;
-; dda_module:inst5|test:inst11|clk_cnt[7]     ; Merged with dda_module:inst5|test:inst14|clk_cnt[7]     ;
-; dda_module:inst5|test:inst13|clk_cnt[7]     ; Merged with dda_module:inst5|test:inst14|clk_cnt[7]     ;
-; dda_module:inst5|test:inst4|clk_cnt[7]      ; Merged with dda_module:inst5|test:inst14|clk_cnt[7]     ;
-; dda_module:inst5|test:inst5|clk_cnt[7]      ; Merged with dda_module:inst5|test:inst14|clk_cnt[7]     ;
-; dda_module:inst5|test:inst|clk_cnt[7]       ; Merged with dda_module:inst5|test:inst14|clk_cnt[7]     ;
-; dda_module:inst5|test:inst11|clk_cnt[8]     ; Merged with dda_module:inst5|test:inst14|clk_cnt[8]     ;
-; dda_module:inst5|test:inst13|clk_cnt[8]     ; Merged with dda_module:inst5|test:inst14|clk_cnt[8]     ;
-; dda_module:inst5|test:inst4|clk_cnt[8]      ; Merged with dda_module:inst5|test:inst14|clk_cnt[8]     ;
-; dda_module:inst5|test:inst5|clk_cnt[8]      ; Merged with dda_module:inst5|test:inst14|clk_cnt[8]     ;
-; dda_module:inst5|test:inst|clk_cnt[8]       ; Merged with dda_module:inst5|test:inst14|clk_cnt[8]     ;
-; dda_module:inst5|test:inst11|clk_cnt[9]     ; Merged with dda_module:inst5|test:inst14|clk_cnt[9]     ;
-; dda_module:inst5|test:inst13|clk_cnt[9]     ; Merged with dda_module:inst5|test:inst14|clk_cnt[9]     ;
-; dda_module:inst5|test:inst4|clk_cnt[9]      ; Merged with dda_module:inst5|test:inst14|clk_cnt[9]     ;
-; dda_module:inst5|test:inst5|clk_cnt[9]      ; Merged with dda_module:inst5|test:inst14|clk_cnt[9]     ;
-; dda_module:inst5|test:inst|clk_cnt[9]       ; Merged with dda_module:inst5|test:inst14|clk_cnt[9]     ;
-; dda_module:inst5|test:inst11|clk_cnt[10]    ; Merged with dda_module:inst5|test:inst14|clk_cnt[10]    ;
-; dda_module:inst5|test:inst13|clk_cnt[10]    ; Merged with dda_module:inst5|test:inst14|clk_cnt[10]    ;
-; dda_module:inst5|test:inst4|clk_cnt[10]     ; Merged with dda_module:inst5|test:inst14|clk_cnt[10]    ;
-; dda_module:inst5|test:inst5|clk_cnt[10]     ; Merged with dda_module:inst5|test:inst14|clk_cnt[10]    ;
-; dda_module:inst5|test:inst|clk_cnt[10]      ; Merged with dda_module:inst5|test:inst14|clk_cnt[10]    ;
-; dda_module:inst5|test:inst11|busy           ; Merged with dda_module:inst5|test:inst14|busy           ;
-; dda_module:inst5|test:inst13|busy           ; Merged with dda_module:inst5|test:inst14|busy           ;
-; dda_module:inst5|test:inst4|busy            ; Merged with dda_module:inst5|test:inst14|busy           ;
-; dda_module:inst5|test:inst5|busy            ; Merged with dda_module:inst5|test:inst14|busy           ;
-; dda_module:inst5|test:inst|busy             ; Merged with dda_module:inst5|test:inst14|busy           ;
-; dda_module:inst5|test:inst14|clk20u_cnt[0]  ; Merged with dda_module:inst5|test:inst14|clk20u         ;
-; Total Number of Removed Registers = 152     ;                                                         ;
-+---------------------------------------------+---------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                              ;
++-------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
+; Register name                                                                                         ; Reason for Removal                                      ;
++-------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
+; dda_module:inst5|test:inst14|Ntemp[7]                                                                 ; Stuck at GND due to stuck port data_in                  ;
+; dda_module:inst5|test:inst13|Ntemp[7]                                                                 ; Stuck at GND due to stuck port data_in                  ;
+; dda_module:inst5|test:inst11|Ntemp[7]                                                                 ; Stuck at GND due to stuck port data_in                  ;
+; dda_module:inst5|test:inst5|Ntemp[7]                                                                  ; Stuck at GND due to stuck port data_in                  ;
+; dda_module:inst5|test:inst4|Ntemp[7]                                                                  ; Stuck at GND due to stuck port data_in                  ;
+; dda_module:inst5|test:inst|Ntemp[7]                                                                   ; Stuck at GND due to stuck port data_in                  ;
+; encoder:inst18|lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_g7h:auto_generated|safe_q[2] ; Lost fanout                                             ;
+; encoder:inst3|lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_g7h:auto_generated|safe_q[2]  ; Lost fanout                                             ;
+; encoder:inst37|lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_g7h:auto_generated|safe_q[2] ; Lost fanout                                             ;
+; encoder:inst35|lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_g7h:auto_generated|safe_q[2] ; Lost fanout                                             ;
+; encoder:inst34|lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_g7h:auto_generated|safe_q[2] ; Lost fanout                                             ;
+; encoder:inst33|lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_g7h:auto_generated|safe_q[2] ; Lost fanout                                             ;
+; dda_module:inst5|test:inst|pre_WR                                                                     ; Merged with dda_module:inst5|test:inst14|pre_WR         ;
+; dda_module:inst5|test:inst4|pre_WR                                                                    ; Merged with dda_module:inst5|test:inst14|pre_WR         ;
+; dda_module:inst5|test:inst5|pre_WR                                                                    ; Merged with dda_module:inst5|test:inst14|pre_WR         ;
+; dda_module:inst5|test:inst11|pre_WR                                                                   ; Merged with dda_module:inst5|test:inst14|pre_WR         ;
+; dda_module:inst5|test:inst13|pre_WR                                                                   ; Merged with dda_module:inst5|test:inst14|pre_WR         ;
+; dda_module:inst5|test:inst11|clk20u                                                                   ; Merged with dda_module:inst5|test:inst14|clk20u         ;
+; dda_module:inst5|test:inst13|clk20u                                                                   ; Merged with dda_module:inst5|test:inst14|clk20u         ;
+; dda_module:inst5|test:inst4|clk20u                                                                    ; Merged with dda_module:inst5|test:inst14|clk20u         ;
+; dda_module:inst5|test:inst5|clk20u                                                                    ; Merged with dda_module:inst5|test:inst14|clk20u         ;
+; dda_module:inst5|test:inst|clk20u                                                                     ; Merged with dda_module:inst5|test:inst14|clk20u         ;
+; dda_module:inst5|test:inst11|clk20u_cnt[0]                                                            ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[0]  ;
+; dda_module:inst5|test:inst13|clk20u_cnt[0]                                                            ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[0]  ;
+; dda_module:inst5|test:inst4|clk20u_cnt[0]                                                             ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[0]  ;
+; dda_module:inst5|test:inst5|clk20u_cnt[0]                                                             ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[0]  ;
+; dda_module:inst5|test:inst|clk20u_cnt[0]                                                              ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[0]  ;
+; dda_module:inst5|test:inst11|clk20u_cnt[1]                                                            ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[1]  ;
+; dda_module:inst5|test:inst13|clk20u_cnt[1]                                                            ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[1]  ;
+; dda_module:inst5|test:inst4|clk20u_cnt[1]                                                             ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[1]  ;
+; dda_module:inst5|test:inst5|clk20u_cnt[1]                                                             ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[1]  ;
+; dda_module:inst5|test:inst|clk20u_cnt[1]                                                              ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[1]  ;
+; dda_module:inst5|test:inst11|clk20u_cnt[2]                                                            ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[2]  ;
+; dda_module:inst5|test:inst13|clk20u_cnt[2]                                                            ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[2]  ;
+; dda_module:inst5|test:inst4|clk20u_cnt[2]                                                             ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[2]  ;
+; dda_module:inst5|test:inst5|clk20u_cnt[2]                                                             ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[2]  ;
+; dda_module:inst5|test:inst|clk20u_cnt[2]                                                              ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[2]  ;
+; dda_module:inst5|test:inst11|clk20u_cnt[3]                                                            ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[3]  ;
+; dda_module:inst5|test:inst13|clk20u_cnt[3]                                                            ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[3]  ;
+; dda_module:inst5|test:inst4|clk20u_cnt[3]                                                             ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[3]  ;
+; dda_module:inst5|test:inst5|clk20u_cnt[3]                                                             ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[3]  ;
+; dda_module:inst5|test:inst|clk20u_cnt[3]                                                              ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[3]  ;
+; dda_module:inst5|test:inst11|clk20u_cnt[4]                                                            ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[4]  ;
+; dda_module:inst5|test:inst13|clk20u_cnt[4]                                                            ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[4]  ;
+; dda_module:inst5|test:inst4|clk20u_cnt[4]                                                             ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[4]  ;
+; dda_module:inst5|test:inst5|clk20u_cnt[4]                                                             ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[4]  ;
+; dda_module:inst5|test:inst|clk20u_cnt[4]                                                              ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[4]  ;
+; dda_module:inst5|test:inst11|clk20u_cnt[5]                                                            ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[5]  ;
+; dda_module:inst5|test:inst13|clk20u_cnt[5]                                                            ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[5]  ;
+; dda_module:inst5|test:inst4|clk20u_cnt[5]                                                             ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[5]  ;
+; dda_module:inst5|test:inst5|clk20u_cnt[5]                                                             ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[5]  ;
+; dda_module:inst5|test:inst|clk20u_cnt[5]                                                              ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[5]  ;
+; dda_module:inst5|test:inst11|clk20u_cnt[6]                                                            ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[6]  ;
+; dda_module:inst5|test:inst13|clk20u_cnt[6]                                                            ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[6]  ;
+; dda_module:inst5|test:inst4|clk20u_cnt[6]                                                             ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[6]  ;
+; dda_module:inst5|test:inst5|clk20u_cnt[6]                                                             ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[6]  ;
+; dda_module:inst5|test:inst|clk20u_cnt[6]                                                              ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[6]  ;
+; dda_module:inst5|test:inst11|clk20u_cnt[7]                                                            ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[7]  ;
+; dda_module:inst5|test:inst13|clk20u_cnt[7]                                                            ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[7]  ;
+; dda_module:inst5|test:inst4|clk20u_cnt[7]                                                             ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[7]  ;
+; dda_module:inst5|test:inst5|clk20u_cnt[7]                                                             ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[7]  ;
+; dda_module:inst5|test:inst|clk20u_cnt[7]                                                              ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[7]  ;
+; dda_module:inst5|test:inst11|clk20u_cnt[8]                                                            ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[8]  ;
+; dda_module:inst5|test:inst13|clk20u_cnt[8]                                                            ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[8]  ;
+; dda_module:inst5|test:inst4|clk20u_cnt[8]                                                             ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[8]  ;
+; dda_module:inst5|test:inst5|clk20u_cnt[8]                                                             ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[8]  ;
+; dda_module:inst5|test:inst|clk20u_cnt[8]                                                              ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[8]  ;
+; dda_module:inst5|test:inst11|clk20u_cnt[9]                                                            ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[9]  ;
+; dda_module:inst5|test:inst13|clk20u_cnt[9]                                                            ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[9]  ;
+; dda_module:inst5|test:inst4|clk20u_cnt[9]                                                             ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[9]  ;
+; dda_module:inst5|test:inst5|clk20u_cnt[9]                                                             ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[9]  ;
+; dda_module:inst5|test:inst|clk20u_cnt[9]                                                              ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[9]  ;
+; dda_module:inst5|test:inst11|clk20u_cnt[10]                                                           ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[10] ;
+; dda_module:inst5|test:inst13|clk20u_cnt[10]                                                           ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[10] ;
+; dda_module:inst5|test:inst4|clk20u_cnt[10]                                                            ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[10] ;
+; dda_module:inst5|test:inst5|clk20u_cnt[10]                                                            ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[10] ;
+; dda_module:inst5|test:inst|clk20u_cnt[10]                                                             ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[10] ;
+; dda_module:inst5|test:inst11|clk20u_cnt[11]                                                           ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[11] ;
+; dda_module:inst5|test:inst13|clk20u_cnt[11]                                                           ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[11] ;
+; dda_module:inst5|test:inst4|clk20u_cnt[11]                                                            ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[11] ;
+; dda_module:inst5|test:inst5|clk20u_cnt[11]                                                            ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[11] ;
+; dda_module:inst5|test:inst|clk20u_cnt[11]                                                             ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[11] ;
+; dda_module:inst5|test:inst11|clk20u_cnt[12]                                                           ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[12] ;
+; dda_module:inst5|test:inst13|clk20u_cnt[12]                                                           ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[12] ;
+; dda_module:inst5|test:inst4|clk20u_cnt[12]                                                            ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[12] ;
+; dda_module:inst5|test:inst5|clk20u_cnt[12]                                                            ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[12] ;
+; dda_module:inst5|test:inst|clk20u_cnt[12]                                                             ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[12] ;
+; dda_module:inst5|test:inst11|clk20u_cnt[13]                                                           ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[13] ;
+; dda_module:inst5|test:inst13|clk20u_cnt[13]                                                           ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[13] ;
+; dda_module:inst5|test:inst4|clk20u_cnt[13]                                                            ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[13] ;
+; dda_module:inst5|test:inst5|clk20u_cnt[13]                                                            ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[13] ;
+; dda_module:inst5|test:inst|clk20u_cnt[13]                                                             ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[13] ;
+; dda_module:inst5|test:inst11|clk20u_cnt[14]                                                           ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[14] ;
+; dda_module:inst5|test:inst13|clk20u_cnt[14]                                                           ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[14] ;
+; dda_module:inst5|test:inst4|clk20u_cnt[14]                                                            ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[14] ;
+; dda_module:inst5|test:inst5|clk20u_cnt[14]                                                            ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[14] ;
+; dda_module:inst5|test:inst|clk20u_cnt[14]                                                             ; Merged with dda_module:inst5|test:inst14|clk20u_cnt[14] ;
+; dda_module:inst5|test:inst11|clk_cnt[0]                                                               ; Merged with dda_module:inst5|test:inst14|clk_cnt[0]     ;
+; dda_module:inst5|test:inst13|clk_cnt[0]                                                               ; Merged with dda_module:inst5|test:inst14|clk_cnt[0]     ;
+; dda_module:inst5|test:inst4|clk_cnt[0]                                                                ; Merged with dda_module:inst5|test:inst14|clk_cnt[0]     ;
+; dda_module:inst5|test:inst5|clk_cnt[0]                                                                ; Merged with dda_module:inst5|test:inst14|clk_cnt[0]     ;
+; dda_module:inst5|test:inst|clk_cnt[0]                                                                 ; Merged with dda_module:inst5|test:inst14|clk_cnt[0]     ;
+; dda_module:inst5|test:inst11|clk_cnt[1]                                                               ; Merged with dda_module:inst5|test:inst14|clk_cnt[1]     ;
+; dda_module:inst5|test:inst13|clk_cnt[1]                                                               ; Merged with dda_module:inst5|test:inst14|clk_cnt[1]     ;
+; dda_module:inst5|test:inst4|clk_cnt[1]                                                                ; Merged with dda_module:inst5|test:inst14|clk_cnt[1]     ;
+; dda_module:inst5|test:inst5|clk_cnt[1]                                                                ; Merged with dda_module:inst5|test:inst14|clk_cnt[1]     ;
+; dda_module:inst5|test:inst|clk_cnt[1]                                                                 ; Merged with dda_module:inst5|test:inst14|clk_cnt[1]     ;
+; dda_module:inst5|test:inst11|clk_cnt[2]                                                               ; Merged with dda_module:inst5|test:inst14|clk_cnt[2]     ;
+; dda_module:inst5|test:inst13|clk_cnt[2]                                                               ; Merged with dda_module:inst5|test:inst14|clk_cnt[2]     ;
+; dda_module:inst5|test:inst4|clk_cnt[2]                                                                ; Merged with dda_module:inst5|test:inst14|clk_cnt[2]     ;
+; dda_module:inst5|test:inst5|clk_cnt[2]                                                                ; Merged with dda_module:inst5|test:inst14|clk_cnt[2]     ;
+; dda_module:inst5|test:inst|clk_cnt[2]                                                                 ; Merged with dda_module:inst5|test:inst14|clk_cnt[2]     ;
+; dda_module:inst5|test:inst11|clk_cnt[3]                                                               ; Merged with dda_module:inst5|test:inst14|clk_cnt[3]     ;
+; dda_module:inst5|test:inst13|clk_cnt[3]                                                               ; Merged with dda_module:inst5|test:inst14|clk_cnt[3]     ;
+; dda_module:inst5|test:inst4|clk_cnt[3]                                                                ; Merged with dda_module:inst5|test:inst14|clk_cnt[3]     ;
+; dda_module:inst5|test:inst5|clk_cnt[3]                                                                ; Merged with dda_module:inst5|test:inst14|clk_cnt[3]     ;
+; dda_module:inst5|test:inst|clk_cnt[3]                                                                 ; Merged with dda_module:inst5|test:inst14|clk_cnt[3]     ;
+; dda_module:inst5|test:inst11|clk_cnt[4]                                                               ; Merged with dda_module:inst5|test:inst14|clk_cnt[4]     ;
+; dda_module:inst5|test:inst13|clk_cnt[4]                                                               ; Merged with dda_module:inst5|test:inst14|clk_cnt[4]     ;
+; dda_module:inst5|test:inst4|clk_cnt[4]                                                                ; Merged with dda_module:inst5|test:inst14|clk_cnt[4]     ;
+; dda_module:inst5|test:inst5|clk_cnt[4]                                                                ; Merged with dda_module:inst5|test:inst14|clk_cnt[4]     ;
+; dda_module:inst5|test:inst|clk_cnt[4]                                                                 ; Merged with dda_module:inst5|test:inst14|clk_cnt[4]     ;
+; dda_module:inst5|test:inst11|clk_cnt[5]                                                               ; Merged with dda_module:inst5|test:inst14|clk_cnt[5]     ;
+; dda_module:inst5|test:inst13|clk_cnt[5]                                                               ; Merged with dda_module:inst5|test:inst14|clk_cnt[5]     ;
+; dda_module:inst5|test:inst4|clk_cnt[5]                                                                ; Merged with dda_module:inst5|test:inst14|clk_cnt[5]     ;
+; dda_module:inst5|test:inst5|clk_cnt[5]                                                                ; Merged with dda_module:inst5|test:inst14|clk_cnt[5]     ;
+; dda_module:inst5|test:inst|clk_cnt[5]                                                                 ; Merged with dda_module:inst5|test:inst14|clk_cnt[5]     ;
+; dda_module:inst5|test:inst11|clk_cnt[6]                                                               ; Merged with dda_module:inst5|test:inst14|clk_cnt[6]     ;
+; dda_module:inst5|test:inst13|clk_cnt[6]                                                               ; Merged with dda_module:inst5|test:inst14|clk_cnt[6]     ;
+; dda_module:inst5|test:inst4|clk_cnt[6]                                                                ; Merged with dda_module:inst5|test:inst14|clk_cnt[6]     ;
+; dda_module:inst5|test:inst5|clk_cnt[6]                                                                ; Merged with dda_module:inst5|test:inst14|clk_cnt[6]     ;
+; dda_module:inst5|test:inst|clk_cnt[6]                                                                 ; Merged with dda_module:inst5|test:inst14|clk_cnt[6]     ;
+; dda_module:inst5|test:inst11|clk_cnt[7]                                                               ; Merged with dda_module:inst5|test:inst14|clk_cnt[7]     ;
+; dda_module:inst5|test:inst13|clk_cnt[7]                                                               ; Merged with dda_module:inst5|test:inst14|clk_cnt[7]     ;
+; dda_module:inst5|test:inst4|clk_cnt[7]                                                                ; Merged with dda_module:inst5|test:inst14|clk_cnt[7]     ;
+; dda_module:inst5|test:inst5|clk_cnt[7]                                                                ; Merged with dda_module:inst5|test:inst14|clk_cnt[7]     ;
+; dda_module:inst5|test:inst|clk_cnt[7]                                                                 ; Merged with dda_module:inst5|test:inst14|clk_cnt[7]     ;
+; dda_module:inst5|test:inst11|clk_cnt[8]                                                               ; Merged with dda_module:inst5|test:inst14|clk_cnt[8]     ;
+; dda_module:inst5|test:inst13|clk_cnt[8]                                                               ; Merged with dda_module:inst5|test:inst14|clk_cnt[8]     ;
+; dda_module:inst5|test:inst4|clk_cnt[8]                                                                ; Merged with dda_module:inst5|test:inst14|clk_cnt[8]     ;
+; dda_module:inst5|test:inst5|clk_cnt[8]                                                                ; Merged with dda_module:inst5|test:inst14|clk_cnt[8]     ;
+; dda_module:inst5|test:inst|clk_cnt[8]                                                                 ; Merged with dda_module:inst5|test:inst14|clk_cnt[8]     ;
+; dda_module:inst5|test:inst11|clk_cnt[9]                                                               ; Merged with dda_module:inst5|test:inst14|clk_cnt[9]     ;
+; dda_module:inst5|test:inst13|clk_cnt[9]                                                               ; Merged with dda_module:inst5|test:inst14|clk_cnt[9]     ;
+; dda_module:inst5|test:inst4|clk_cnt[9]                                                                ; Merged with dda_module:inst5|test:inst14|clk_cnt[9]     ;
+; dda_module:inst5|test:inst5|clk_cnt[9]                                                                ; Merged with dda_module:inst5|test:inst14|clk_cnt[9]     ;
+; dda_module:inst5|test:inst|clk_cnt[9]                                                                 ; Merged with dda_module:inst5|test:inst14|clk_cnt[9]     ;
+; dda_module:inst5|test:inst11|clk_cnt[10]                                                              ; Merged with dda_module:inst5|test:inst14|clk_cnt[10]    ;
+; dda_module:inst5|test:inst13|clk_cnt[10]                                                              ; Merged with dda_module:inst5|test:inst14|clk_cnt[10]    ;
+; dda_module:inst5|test:inst4|clk_cnt[10]                                                               ; Merged with dda_module:inst5|test:inst14|clk_cnt[10]    ;
+; dda_module:inst5|test:inst5|clk_cnt[10]                                                               ; Merged with dda_module:inst5|test:inst14|clk_cnt[10]    ;
+; dda_module:inst5|test:inst|clk_cnt[10]                                                                ; Merged with dda_module:inst5|test:inst14|clk_cnt[10]    ;
+; dda_module:inst5|test:inst11|busy                                                                     ; Merged with dda_module:inst5|test:inst14|busy           ;
+; dda_module:inst5|test:inst13|busy                                                                     ; Merged with dda_module:inst5|test:inst14|busy           ;
+; dda_module:inst5|test:inst4|busy                                                                      ; Merged with dda_module:inst5|test:inst14|busy           ;
+; dda_module:inst5|test:inst5|busy                                                                      ; Merged with dda_module:inst5|test:inst14|busy           ;
+; dda_module:inst5|test:inst|busy                                                                       ; Merged with dda_module:inst5|test:inst14|busy           ;
+; dda_module:inst5|test:inst14|clk20u_cnt[0]                                                            ; Merged with dda_module:inst5|test:inst14|clk20u         ;
+; Total Number of Removed Registers = 158                                                               ;                                                         ;
++-------------------------------------------------------------------------------------------------------+---------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -442,12 +564,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 130   ;
+; Total registers                              ; 298   ;
 ; Number of registers using Synchronous Clear  ; 42    ;
 ; Number of registers using Synchronous Load   ; 1     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 96    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 116   ;
+; Number of registers using Clock Enable       ; 212   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -473,28 +595,160 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
-; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[10]    ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[10] ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |xuat_xung|dda_module:inst5|test:inst11|pulse          ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |xuat_xung|dda_module:inst5|test:inst4|acc[0]          ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |xuat_xung|dda_module:inst5|test:inst4|acc[1]          ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |xuat_xung|dda_module:inst5|test:inst5|acc[3]          ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |xuat_xung|dda_module:inst5|test:inst11|acc[1]         ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |xuat_xung|dda_module:inst5|test:inst13|acc[7]         ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |xuat_xung|dda_module:inst5|test:inst14|acc[6]         ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |xuat_xung|dda_module:inst5|test:inst|acc[6]           ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |xuat_xung|dda_module:inst5|test:inst4|acc[4]          ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |xuat_xung|dda_module:inst5|test:inst5|acc[5]          ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |xuat_xung|dda_module:inst5|test:inst11|acc[5]         ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |xuat_xung|dda_module:inst5|test:inst13|acc[5]         ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |xuat_xung|dda_module:inst5|test:inst14|acc[5]         ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |xuat_xung|dda_module:inst5|test:inst|acc[5]           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |xuat_xung|dda_module:inst5|test:inst14|clk_cnt[10]   ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |xuat_xung|dda_module:inst5|test:inst14|clk20u_cnt[5] ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |xuat_xung|dda_module:inst5|test:inst5|pulse          ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |xuat_xung|dda_module:inst5|test:inst5|acc[0]         ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |xuat_xung|dda_module:inst5|test:inst4|acc[6]         ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |xuat_xung|dda_module:inst5|test:inst5|acc[3]         ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |xuat_xung|dda_module:inst5|test:inst11|acc[6]        ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |xuat_xung|dda_module:inst5|test:inst13|acc[2]        ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |xuat_xung|dda_module:inst5|test:inst14|acc[3]        ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |xuat_xung|dda_module:inst5|test:inst|acc[3]          ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |xuat_xung|dda_module:inst5|test:inst4|acc[5]         ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |xuat_xung|dda_module:inst5|test:inst5|acc[4]         ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |xuat_xung|dda_module:inst5|test:inst11|acc[4]        ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |xuat_xung|dda_module:inst5|test:inst13|acc[4]        ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |xuat_xung|dda_module:inst5|test:inst14|acc[5]        ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |xuat_xung|dda_module:inst5|test:inst|acc[5]          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Source assignments for encoder:inst33|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component ;
++---------------------------+-------+------+----------------------------------------------------------------------+
+; Assignment                ; Value ; From ; To                                                                   ;
++---------------------------+-------+------+----------------------------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                                                    ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                                                    ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                                                    ;
++---------------------------+-------+------+----------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Source assignments for encoder:inst33|lpm_counter0:inst3|lpm_counter:lpm_counter_component ;
++---------------------------+-------+------+-------------------------------------------------+
+; Assignment                ; Value ; From ; To                                              ;
++---------------------------+-------+------+-------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                               ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                               ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                               ;
++---------------------------+-------+------+-------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Source assignments for encoder:inst34|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component ;
++---------------------------+-------+------+----------------------------------------------------------------------+
+; Assignment                ; Value ; From ; To                                                                   ;
++---------------------------+-------+------+----------------------------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                                                    ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                                                    ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                                                    ;
++---------------------------+-------+------+----------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Source assignments for encoder:inst34|lpm_counter0:inst3|lpm_counter:lpm_counter_component ;
++---------------------------+-------+------+-------------------------------------------------+
+; Assignment                ; Value ; From ; To                                              ;
++---------------------------+-------+------+-------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                               ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                               ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                               ;
++---------------------------+-------+------+-------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Source assignments for encoder:inst35|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component ;
++---------------------------+-------+------+----------------------------------------------------------------------+
+; Assignment                ; Value ; From ; To                                                                   ;
++---------------------------+-------+------+----------------------------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                                                    ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                                                    ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                                                    ;
++---------------------------+-------+------+----------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Source assignments for encoder:inst35|lpm_counter0:inst3|lpm_counter:lpm_counter_component ;
++---------------------------+-------+------+-------------------------------------------------+
+; Assignment                ; Value ; From ; To                                              ;
++---------------------------+-------+------+-------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                               ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                               ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                               ;
++---------------------------+-------+------+-------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Source assignments for encoder:inst37|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component ;
++---------------------------+-------+------+----------------------------------------------------------------------+
+; Assignment                ; Value ; From ; To                                                                   ;
++---------------------------+-------+------+----------------------------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                                                    ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                                                    ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                                                    ;
++---------------------------+-------+------+----------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Source assignments for encoder:inst37|lpm_counter0:inst3|lpm_counter:lpm_counter_component ;
++---------------------------+-------+------+-------------------------------------------------+
+; Assignment                ; Value ; From ; To                                              ;
++---------------------------+-------+------+-------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                               ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                               ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                               ;
++---------------------------+-------+------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Source assignments for encoder:inst3|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component ;
++---------------------------+-------+------+---------------------------------------------------------------------+
+; Assignment                ; Value ; From ; To                                                                  ;
++---------------------------+-------+------+---------------------------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                                                   ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                                                   ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                                                   ;
++---------------------------+-------+------+---------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Source assignments for encoder:inst3|lpm_counter0:inst3|lpm_counter:lpm_counter_component ;
++---------------------------+-------+------+------------------------------------------------+
+; Assignment                ; Value ; From ; To                                             ;
++---------------------------+-------+------+------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                              ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                              ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                              ;
++---------------------------+-------+------+------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Source assignments for encoder:inst18|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component ;
++---------------------------+-------+------+----------------------------------------------------------------------+
+; Assignment                ; Value ; From ; To                                                                   ;
++---------------------------+-------+------+----------------------------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                                                    ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                                                    ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                                                    ;
++---------------------------+-------+------+----------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Source assignments for encoder:inst18|lpm_counter0:inst3|lpm_counter:lpm_counter_component ;
++---------------------------+-------+------+-------------------------------------------------+
+; Assignment                ; Value ; From ; To                                              ;
++---------------------------+-------+------+-------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                               ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                               ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                               ;
++---------------------------+-------+------+-------------------------------------------------+
 
 
 +-------------------------------------------------------------------------+
@@ -569,20 +823,483 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: encoder:inst33|lpm_bustri0:inst2|lpm_bustri:lpm_bustri_component ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; LPM_WIDTH      ; 16    ; Signed Integer                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: encoder:inst33|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component ;
++------------------------+-----------+--------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value     ; Type                                                                                             ;
++------------------------+-----------+--------------------------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON        ; AUTO_CARRY                                                                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF       ; IGNORE_CARRY                                                                                     ;
+; AUTO_CASCADE_CHAINS    ; ON        ; AUTO_CASCADE                                                                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF       ; IGNORE_CASCADE                                                                                   ;
+; LPM_WIDTH              ; 16        ; Signed Integer                                                                                   ;
+; LPM_DIRECTION          ; DEFAULT   ; Untyped                                                                                          ;
+; LPM_MODULUS            ; 0         ; Untyped                                                                                          ;
+; LPM_AVALUE             ; UNUSED    ; Untyped                                                                                          ;
+; LPM_SVALUE             ; UNUSED    ; Untyped                                                                                          ;
+; LPM_PORT_UPDOWN        ; PORT_USED ; Untyped                                                                                          ;
+; DEVICE_FAMILY          ; MAX II    ; Untyped                                                                                          ;
+; CARRY_CHAIN            ; MANUAL    ; Untyped                                                                                          ;
+; CARRY_CHAIN_LENGTH     ; 48        ; CARRY_CHAIN_LENGTH                                                                               ;
+; NOT_GATE_PUSH_BACK     ; ON        ; NOT_GATE_PUSH_BACK                                                                               ;
+; CARRY_CNT_EN           ; SMART     ; Untyped                                                                                          ;
+; LABWIDE_SCLR           ; ON        ; Untyped                                                                                          ;
+; USE_NEW_VERSION        ; TRUE      ; Untyped                                                                                          ;
+; CBXI_PARAMETER         ; cntr_t2h  ; Untyped                                                                                          ;
++------------------------+-----------+--------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: encoder:inst33|encoder_module:inst1|lpm_xor0:inst|lpm_xor:lpm_xor_component ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; LPM_WIDTH      ; 1     ; Signed Integer                                                                                  ;
+; LPM_SIZE       ; 4     ; Signed Integer                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: encoder:inst33|lpm_counter0:inst3|lpm_counter:lpm_counter_component ;
++------------------------+-------------+---------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                      ;
++------------------------+-------------+---------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                              ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                            ;
+; LPM_WIDTH              ; 3           ; Signed Integer                                                            ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                                   ;
+; LPM_MODULUS            ; 0           ; Untyped                                                                   ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                                   ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                                   ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                                   ;
+; DEVICE_FAMILY          ; MAX II      ; Untyped                                                                   ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                   ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                        ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                                        ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                                   ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                                   ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                                   ;
+; CBXI_PARAMETER         ; cntr_g7h    ; Untyped                                                                   ;
++------------------------+-------------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: encoder:inst34|lpm_bustri0:inst2|lpm_bustri:lpm_bustri_component ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; LPM_WIDTH      ; 16    ; Signed Integer                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: encoder:inst34|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component ;
++------------------------+-----------+--------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value     ; Type                                                                                             ;
++------------------------+-----------+--------------------------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON        ; AUTO_CARRY                                                                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF       ; IGNORE_CARRY                                                                                     ;
+; AUTO_CASCADE_CHAINS    ; ON        ; AUTO_CASCADE                                                                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF       ; IGNORE_CASCADE                                                                                   ;
+; LPM_WIDTH              ; 16        ; Signed Integer                                                                                   ;
+; LPM_DIRECTION          ; DEFAULT   ; Untyped                                                                                          ;
+; LPM_MODULUS            ; 0         ; Untyped                                                                                          ;
+; LPM_AVALUE             ; UNUSED    ; Untyped                                                                                          ;
+; LPM_SVALUE             ; UNUSED    ; Untyped                                                                                          ;
+; LPM_PORT_UPDOWN        ; PORT_USED ; Untyped                                                                                          ;
+; DEVICE_FAMILY          ; MAX II    ; Untyped                                                                                          ;
+; CARRY_CHAIN            ; MANUAL    ; Untyped                                                                                          ;
+; CARRY_CHAIN_LENGTH     ; 48        ; CARRY_CHAIN_LENGTH                                                                               ;
+; NOT_GATE_PUSH_BACK     ; ON        ; NOT_GATE_PUSH_BACK                                                                               ;
+; CARRY_CNT_EN           ; SMART     ; Untyped                                                                                          ;
+; LABWIDE_SCLR           ; ON        ; Untyped                                                                                          ;
+; USE_NEW_VERSION        ; TRUE      ; Untyped                                                                                          ;
+; CBXI_PARAMETER         ; cntr_t2h  ; Untyped                                                                                          ;
++------------------------+-----------+--------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: encoder:inst34|encoder_module:inst1|lpm_xor0:inst|lpm_xor:lpm_xor_component ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; LPM_WIDTH      ; 1     ; Signed Integer                                                                                  ;
+; LPM_SIZE       ; 4     ; Signed Integer                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: encoder:inst34|lpm_counter0:inst3|lpm_counter:lpm_counter_component ;
++------------------------+-------------+---------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                      ;
++------------------------+-------------+---------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                              ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                            ;
+; LPM_WIDTH              ; 3           ; Signed Integer                                                            ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                                   ;
+; LPM_MODULUS            ; 0           ; Untyped                                                                   ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                                   ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                                   ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                                   ;
+; DEVICE_FAMILY          ; MAX II      ; Untyped                                                                   ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                   ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                        ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                                        ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                                   ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                                   ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                                   ;
+; CBXI_PARAMETER         ; cntr_g7h    ; Untyped                                                                   ;
++------------------------+-------------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: encoder:inst35|lpm_bustri0:inst2|lpm_bustri:lpm_bustri_component ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; LPM_WIDTH      ; 16    ; Signed Integer                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: encoder:inst35|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component ;
++------------------------+-----------+--------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value     ; Type                                                                                             ;
++------------------------+-----------+--------------------------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON        ; AUTO_CARRY                                                                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF       ; IGNORE_CARRY                                                                                     ;
+; AUTO_CASCADE_CHAINS    ; ON        ; AUTO_CASCADE                                                                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF       ; IGNORE_CASCADE                                                                                   ;
+; LPM_WIDTH              ; 16        ; Signed Integer                                                                                   ;
+; LPM_DIRECTION          ; DEFAULT   ; Untyped                                                                                          ;
+; LPM_MODULUS            ; 0         ; Untyped                                                                                          ;
+; LPM_AVALUE             ; UNUSED    ; Untyped                                                                                          ;
+; LPM_SVALUE             ; UNUSED    ; Untyped                                                                                          ;
+; LPM_PORT_UPDOWN        ; PORT_USED ; Untyped                                                                                          ;
+; DEVICE_FAMILY          ; MAX II    ; Untyped                                                                                          ;
+; CARRY_CHAIN            ; MANUAL    ; Untyped                                                                                          ;
+; CARRY_CHAIN_LENGTH     ; 48        ; CARRY_CHAIN_LENGTH                                                                               ;
+; NOT_GATE_PUSH_BACK     ; ON        ; NOT_GATE_PUSH_BACK                                                                               ;
+; CARRY_CNT_EN           ; SMART     ; Untyped                                                                                          ;
+; LABWIDE_SCLR           ; ON        ; Untyped                                                                                          ;
+; USE_NEW_VERSION        ; TRUE      ; Untyped                                                                                          ;
+; CBXI_PARAMETER         ; cntr_t2h  ; Untyped                                                                                          ;
++------------------------+-----------+--------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: encoder:inst35|encoder_module:inst1|lpm_xor0:inst|lpm_xor:lpm_xor_component ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; LPM_WIDTH      ; 1     ; Signed Integer                                                                                  ;
+; LPM_SIZE       ; 4     ; Signed Integer                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: encoder:inst35|lpm_counter0:inst3|lpm_counter:lpm_counter_component ;
++------------------------+-------------+---------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                      ;
++------------------------+-------------+---------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                              ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                            ;
+; LPM_WIDTH              ; 3           ; Signed Integer                                                            ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                                   ;
+; LPM_MODULUS            ; 0           ; Untyped                                                                   ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                                   ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                                   ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                                   ;
+; DEVICE_FAMILY          ; MAX II      ; Untyped                                                                   ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                   ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                        ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                                        ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                                   ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                                   ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                                   ;
+; CBXI_PARAMETER         ; cntr_g7h    ; Untyped                                                                   ;
++------------------------+-------------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: encoder:inst37|lpm_bustri0:inst2|lpm_bustri:lpm_bustri_component ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; LPM_WIDTH      ; 16    ; Signed Integer                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: encoder:inst37|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component ;
++------------------------+-----------+--------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value     ; Type                                                                                             ;
++------------------------+-----------+--------------------------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON        ; AUTO_CARRY                                                                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF       ; IGNORE_CARRY                                                                                     ;
+; AUTO_CASCADE_CHAINS    ; ON        ; AUTO_CASCADE                                                                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF       ; IGNORE_CASCADE                                                                                   ;
+; LPM_WIDTH              ; 16        ; Signed Integer                                                                                   ;
+; LPM_DIRECTION          ; DEFAULT   ; Untyped                                                                                          ;
+; LPM_MODULUS            ; 0         ; Untyped                                                                                          ;
+; LPM_AVALUE             ; UNUSED    ; Untyped                                                                                          ;
+; LPM_SVALUE             ; UNUSED    ; Untyped                                                                                          ;
+; LPM_PORT_UPDOWN        ; PORT_USED ; Untyped                                                                                          ;
+; DEVICE_FAMILY          ; MAX II    ; Untyped                                                                                          ;
+; CARRY_CHAIN            ; MANUAL    ; Untyped                                                                                          ;
+; CARRY_CHAIN_LENGTH     ; 48        ; CARRY_CHAIN_LENGTH                                                                               ;
+; NOT_GATE_PUSH_BACK     ; ON        ; NOT_GATE_PUSH_BACK                                                                               ;
+; CARRY_CNT_EN           ; SMART     ; Untyped                                                                                          ;
+; LABWIDE_SCLR           ; ON        ; Untyped                                                                                          ;
+; USE_NEW_VERSION        ; TRUE      ; Untyped                                                                                          ;
+; CBXI_PARAMETER         ; cntr_t2h  ; Untyped                                                                                          ;
++------------------------+-----------+--------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: encoder:inst37|encoder_module:inst1|lpm_xor0:inst|lpm_xor:lpm_xor_component ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; LPM_WIDTH      ; 1     ; Signed Integer                                                                                  ;
+; LPM_SIZE       ; 4     ; Signed Integer                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: encoder:inst37|lpm_counter0:inst3|lpm_counter:lpm_counter_component ;
++------------------------+-------------+---------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                      ;
++------------------------+-------------+---------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                              ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                            ;
+; LPM_WIDTH              ; 3           ; Signed Integer                                                            ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                                   ;
+; LPM_MODULUS            ; 0           ; Untyped                                                                   ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                                   ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                                   ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                                   ;
+; DEVICE_FAMILY          ; MAX II      ; Untyped                                                                   ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                   ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                        ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                                        ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                                   ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                                   ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                                   ;
+; CBXI_PARAMETER         ; cntr_g7h    ; Untyped                                                                   ;
++------------------------+-------------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: encoder:inst3|lpm_bustri0:inst2|lpm_bustri:lpm_bustri_component ;
++----------------+-------+-------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                ;
++----------------+-------+-------------------------------------------------------------------------------------+
+; LPM_WIDTH      ; 16    ; Signed Integer                                                                      ;
++----------------+-------+-------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: encoder:inst3|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component ;
++------------------------+-----------+-------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value     ; Type                                                                                            ;
++------------------------+-----------+-------------------------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON        ; AUTO_CARRY                                                                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF       ; IGNORE_CARRY                                                                                    ;
+; AUTO_CASCADE_CHAINS    ; ON        ; AUTO_CASCADE                                                                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF       ; IGNORE_CASCADE                                                                                  ;
+; LPM_WIDTH              ; 16        ; Signed Integer                                                                                  ;
+; LPM_DIRECTION          ; DEFAULT   ; Untyped                                                                                         ;
+; LPM_MODULUS            ; 0         ; Untyped                                                                                         ;
+; LPM_AVALUE             ; UNUSED    ; Untyped                                                                                         ;
+; LPM_SVALUE             ; UNUSED    ; Untyped                                                                                         ;
+; LPM_PORT_UPDOWN        ; PORT_USED ; Untyped                                                                                         ;
+; DEVICE_FAMILY          ; MAX II    ; Untyped                                                                                         ;
+; CARRY_CHAIN            ; MANUAL    ; Untyped                                                                                         ;
+; CARRY_CHAIN_LENGTH     ; 48        ; CARRY_CHAIN_LENGTH                                                                              ;
+; NOT_GATE_PUSH_BACK     ; ON        ; NOT_GATE_PUSH_BACK                                                                              ;
+; CARRY_CNT_EN           ; SMART     ; Untyped                                                                                         ;
+; LABWIDE_SCLR           ; ON        ; Untyped                                                                                         ;
+; USE_NEW_VERSION        ; TRUE      ; Untyped                                                                                         ;
+; CBXI_PARAMETER         ; cntr_t2h  ; Untyped                                                                                         ;
++------------------------+-----------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: encoder:inst3|encoder_module:inst1|lpm_xor0:inst|lpm_xor:lpm_xor_component ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+; LPM_WIDTH      ; 1     ; Signed Integer                                                                                 ;
+; LPM_SIZE       ; 4     ; Signed Integer                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: encoder:inst3|lpm_counter0:inst3|lpm_counter:lpm_counter_component ;
++------------------------+-------------+--------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                     ;
++------------------------+-------------+--------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                             ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                           ;
+; LPM_WIDTH              ; 3           ; Signed Integer                                                           ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                                  ;
+; LPM_MODULUS            ; 0           ; Untyped                                                                  ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                                  ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                                  ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                                  ;
+; DEVICE_FAMILY          ; MAX II      ; Untyped                                                                  ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                  ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                       ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                                       ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                                  ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                                  ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                                  ;
+; CBXI_PARAMETER         ; cntr_g7h    ; Untyped                                                                  ;
++------------------------+-------------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: encoder:inst18|lpm_bustri0:inst2|lpm_bustri:lpm_bustri_component ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; LPM_WIDTH      ; 16    ; Signed Integer                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: encoder:inst18|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component ;
++------------------------+-----------+--------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value     ; Type                                                                                             ;
++------------------------+-----------+--------------------------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON        ; AUTO_CARRY                                                                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF       ; IGNORE_CARRY                                                                                     ;
+; AUTO_CASCADE_CHAINS    ; ON        ; AUTO_CASCADE                                                                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF       ; IGNORE_CASCADE                                                                                   ;
+; LPM_WIDTH              ; 16        ; Signed Integer                                                                                   ;
+; LPM_DIRECTION          ; DEFAULT   ; Untyped                                                                                          ;
+; LPM_MODULUS            ; 0         ; Untyped                                                                                          ;
+; LPM_AVALUE             ; UNUSED    ; Untyped                                                                                          ;
+; LPM_SVALUE             ; UNUSED    ; Untyped                                                                                          ;
+; LPM_PORT_UPDOWN        ; PORT_USED ; Untyped                                                                                          ;
+; DEVICE_FAMILY          ; MAX II    ; Untyped                                                                                          ;
+; CARRY_CHAIN            ; MANUAL    ; Untyped                                                                                          ;
+; CARRY_CHAIN_LENGTH     ; 48        ; CARRY_CHAIN_LENGTH                                                                               ;
+; NOT_GATE_PUSH_BACK     ; ON        ; NOT_GATE_PUSH_BACK                                                                               ;
+; CARRY_CNT_EN           ; SMART     ; Untyped                                                                                          ;
+; LABWIDE_SCLR           ; ON        ; Untyped                                                                                          ;
+; USE_NEW_VERSION        ; TRUE      ; Untyped                                                                                          ;
+; CBXI_PARAMETER         ; cntr_t2h  ; Untyped                                                                                          ;
++------------------------+-----------+--------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: encoder:inst18|encoder_module:inst1|lpm_xor0:inst|lpm_xor:lpm_xor_component ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; LPM_WIDTH      ; 1     ; Signed Integer                                                                                  ;
+; LPM_SIZE       ; 4     ; Signed Integer                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: encoder:inst18|lpm_counter0:inst3|lpm_counter:lpm_counter_component ;
++------------------------+-------------+---------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                      ;
++------------------------+-------------+---------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                              ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                            ;
+; LPM_WIDTH              ; 3           ; Signed Integer                                                            ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                                   ;
+; LPM_MODULUS            ; 0           ; Untyped                                                                   ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                                   ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                                   ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                                   ;
+; DEVICE_FAMILY          ; MAX II      ; Untyped                                                                   ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                   ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                        ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                                        ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                                   ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                                   ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                                   ;
+; CBXI_PARAMETER         ; cntr_g7h    ; Untyped                                                                   ;
++------------------------+-------------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Mar 14 17:16:48 2019
+    Info: Processing started: Wed Mar 27 14:38:21 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off test -c test
 Info: Found 1 design units, including 1 entities, in source file xuat_xung.bdf
     Info: Found entity 1: xuat_xung
 Info: Found 1 design units, including 1 entities, in source file test.v
     Info: Found entity 1: test
+Info: Found 1 design units, including 1 entities, in source file enc_filter.bdf
+    Info: Found entity 1: enc_filter
+Info: Found 1 design units, including 1 entities, in source file encoder_module.bdf
+    Info: Found entity 1: encoder_module
+Info: Found 1 design units, including 1 entities, in source file encoder.bdf
+    Info: Found entity 1: encoder
+Info: Found 1 design units, including 1 entities, in source file lpm_bustri0.v
+    Info: Found entity 1: lpm_bustri0
+Info: Found 1 design units, including 1 entities, in source file /dh bach khoa/luan van/hexapod_k14/cpld_new/cpld_new/lpm_counter4.v
+    Info: Found entity 1: lpm_counter4
+Info: Found 1 design units, including 1 entities, in source file lpm_xor0.v
+    Info: Found entity 1: lpm_xor0
+Info: Found 1 design units, including 1 entities, in source file lpm_counter0.v
+    Info: Found entity 1: lpm_counter0
 Info: Elaborating entity "xuat_xung" for the top level hierarchy
-Warning: Block or symbol "74373b" of instance "inst1" overlaps another block or symbol
 Warning: Using design file dda_module.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info: Found entity 1: dda_module
 Info: Elaborating entity "dda_module" for hierarchy "dda_module:inst5"
@@ -597,6 +1314,44 @@ Info: Elaborating entity "74373b" for hierarchy "dda_module:inst5|74373b:inst2"
 Info: Elaborated megafunction instantiation "dda_module:inst5|74373b:inst2"
 Info: Elaborating entity "74138" for hierarchy "dda_module:inst5|74138:inst41"
 Info: Elaborated megafunction instantiation "dda_module:inst5|74138:inst41"
+Info: Elaborating entity "encoder" for hierarchy "encoder:inst33"
+Info: Elaborating entity "lpm_bustri0" for hierarchy "encoder:inst33|lpm_bustri0:inst2"
+Info: Elaborating entity "lpm_bustri" for hierarchy "encoder:inst33|lpm_bustri0:inst2|lpm_bustri:lpm_bustri_component"
+Info: Elaborated megafunction instantiation "encoder:inst33|lpm_bustri0:inst2|lpm_bustri:lpm_bustri_component"
+Info: Instantiated megafunction "encoder:inst33|lpm_bustri0:inst2|lpm_bustri:lpm_bustri_component" with the following parameter:
+    Info: Parameter "lpm_type" = "LPM_BUSTRI"
+    Info: Parameter "lpm_width" = "16"
+Info: Elaborating entity "encoder_module" for hierarchy "encoder:inst33|encoder_module:inst1"
+Info: Elaborating entity "lpm_counter4" for hierarchy "encoder:inst33|encoder_module:inst1|lpm_counter4:inst5"
+Info: Elaborating entity "lpm_counter" for hierarchy "encoder:inst33|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component"
+Info: Elaborated megafunction instantiation "encoder:inst33|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component"
+Info: Instantiated megafunction "encoder:inst33|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component" with the following parameter:
+    Info: Parameter "lpm_direction" = "UNUSED"
+    Info: Parameter "lpm_port_updown" = "PORT_USED"
+    Info: Parameter "lpm_type" = "LPM_COUNTER"
+    Info: Parameter "lpm_width" = "16"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_t2h.tdf
+    Info: Found entity 1: cntr_t2h
+Info: Elaborating entity "cntr_t2h" for hierarchy "encoder:inst33|encoder_module:inst1|lpm_counter4:inst5|lpm_counter:lpm_counter_component|cntr_t2h:auto_generated"
+Info: Elaborating entity "lpm_xor0" for hierarchy "encoder:inst33|encoder_module:inst1|lpm_xor0:inst"
+Info: Elaborating entity "lpm_xor" for hierarchy "encoder:inst33|encoder_module:inst1|lpm_xor0:inst|lpm_xor:lpm_xor_component"
+Info: Elaborated megafunction instantiation "encoder:inst33|encoder_module:inst1|lpm_xor0:inst|lpm_xor:lpm_xor_component"
+Info: Instantiated megafunction "encoder:inst33|encoder_module:inst1|lpm_xor0:inst|lpm_xor:lpm_xor_component" with the following parameter:
+    Info: Parameter "lpm_size" = "4"
+    Info: Parameter "lpm_type" = "LPM_XOR"
+    Info: Parameter "lpm_width" = "1"
+Info: Elaborating entity "enc_filter" for hierarchy "encoder:inst33|enc_filter:inst"
+Info: Elaborating entity "lpm_counter0" for hierarchy "encoder:inst33|lpm_counter0:inst3"
+Info: Elaborating entity "lpm_counter" for hierarchy "encoder:inst33|lpm_counter0:inst3|lpm_counter:lpm_counter_component"
+Info: Elaborated megafunction instantiation "encoder:inst33|lpm_counter0:inst3|lpm_counter:lpm_counter_component"
+Info: Instantiated megafunction "encoder:inst33|lpm_counter0:inst3|lpm_counter:lpm_counter_component" with the following parameter:
+    Info: Parameter "lpm_direction" = "UP"
+    Info: Parameter "lpm_port_updown" = "PORT_UNUSED"
+    Info: Parameter "lpm_type" = "LPM_COUNTER"
+    Info: Parameter "lpm_width" = "3"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_g7h.tdf
+    Info: Found entity 1: cntr_g7h
+Info: Elaborating entity "cntr_g7h" for hierarchy "encoder:inst33|lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_g7h:auto_generated"
 Warning: Tri-state node(s) do not directly drive top-level pin(s)
     Warning: Converted tri-state buffer "74373b:inst1|73" feeding internal logic into a wire
     Warning: Converted tri-state buffer "74373b:inst1|72" feeding internal logic into a wire
@@ -652,21 +1407,29 @@ Warning: Tri-state node(s) do not directly drive top-level pin(s)
     Warning: Converted tri-state buffer "dda_module:inst5|74373b:inst2|69" feeding internal logic into a wire
     Warning: Converted tri-state buffer "dda_module:inst5|74373b:inst2|68" feeding internal logic into a wire
     Warning: Converted tri-state buffer "dda_module:inst5|74373b:inst2|67" feeding internal logic into a wire
-Info: Implemented 370 device resources after synthesis - the final resource count might be different
-    Info: Implemented 18 input pins
+Info: 6 registers lost all their fanouts during netlist optimizations. The first 6 are displayed below.
+    Info: Register "encoder:inst18|lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_g7h:auto_generated|safe_q[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "encoder:inst3|lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_g7h:auto_generated|safe_q[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "encoder:inst37|lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_g7h:auto_generated|safe_q[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "encoder:inst35|lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_g7h:auto_generated|safe_q[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "encoder:inst34|lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_g7h:auto_generated|safe_q[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "encoder:inst33|lpm_counter0:inst3|lpm_counter:lpm_counter_component|cntr_g7h:auto_generated|safe_q[2]" lost all its fanouts during netlist optimizations.
+Info: Implemented 643 device resources after synthesis - the final resource count might be different
+    Info: Implemented 24 input pins
     Info: Implemented 13 output pins
-    Info: Implemented 339 logic cells
-Info: Generated suppressed messages file D:/Document/Thesis/Software/CPLD/test.map.smsg
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 63 warnings
-    Info: Peak virtual memory: 231 megabytes
-    Info: Processing ended: Thu Mar 14 17:16:49 2019
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Implemented 16 bidirectional pins
+    Info: Implemented 590 logic cells
+Info: Generated suppressed messages file D:/DH Bach Khoa/Luan van/Software_thesis_2019/HexapodThesis-CPLD/test.map.smsg
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 62 warnings
+    Info: Peak virtual memory: 234 megabytes
+    Info: Processing ended: Wed Mar 27 14:38:23 2019
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in D:/Document/Thesis/Software/CPLD/test.map.smsg.
+The suppressed messages can be found in D:/DH Bach Khoa/Luan van/Software_thesis_2019/HexapodThesis-CPLD/test.map.smsg.
 
 
