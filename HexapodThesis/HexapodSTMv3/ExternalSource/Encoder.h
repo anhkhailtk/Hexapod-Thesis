@@ -9,6 +9,7 @@
 #endif
 
 extern uint16_t save_pos_count;
+extern uint32_t countT2;
 
 void ENC_Timer_Init(void);
 void ENC_Reset(void);

@@ -14,14 +14,14 @@
 #include <string.h>
 bool rx_flag = 0;
 bool rx_flag_android = 0;
+
+bool update_cmd_busy_flag;
+bool update_cmd_busy_flag_android;
+
 uint16_t save_pos_count = 0;
 
 bool vSGUI_ready_flag = 0;
 bool android_ready_flag = 0;
-uint8_t Mode=IDLE;
-
-static bool isConnectAgain = 0;
-static bool isConnectAgain_android = 0;
 
 static bool isPCRunning = 0;
 static bool isAndroidRunning = 0;
@@ -42,6 +42,10 @@ HEXAPOD_DATA_STRUCT st_hexapod_data;
 
 int main()
 {		
+	Mode = IDLE;
+	update_cmd_busy_flag = 0;
+	update_cmd_busy_flag_android = 0;
+	
 	uint32_t ui_delay;
 	UART_DMA_Init();
 	UART_DMA_Init_android();
@@ -107,8 +111,6 @@ int main()
 	isPCRunning = 0;
 	isAndroidRunning = 0;
 	
-	isConnectAgain = 0;
-	isConnectAgain_android = 0;
 	
 	while(!(vSGUI_ready_flag | android_ready_flag))
 	{
@@ -182,8 +184,14 @@ void DMA1_Stream1_IRQHandler(void)
 	DMA_Cmd(DMA1_Stream1, DISABLE);
 	/* Clear the DMA1_Stream1 TCIF1 pending bit */
   DMA_ClearITPendingBit(DMA1_Stream1, DMA_IT_TCIF1);
-		
-	Uart_Program();
+	
+	if((rxbuff[0] == 'p') && (rxbuff[1] == '-') && (rxbuff[51] == 0x0A ))
+		Uart_Program();
+	else
+	{
+		memset(rxbuff, 0, 52);
+		rx_flag = 0;
+	}
 	//rx_flag = 1;
 
 	DMA_Cmd(DMA1_Stream1, ENABLE);	
@@ -195,8 +203,14 @@ void DMA2_Stream2_IRQHandler(void)
 	DMA_Cmd(DMA2_Stream2, DISABLE);
 	/* Clear the DMA2_Stream2 TCIF2 pending bit */
   DMA_ClearITPendingBit(DMA2_Stream2, DMA_IT_TCIF2);
-		
-	Uart_Program_android();
+
+	if((rxbuff_android[0] == 'a') && (rxbuff_android[1] == '-') && (rxbuff_android[51] == 0x0A ))		
+		Uart_Program_android();
+	else
+	{
+		memset(rxbuff_android, 0, 52);
+		rx_flag_android = 0;
+	}	
 	//rx_flag_android = 1;
 
 	DMA_Cmd(DMA2_Stream2, ENABLE);	
@@ -210,20 +224,13 @@ void Uart_Program(void)
 		if(isAndroidRunning)
 		{
 			Uart_Cmd_Update("lAndroid is running-");
-			Uart_Cmd_Update_android("s_lPC is waiting-");
+			Uart_Cmd_Update_android("s_lPIW-"); // PC is waiting
 			isAndroidRunning = 1;
 			isPCRunning = 0;
 			rx_flag = 0;
 		}
 		else
 		{
-			if(!isConnectAgain)
-			{
-				Uart_Cmd_Update("lSTM and VSGUI connected-");
-				Uart_Cmd_Update_android("s_lPC is running-");		
-				isConnectAgain_android = 0;
-			}
-			isConnectAgain = 1;
 			isAndroidRunning = 0;
 			isPCRunning = 1;
 			ApplyCmd();
@@ -236,20 +243,13 @@ void Uart_Program_android(void)
 		if(isPCRunning)
 		{
 			Uart_Cmd_Update("lAndroid is waiting-");
-			Uart_Cmd_Update_android("s_lPC is running-");
+			Uart_Cmd_Update_android("s_lPIR-"); //PC is running
 			isAndroidRunning = 0;
 			isPCRunning = 1;
 			rx_flag_android = 0;
 		}
 		else
 		{
-			if(!isConnectAgain_android)
-			{
-				Uart_Cmd_Update("lAndroid is running-");
-				Uart_Cmd_Update_android("s_lSTM and Android connected-");		
-				isConnectAgain = 0;
-			}
-			isConnectAgain_android = 1;
 			isAndroidRunning = 1;
 			isPCRunning = 0;
 			ApplyCmd_android();
@@ -275,16 +275,21 @@ void ApplyCmd(void)
 				}
 				else if(isPCRunning)
 				{
+					Uart_Cmd_Update("lSTM and VSGUI connected-");
+					Uart_Cmd_Update_android("s_lPIR-"); //PC is running
+					isAndroidRunning = 0;
+					isPCRunning = 1;
 					android_ready_flag = 0;
 					vSGUI_ready_flag = 1;
 				}
 			}
 			else if(rxbuff[3] == 'd')
 			{
-				isConnectAgain = 0;
 				isPCRunning = 0;
+				isAndroidRunning = 0;
 				Uart_Cmd_Update("lTracking Mode activated-");
-				Uart_Cmd_Update_android("s_lPC is disconnected-");				
+				Uart_Cmd_Update_android("s_lPID-"); //PC is disconnected	
+				Mode = IDLE;
 			}
 			break;
 		}
@@ -394,7 +399,7 @@ void ApplyCmd(void)
 			}
 			
 			Uart_Cmd_Update("lI saved the position successfully-");
-			Uart_Cmd_Update_android("s_lI saved the position successfully-");
+			Uart_Cmd_Update_android("s_lISTPS-"); // I saved the position successfully
 			Mode = IDLE;
 			break;
 		}
@@ -415,6 +420,10 @@ void ApplyCmd_android(void)
 			{
 				if(isAndroidRunning)
 				{
+					Uart_Cmd_Update("lAndroid is running-");
+					Uart_Cmd_Update_android("s_lSAAC-"); //STM and Android connected
+					isAndroidRunning = 1;
+					isPCRunning = 0;
 					vSGUI_ready_flag = 0;
 					android_ready_flag = 1;
 				}
@@ -426,10 +435,11 @@ void ApplyCmd_android(void)
 			}
 			else if(rxbuff_android[3] == 'd')
 			{
-				isConnectAgain_android = 0;
+				isPCRunning = 0;
 				isAndroidRunning = 0;
 				Uart_Cmd_Update("lAndroid is disconnected-");
-				Uart_Cmd_Update_android("s_lTracking Mode activated-");	
+				Uart_Cmd_Update_android("s_lTMA-"); //Tracking Mode activated
+				Mode = IDLE;				
 			}
 			break;
 		}
@@ -539,7 +549,7 @@ void ApplyCmd_android(void)
 			}
 			
 			Uart_Cmd_Update("lI saved the position successfully-");
-			Uart_Cmd_Update_android("s_lI saved the position successfully-");
+			Uart_Cmd_Update_android("s_lISTPS-"); //I saved the position successfully
 			Mode = IDLE;
 			break;
 		}

@@ -18,6 +18,8 @@ char frame_for_android[100] = "s_";
 static char str_uart_update[100];
 static char str_uart_update_android[100];
 
+
+
 uint8_t len = 0;
 
 void UART_DMA_Init(void)
@@ -153,8 +155,8 @@ void Ex_Usart_SendData(char* UsartData)
 			DMA2_Stream6->NDTR = string_lenght_android;
 			DMA_Cmd(DMA2_Stream6, ENABLE);
 		}
-		memset(str_tx_uart,0,strlen(str_tx_uart));
-		memset(str_tx_uart_android,0,strlen(str_tx_uart_android));
+		memset(str_tx_uart,0,string_lenght);
+		memset(str_tx_uart_android,0,string_lenght_android);
 }
 
 //----------------------------------------------------------------------------------------------
@@ -190,8 +192,11 @@ void Uart_Cmd_Update(const char* strInput)
 	//if 2 strings are similar, skip it
 	if(strInput != str_uart_update)
 	{
+		while(update_cmd_busy_flag);
+		update_cmd_busy_flag = 1;
 		strcpy(str_uart_update, strInput);
 		strcat(str_tx_uart, str_uart_update);
+		update_cmd_busy_flag = 0;
 	}
 }
 
@@ -200,8 +205,11 @@ void Uart_Cmd_Update_android(const char* strInput)
 	//if 2 strings are similar, skip it
 	if(strInput != str_uart_update_android)
 	{
+		while(update_cmd_busy_flag_android);
+		update_cmd_busy_flag_android = 1;
 		strcpy(str_uart_update_android, strInput);
 		strcat(str_tx_uart_android, str_uart_update_android);
+		update_cmd_busy_flag_android = 0;
 	}
 }
 

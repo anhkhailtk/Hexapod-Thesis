@@ -10,7 +10,7 @@
 float Servo_pos_pre[MAX_SERVO_NUM]={0,0,0,0,0,0};
 float Servo_pos_cur[MAX_SERVO_NUM]={0,0,0,0,0,0};
 float Servo_pos_distance[MAX_SERVO_NUM]={0,0,0,0,0,0};
-
+uint32_t countT3;
 static uint8_t Servo_dir_private[MAX_SERVO_NUM] = {0};
 // a[i] factor for each motor 
 static float a_1[MATRIX_ORDER] = {0}; 
@@ -64,6 +64,9 @@ void TIM3_IRQHandler(void)
     // Checks whether the TIM3 interrupt has occurred or not
     if (TIM_GetITStatus(TIM3, TIM_IT_Update))
     {
+			countT3++;
+			if(countT3 == 10000)
+				countT3 = 0;
 			if(Servo_Ready_Run_flag)
 				Servo_pos_per_cycle();
 		}

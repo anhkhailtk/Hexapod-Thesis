@@ -3,10 +3,12 @@
 #include <WiFiClient.h>
 #include <string.h>
 
-const char* ssid = "Phong 419";
-const char* password =  "phong419!@#";
+//const char* ssid = "Phong 419";
+//const char* password =  "phong419!@#";
 //const char* ssid = "ID11_2.4G_04";
 //const char* password =  "123456aA@";
+const char* ssid = "Redmikhai";
+const char* password =  "khaikhai";
 const char* mqttServer = "m16.cloudmqtt.com";
 const int mqttPort = 14886;
 const char* mqttUser = "vxgdfhne";
@@ -30,7 +32,7 @@ void setup()
   while (!client.connected()) {
     if (client.connect("ESP8266Client", mqttUser, mqttPassword ))
     {
-      
+      //Serial.println("MQTT connected");
     } else {
       delay(2000);
     }
@@ -83,29 +85,4 @@ void loop()
    receiverCompleted = false;
   }
   
-}
-
-void StringProcessing(char* strInput)
-{
-  int temp = 0;
-
-  for(int i = 0; i < strlen(strInput); i++)
-  {
-    if(strInput[i] == '-')
-    {
-      int count_up = 0;
-      char strarrOutput[500] = "";
-      for(int j = temp; j < i; j++)
-      {
-        strarrOutput[count_up] = strInput[j];
-        count_up++;
-      }
-           
-      if((strarrOutput[0] == 's') && (strarrOutput[1] == '_'))
-      {
-        client.publish("hexapodstatus", strarrOutput);
-      }
-      temp = i + 1;  
-    }
-  }
 }

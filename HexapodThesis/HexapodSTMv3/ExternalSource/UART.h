@@ -10,7 +10,7 @@
  extern "C" {
 #endif
 #define BUFF_RX 52 
-#define BUFF_TX 100
+#define BUFF_TX 500
 
 extern uint8_t 	txbuff[BUFF_TX];
 extern uint8_t 	rxbuff[BUFF_RX];
@@ -19,6 +19,9 @@ extern uint8_t 	rxbuff_android[BUFF_RX];
 
 extern char str_tx_uart[500];
 extern char str_tx_uart_android[500];
+
+extern bool update_cmd_busy_flag;
+extern bool update_cmd_busy_flag_android;
 
 void UART_DMA_Init(void);
 void UART_DMA_Init_android(void);

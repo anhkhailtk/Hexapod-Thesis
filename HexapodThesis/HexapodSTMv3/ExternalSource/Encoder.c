@@ -8,6 +8,7 @@
 #include "UART.h"
 #include "Servo.h"
 static uint16_t cnt_update_enc = 0;
+uint32_t countT2;
 
 void ENC_Timer_Init(void)
 {
@@ -39,7 +40,7 @@ void ENC_Timer_Init(void)
     // SubPriority = 0)
     NVIC_InitTypeDef NVIC_InitStruct;
     NVIC_InitStruct.NVIC_IRQChannel = TIM2_IRQn;
-    NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = 1;
+    NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = 2;
     NVIC_InitStruct.NVIC_IRQChannelSubPriority = 1;
     NVIC_InitStruct.NVIC_IRQChannelCmd = ENABLE;
     NVIC_Init(&NVIC_InitStruct);
@@ -61,7 +62,9 @@ void TIM2_IRQHandler(void)
     if (TIM_GetITStatus(TIM2, TIM_IT_Update))
     {
 
-			
+			countT2++;
+			if(countT2 == 10000)
+				countT2 = 0;
       FSMC_ENC_Update_Pos();
 			cnt_update_enc += 1;
 			if (cnt_update_enc == 100)

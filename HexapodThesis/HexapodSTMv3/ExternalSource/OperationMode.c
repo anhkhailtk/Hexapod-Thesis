@@ -11,10 +11,12 @@
 #include "UART.h"
 #include <math.h>
 uint32_t ui_delay;
+uint8_t Mode;
+
 void TestingMode(void)
 {
 	Uart_Cmd_Update("lI am in Testing Mode-");
-	Uart_Cmd_Update_android("s_lI am in Testing Mode-");
+	Uart_Cmd_Update_android("s_lIAITM-"); //I am in Testing Mode
 	
   TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
 	TIM_Cmd(TIM2, ENABLE);
@@ -38,7 +40,7 @@ void HomeScanMode(void)
 {
 				//Send status
 				Uart_Cmd_Update("lI am in Home Scan Mode-");
-				Uart_Cmd_Update_android("s_lI am in Home Scan Mode-");
+				Uart_Cmd_Update_android("s_lIAIHSM-"); //I am in Home Scan Mode
 				//Disable timer 2
 				TIM_Cmd(TIM2, DISABLE);
 //----------------------------------------------------------------------------------------------				
@@ -110,7 +112,7 @@ void HomeScanMode(void)
 void InverseKinematicMode(void)
 {
 	Uart_Cmd_Update("lI am in Inverse Kinematic Mode-");
-	Uart_Cmd_Update_android("s_lI am in Inverse Kinematic Mode-");
+	Uart_Cmd_Update_android("s_lIAIIKM-"); // I am in Inverse Kinematic Mode
   TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
 	TIM_Cmd(TIM2, ENABLE);
 	float pos[3];
@@ -123,22 +125,36 @@ void InverseKinematicMode(void)
 	bool kinematic_false_flag = 0;
 	for(int i = 0;i < MAX_SERVO_NUM; i++)
 	{
-		if((Servo_pos_cur[i] > (MAX_OF_TRIP[i] - 2.0f)) || (Servo_pos_cur[i] < (HOME_OFFSET[i] + 2.0f)))
+		if((Servo_pos_cur[i] > (MAX_OF_TRIP[i] - 2.0f)) || (Servo_pos_cur[i] < (HOME_OFFSET[i] + 2.0f)) || (isnan(Servo_pos_cur[i])))
 			kinematic_false_flag = 1;
 	}
 	
 	if(!kinematic_false_flag)
 	{
-		TestingMode();
+		for(int i=0;i<MAX_SERVO_NUM;i++)
+		{
+			if(Servo_pos_cur[i] >= MAX_OF_TRIP[i] - 2.0f)
+				Servo_pos_cur[i] = MAX_OF_TRIP[i] - 2.0f ;
+			else if(Servo_pos_cur[i] <= (HOME_OFFSET[i] + 2.0f))
+				Servo_pos_cur[i] = HOME_OFFSET[i] + 2.0f;
+		}
+
+		Calcu_Pos(Servo_pos_cur,Servo_pos_pre);
+		Pos_servo_all(Servo_pos_distance,Servo_dir);
+		for(int j=0;j<6;j++)
+		{
+			Servo_pos_pre[j] = st_servo_data[j].enc_cur_pos;
+		}
 	}
 	else
 	{
 		Uart_Cmd_Update("lI can not calculate inverse kinematic-");
-		Uart_Cmd_Update_android("s_lI can not calculate inverse kinematic-");
+		Uart_Cmd_Update_android("s_lICNCIK-"); //I can not calculate inverse kinematic
 	}
-
+	Uart_Cmd_Update("lI am in Idle Mode-");
+	Uart_Cmd_Update_android("s_lIAIIM-"); //I am in Idle Mode
 	
-	
+	Mode = IDLE;
 }
 void IdleMode(void)
 {
@@ -148,5 +164,5 @@ void IdleMode(void)
 	TIM_Cmd(TIM2, ENABLE);	
 	
 	Uart_Cmd_Update("lI am in Idle Mode-");
-	Uart_Cmd_Update_android("s_lI am in Idle Mode-");
+	Uart_Cmd_Update_android("s_lIAIIM-"); //I am in Idle Mode
 }

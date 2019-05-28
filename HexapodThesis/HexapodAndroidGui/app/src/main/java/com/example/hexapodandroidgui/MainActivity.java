@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean isLogShowEnabled = false;
     private boolean isMqttMsgProcessingFinished = true;
     private boolean isConnectSTM;
+    private boolean allow_write_log_flag = false;
     MqttHelper mqttHelper;
 
     DateFormat df;
@@ -96,9 +97,11 @@ public class MainActivity extends AppCompatActivity {
                     tv_HexaStatus.post(new Runnable() {
                         @Override
                         public void run() {
-                            tv_HexaStatus.append(str_log);
+                            tv_HexaStatus.setText(str_log);
                         }
                     });
+
+
 
                 }
 
@@ -127,7 +130,8 @@ public class MainActivity extends AppCompatActivity {
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        mqttHelper.publish("androidcontrol", "a-t-" + str_mqtt_cmd);
+                        if(isConnectSTM)
+                            mqttHelper.publish("androidcontrol", "a-t-" + str_mqtt_cmd);
                     }
                 }).start();
 
@@ -172,7 +176,8 @@ public class MainActivity extends AppCompatActivity {
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        mqttHelper.publish("androidcontrol", "a-hs-lrlrlr");
+                        if(isConnectSTM)
+                            mqttHelper.publish("androidcontrol", "a-hs-rlrlrl");
                     }
                 }).start();
 
@@ -182,13 +187,15 @@ public class MainActivity extends AppCompatActivity {
         btn_InvKinetic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 str_mqtt_cmd = Edt2Float(edt_TestX) + Edt2Float(edt_TestY)
                         + Edt2Float(edt_TestZ) + Edt2Float(edt_TestRoll) + Edt2Float(edt_TestPitch)
                         + Edt2Float(edt_TestYaw) ;
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        mqttHelper.publish("androidcontrol", "a-ki" + str_mqtt_cmd);
+                        if(isConnectSTM)
+                            mqttHelper.publish("androidcontrol", "a-ki" + str_mqtt_cmd);
                     }
                 }).start();
 
@@ -198,6 +205,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void connectComplete(boolean reconnect, String serverURI) {
                 Log.w("mqtt", "Connected");
+                allow_write_log_flag = true;
                 tv_HexaStatus.post(new Runnable() {
                     @Override
                     public void run() {
@@ -210,6 +218,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void connectionLost(Throwable cause) {
                 Log.w("mqtt", "Disconnected");
+                allow_write_log_flag = true;
                 tv_HexaStatus.post(new Runnable() {
                     @Override
                     public void run() {
@@ -257,7 +266,20 @@ public class MainActivity extends AppCompatActivity {
                     for (int j = 3; j < strarr_msg[i].length(); j++)
                         msg_display += strarr_msg[i].charAt(j);
                     switch (msg_display) {
-                        case "STM and Android connected": {
+                        case "STM Ready":
+                        {
+                            str_tv = "Tracking Mode";
+                            btn_ConnectSTM.post(new Runnable() {
+                                @Override
+                                public void run() {
+                                    btn_ConnectSTM.setText("CONNECT TO STM");
+                                }
+                            });
+                            isConnectSTM = false;
+                            break;
+                        }
+                        case "SAAC": { //STM and Android connected
+                            msg_display = "STM and Android connected";
                             str_tv = "Remote Mode";
                             btn_ConnectSTM.post(new Runnable() {
                                 @Override
@@ -268,7 +290,8 @@ public class MainActivity extends AppCompatActivity {
                             isConnectSTM = true;
                             break;
                         }
-                        case "PC is running": {
+                        case "PIR": { //PC is running
+                            msg_display = "PC is running";
                             str_tv = "Tracking Mode";
                             btn_ConnectSTM.post(new Runnable() {
                                 @Override
@@ -279,7 +302,8 @@ public class MainActivity extends AppCompatActivity {
                             isConnectSTM = false;
                             break;
                         }
-                        case "Tracking Mode activated": {
+                        case "TMA": { //Tracking Mode activated
+                            msg_display = "Tracking Mode activated";
                             str_tv = "Tracking Mode";
                             btn_ConnectSTM.post(new Runnable() {
                                 @Override
@@ -288,6 +312,38 @@ public class MainActivity extends AppCompatActivity {
                                 }
                             });
                             isConnectSTM = false;
+                            break;
+                        }
+                        case "ISTPS": {
+                            msg_display = "I saved the position successfully";
+                            break;
+                        }
+                        case "PIW": {
+                            msg_display = "PC is waiting";
+                            break;
+                        }
+                        case "PID": {
+                            msg_display = "PC is disconnected";
+                            break;
+                        }
+                        case "IAIIM": {
+                            msg_display = "I am in Idle Mode";
+                            break;
+                        }
+                        case "IAITM": {
+                            msg_display = "I am in Testing Mode";
+                            break;
+                        }
+                        case "IAIHSM": {
+                            msg_display = "I am in Home Scan Mode";
+                            break;
+                        }
+                        case "IAIIKM": {
+                            msg_display = "I am in Inverse Kinematic Mode";
+                            break;
+                        }
+                        case "ICNCIK": {
+                            msg_display = "I can not calculate inverse kinematic";
                             break;
                         }
 
@@ -298,6 +354,7 @@ public class MainActivity extends AppCompatActivity {
                             tv_ConnectionStatus.setText(str_tv);
                         }
                     });
+
                     str_log += df.format(Calendar.getInstance().getTime()) + ": " + msg_display + "\n";
                     break;
                 }
@@ -313,6 +370,19 @@ public class MainActivity extends AppCompatActivity {
                         j += 6;
                     }
                     break;
+                }
+                case 'h':
+                {
+                    if((chars_msg[3] == 'f') && (chars_msg[4] == 'a'))
+                    {
+                        new Thread(new Runnable() {
+                            @Override
+                            public void run() {
+                                mqttHelper.publish("androidcontrol", "a-he");
+                                str_log += df.format(Calendar.getInstance().getTime()) + ": Home Scan finished.\n";
+                            }
+                        }).start();
+                    }
                 }
                 default: {
                     isLogShowEnabled = false;

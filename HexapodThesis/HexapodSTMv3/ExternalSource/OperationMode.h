@@ -14,6 +14,7 @@
 #define TESTING 								1
 #define HOMESCAN 								2
 #define INVERSEKINEMATIC		 			3
+extern uint8_t Mode;
 
 extern bool reset_flag;
 void TestingMode(void);	 

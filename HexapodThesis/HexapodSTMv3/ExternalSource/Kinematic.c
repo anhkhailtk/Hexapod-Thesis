@@ -66,7 +66,7 @@ void inverse_kinematic(float pos_in[3],float matR_in[9],float q[6])
 	
 	for(int i=0;i<6;i++)
 	{
-		*(q+i) = (Lb/2 - (sqrt(h[i]*h[i] + l_norm[i]*l_norm[i]) - sqrt(L*L - h[i]*h[i])))*10; //  unit : mm
+		*(q+i) = (Lb/2 - (sqrt(l_norm[i]*l_norm[i] - h[i]*h[i]) - sqrt(L*L - h[i]*h[i])))*10; //  unit : mm
 	}
 }
 

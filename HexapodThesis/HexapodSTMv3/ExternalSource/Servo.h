@@ -20,6 +20,8 @@ extern float Servo_pos_cur[6];
 extern float Servo_pos_distance[6];
 extern uint8_t Servo_dir[6];
 
+extern uint32_t countT3;
+
 extern bool pulse_empty[6];
 
 void Servo_Control_Timer_Init(void);

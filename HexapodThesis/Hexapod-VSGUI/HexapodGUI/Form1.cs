@@ -17,12 +17,16 @@ namespace HexapodGUI
         {
             InitializeComponent();
             isConnectSTM = false;
+            isFirstRun = false;
 
         }
         int intlen = 0;
         string[] dir = new string[6];
         string CmdFrStm;
         bool isConnectSTM = false;
+        bool isFirstRun = false;
+        float[] float_pos_to_matlab = new float[6];
+        float[] float_pos_to_matlab_temp = new float[6];
 
         float[] HOME_OFFSET = { 33.65f , 34.29f, 30.39f, 28.73f, 31.57f, 31.77f };
         float[] MAX_OF_TRIP = { 144.977f, 150.024f, 146.865f, 140.612f, 147.100f, 147.818f };
@@ -59,35 +63,16 @@ namespace HexapodGUI
 
         private void timerComUpdate_Tick(object sender, EventArgs e)
         {
-            string s = "COM3";
             string[] ports = SerialPort.GetPortNames();
             if (intlen != ports.Length)
             {
                 intlen = ports.Length;
                 cbb_Com.Items.Clear();
+                cbb_comMatlab.Items.Clear();
                 for (int i = 0; i < intlen; i++)
                 {
                     cbb_Com.Items.Add(ports[i]);
-                }
-                if ((COM.IsOpen == false) && (cbb_Com.Items.Contains(s)))
-                {
-                    try
-                    {
-                        
-                        cbb_Com.Text = s;
-                        COM.PortName = cbb_Com.Text;
-                        COM.Open();
-                        lb_ConnectStatus.Text = "Status: Opened";
-                        btnComOpen.Text = "Close";
-                        lb_ConnectStatus.ForeColor = Color.Green;
-
-                        
-                        
-                    }
-                    catch
-                    {
-                        lb_ConnectStatus.Text = "Error Connection";
-                    }
+                    cbb_comMatlab.Items.Add(ports[i]);
                 }
 
             }
@@ -184,6 +169,7 @@ namespace HexapodGUI
                                 if (cmd[i][2] == 'a')
                                 {
                                     lbHomeStatus.Text = "Home scan for all motor \nfinished.";
+                                    isFirstRun = true;
                                     timeroutScanHome.Enabled = false;
                                     txt_q0.Text = HOME_OFFSET[0].ToString();
                                     txt_q1.Text = HOME_OFFSET[1].ToString();
@@ -220,6 +206,26 @@ namespace HexapodGUI
                                 lb_enc_q4.Text = CmdFrStm.Substring(len, 7);
                                 len += 7;
                                 lb_enc_q5.Text = CmdFrStm.Substring(len, 7);
+
+                                float.TryParse(lb_enc_q0.Text, out float_pos_to_matlab[0]);
+                                float.TryParse(lb_enc_q1.Text, out float_pos_to_matlab[1]);
+                                float.TryParse(lb_enc_q2.Text, out float_pos_to_matlab[2]);
+                                float.TryParse(lb_enc_q3.Text, out float_pos_to_matlab[3]);
+                                float.TryParse(lb_enc_q4.Text, out float_pos_to_matlab[4]);
+                                float.TryParse(lb_enc_q5.Text, out float_pos_to_matlab[5]);
+
+                                for(int j = 0; j < 6; j++)
+                                {
+                                    if(float_pos_to_matlab[j] == 0)
+                                    {
+                                        float_pos_to_matlab[j] = float_pos_to_matlab_temp[j];
+                                    }
+                                    else
+                                    {
+                                        float_pos_to_matlab_temp[j] = float_pos_to_matlab[j];
+                                    }
+                                }
+
                             }
                             break;
                         case 'l':
@@ -307,7 +313,7 @@ namespace HexapodGUI
         private string StringProcessingTestingMode(string s_in, int motor_num)
         {
             string s_out;
-
+            //s_in = s_in.Replace('.', ',');
             float f;
             float.TryParse(s_in, out f);
 
@@ -323,7 +329,7 @@ namespace HexapodGUI
         private string StringProcessingKinematicMode(string s_in, int motor_num)
         {
             string s_out;
-
+            //s_in = s_in.Replace('.', ',');
             float f;
             float.TryParse(s_in, out f);
 
@@ -399,6 +405,52 @@ namespace HexapodGUI
                 isConnectSTM = false;
             }
 
+        }
+
+        private void txt_q4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnComMatlabOpen_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (btnComMatlabOpen.Text == "Open")
+                {
+
+                    COMMatlab.PortName = cbb_comMatlab.Text;
+                    COMMatlab.Open();
+                    lb_ConnectMatlab_status.Text = "Status: Opened";
+                    btnComMatlabOpen.Text = "Close";
+                    lb_ConnectMatlab_status.ForeColor = Color.Green;
+                    timer_send_tomatlab.Enabled = true;
+                }
+                else
+                {
+                    COMMatlab.DiscardInBuffer();
+                    COMMatlab.Close();
+                    lb_ConnectMatlab_status.Text = "Status: Closed";
+                    lb_ConnectMatlab_status.ForeColor = Color.Red;
+                    btnComMatlabOpen.Text = "Open";
+                    txb_status_system.Clear();
+                    timer_send_tomatlab.Enabled = false;
+
+                }
+            }
+            catch
+            {
+                lb_ConnectMatlab_status.Text = "Error Connection";
+            }
+        }
+
+        private void timer_send_tomatlab_Tick(object sender, EventArgs e)
+        {
+            string s = "m";
+            for (int i = 0; i < 6; i++)
+                s += string.Format("{0:000000}", float_pos_to_matlab[i]*1000); 
+            if(s.Length == 37 )
+                COMMatlab.Write(s);
         }
     }
 }

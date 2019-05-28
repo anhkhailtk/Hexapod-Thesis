@@ -36,6 +36,9 @@
     <Reference Include="csgl-opengl">
       <HintPath>D:\Document\Thesis\Software\HexapodGUI\csopengl.1.0.win32cs-dll\csgl-opengl.dll</HintPath>
     </Reference>
+    <Reference Include="MathWorks.MATLAB.ProductionServer.Client">
+      <HintPath>E:\Software\Matlab2015a\toolbox\compiler_sdk\mps_clients\dotnet\MathWorks.MATLAB.ProductionServer.Client.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

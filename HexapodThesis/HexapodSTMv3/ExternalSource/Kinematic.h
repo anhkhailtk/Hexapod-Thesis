@@ -13,8 +13,8 @@
  extern "C" {
 #endif
 
-#define Lp 24.8f
-#define Lb 49.6f
+#define Lp 24.752f
+#define Lb 49.504f
 #define L  20.0f
 
 typedef struct
