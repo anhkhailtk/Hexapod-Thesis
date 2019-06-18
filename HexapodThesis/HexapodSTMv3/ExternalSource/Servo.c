@@ -22,6 +22,8 @@ uint8_t Servo_dir[MAX_SERVO_NUM]={0,0,0,0,0,0};
 bool pulse_empty[MAX_SERVO_NUM];
 static bool Servo_Ready_Run_flag = 0;
 
+static bool isCubicPath;
+static float tf_trapezoidpp[6] = {0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f};
 
 void Servo_Control_Timer_Init(void)
 {
@@ -92,86 +94,108 @@ void Calcu_Pos(float pos_cur[MAX_SERVO_NUM],float pos_pre[MAX_SERVO_NUM])
 	}
 }
 
-void Pos_servo_all(float q[MAX_SERVO_NUM],uint8_t dir[MAX_SERVO_NUM])
+void Pos_servo_all(float q[MAX_SERVO_NUM],uint8_t dir[MAX_SERVO_NUM],  bool path_type)
 {
+	isCubicPath = path_type;
+	
 	bool initial_cal_flag[MAX_SERVO_NUM] = {1,1,1,1,1,1};
 	
-	// Safety Factor
-	float ks = 0.66;
-	
-	for(uint8_t i = 0; i < MATRIX_ORDER; i++)
-		a_1[i] = 0;
-	
-	for(uint8_t i = 0; i < MAX_SERVO_NUM; i++)
-	{
-		Servo_dir_private[i] = dir[i];
-		for(uint8_t j = 0; j < MATRIX_ORDER; j++)
-			a[i][j] = 0;
-	}
-	
-	for(int j=0;j<MAX_SERVO_NUM;j++)
-	{
-		st_servo_data[j].cannot_path_planning = 0;
-		st_servo_data[j].pulse_redundance = 0;
+		// Safety Factor
+		float ks = 0.66;
 		
-		if(q[j] != 0)
+		for(uint8_t i = 0; i < MATRIX_ORDER; i++)
+			a_1[i] = 0;
+		
+		for(uint8_t i = 0; i < MAX_SERVO_NUM; i++)
 		{
-
-			if(j != 1)
+			Servo_dir_private[i] = dir[i];
+			for(uint8_t j = 0; j < MATRIX_ORDER; j++)
+				a[i][j] = 0;
+		}
+		
+		for(int j=0;j<MAX_SERVO_NUM;j++)
+		{
+			st_servo_data[j].cannot_path_planning = 0;
+			st_servo_data[j].pulse_redundance = 0;
+			tf_trapezoidpp[j] = 0.0f;
+			
+			if(q[j] != 0)
 			{
-				st_servo_data[j].pulse_total = pos2pul(q[j]);				
+
+				if(j != 1)
+				{
+					st_servo_data[j].pulse_total = pos2pul(q[j]);				
+				}
+				else
+				{
+					st_servo_data[j].pulse_total = pos2pul(q[j]/2);
+				}
+				
+				// Cannot calculate Path-planning if pulse_total < 50
+				if(st_servo_data[j].pulse_total <= 50 )
+					st_servo_data[j].cannot_path_planning = 1;
+				else
+				{
+					if(isCubicPath)
+					{							
+						pulse_path_planning(q[j],ks,j,a_1); // Calculate a[i] factor
+						for(int k = 0; k < MATRIX_ORDER; k++)
+						{
+							a[j][k] = a_1[k];
+						}				
+					}
+					else
+					{
+						tf_trapezoidpp[j] = q[j] / 7.2f;
+					}
+				}
+				pulse_empty[j] = 0;
 			}
 			else
 			{
-				st_servo_data[j].pulse_total = pos2pul(q[j]/2);
+				pulse_empty[j] = 1;
+			}
+		}
+
+	
+		for(int i = 0; i < MAX_SERVO_NUM; i++)
+		{
+			st_servo_data[i].pre_t = 0;
+			st_servo_data[i].t = 0.001;
+		}
+	
+		Servo_Ready_Run_flag = 0;
+		
+		TIM_ClearITPendingBit(TIM3, TIM_IT_Update);
+		TIM_Cmd(TIM3, ENABLE);
+		
+		while(! (pulse_empty[0] & pulse_empty[1] & pulse_empty[2] & pulse_empty[3] & pulse_empty[4] & pulse_empty[5]))
+		{	
+			for(uint8_t i=0;i<MAX_SERVO_NUM;i++)
+			{
+				if(initial_cal_flag[i])
+				{
+					for(int j = 0; j < MATRIX_ORDER; j++)
+					{
+						a_1[j] = a[i][j];
+					}
+					if(isCubicPath)
+					{
+						st_servo_data[i].pulse_per_cycle = pulse_pp_cal(a_1, st_servo_data[i].pre_t, st_servo_data[i].t, i);
+					}
+					else
+					{
+						st_servo_data[i].pulse_per_cycle = pulse_pp_cal_trapezoidpp(st_servo_data[i].pre_t, st_servo_data[i].t, i, tf_trapezoidpp[i]);
+					}
+					initial_cal_flag[i] = 0;
+					Servo_Ready_Run_flag = 1;
+				}
 			}
 			
-			// Cannot calculate Path-planning if pulse_total < 500
-			if(st_servo_data[j].pulse_total <= 500 )
-				st_servo_data[j].cannot_path_planning = 1;
-			else
-			{
-				pulse_path_planning(q[j],ks,j,a_1); // Calculate a[i] factor
-				for(int k = 0; k < MATRIX_ORDER; k++)
-				{
-					a[j][k] = a_1[k];
-				}				
-			}
-			pulse_empty[j] = 0;
-		}
-		else
-		{
-			pulse_empty[j] = 1;
-		}
-	}
-	for(int i = 0; i < MAX_SERVO_NUM; i++)
-	{
-		st_servo_data[i].pre_t = 0;
-		st_servo_data[i].t = 0.001;
-	}
-	Servo_Ready_Run_flag = 0;
-	TIM_ClearITPendingBit(TIM3, TIM_IT_Update);
-	TIM_Cmd(TIM3, ENABLE);
-	
-	while(! (pulse_empty[0] & pulse_empty[1] & pulse_empty[2] & pulse_empty[3] & pulse_empty[4] & pulse_empty[5]))
-	{	
-		for(uint8_t i=0;i<MAX_SERVO_NUM;i++)
-		{
-			if(initial_cal_flag[i])
-			{
-				for(int j = 0; j < MATRIX_ORDER; j++)
-				{
-					a_1[j] = a[i][j];
-				}				
-				st_servo_data[i].pulse_per_cycle = pulse_pp_cal(a_1, st_servo_data[i].pre_t, st_servo_data[i].t, i);
-				initial_cal_flag[i] = 0;
-				Servo_Ready_Run_flag = 1;
-			}
 		}
 		
-	}
-	
-	TIM_Cmd(TIM3, DISABLE);
+		TIM_Cmd(TIM3, DISABLE);
+
 
 }
 
@@ -207,14 +231,11 @@ void Servo_pos_per_cycle(void)
 						}
 						else
 						{
-							Servo_pulse(i,st_servo_data[i].pulse_per_cycle,Servo_dir_private[i]);
-							
+							Servo_pulse(i, st_servo_data[i].pulse_per_cycle, Servo_dir_private[i]);					
 							st_servo_data[i].pulse_total -= st_servo_data[i].pulse_per_cycle;
 						}
 					}
-				
 			}
-
 		}
 		GPIO_SetBits(GPIOD, GPIO_Pin_11);
 		ui_delay = 10;
@@ -235,9 +256,16 @@ void Servo_pos_per_cycle(void)
 				{
 					a_1[j]=a[i][j];
 				}
-				st_servo_data[i].pre_t=st_servo_data[i].t;
-				st_servo_data[i].t+=0.001f;
-				st_servo_data[i].pulse_per_cycle=pulse_pp_cal(a_1, st_servo_data[i].pre_t, st_servo_data[i].t, i);
+				st_servo_data[i].pre_t = st_servo_data[i].t;
+				st_servo_data[i].t += 0.001f;
+				if(isCubicPath)
+				{
+					st_servo_data[i].pulse_per_cycle = pulse_pp_cal(a_1, st_servo_data[i].pre_t, st_servo_data[i].t, i);
+				}
+				else
+				{
+					st_servo_data[i].pulse_per_cycle = pulse_pp_cal_trapezoidpp(st_servo_data[i].pre_t, st_servo_data[i].t, i, tf_trapezoidpp[i]);					
+				}
 			}
 		}		
 }

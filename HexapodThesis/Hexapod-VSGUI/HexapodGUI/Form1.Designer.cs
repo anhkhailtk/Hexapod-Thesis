@@ -45,6 +45,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lb_ConnectStatus = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.lb_ConnectMatlab_status = new System.Windows.Forms.Label();
             this.btnComMatlabOpen = new System.Windows.Forms.Button();
             this.cbb_comMatlab = new System.Windows.Forms.ComboBox();
@@ -88,8 +90,9 @@
             this.btnConnectToSTM = new System.Windows.Forms.Button();
             this.COMMatlab = new System.IO.Ports.SerialPort(this.components);
             this.timer_send_tomatlab = new System.Windows.Forms.Timer(this.components);
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.btnDemo = new System.Windows.Forms.Button();
+            this.btnCircle = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -270,6 +273,24 @@
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Port Connection";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(194, 34);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(60, 20);
+            this.label20.TabIndex = 20;
+            this.label20.Text = "Matlab:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(14, 34);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(42, 20);
+            this.label19.TabIndex = 19;
+            this.label19.Text = "STM:";
             // 
             // lb_ConnectMatlab_status
             // 
@@ -704,23 +725,35 @@
             // 
             this.timer_send_tomatlab.Tick += new System.EventHandler(this.timer_send_tomatlab_Tick);
             // 
-            // label19
+            // btnDemo
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(14, 34);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(42, 20);
-            this.label19.TabIndex = 19;
-            this.label19.Text = "STM:";
+            this.btnDemo.Location = new System.Drawing.Point(678, 579);
+            this.btnDemo.Name = "btnDemo";
+            this.btnDemo.Size = new System.Drawing.Size(144, 62);
+            this.btnDemo.TabIndex = 30;
+            this.btnDemo.Text = "START DEMO";
+            this.btnDemo.UseVisualStyleBackColor = true;
+            this.btnDemo.Click += new System.EventHandler(this.btnDemo_Click);
             // 
-            // label20
+            // btnCircle
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(194, 34);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(60, 20);
-            this.label20.TabIndex = 20;
-            this.label20.Text = "Matlab:";
+            this.btnCircle.Location = new System.Drawing.Point(605, 579);
+            this.btnCircle.Name = "btnCircle";
+            this.btnCircle.Size = new System.Drawing.Size(67, 62);
+            this.btnCircle.TabIndex = 31;
+            this.btnCircle.Text = "START CIRCLE";
+            this.btnCircle.UseVisualStyleBackColor = true;
+            this.btnCircle.Click += new System.EventHandler(this.btnCircle_Click);
+            // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(524, 579);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(75, 62);
+            this.btnReset.TabIndex = 32;
+            this.btnReset.Text = "RESET";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // Form1
             // 
@@ -729,6 +762,9 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(853, 684);
+            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.btnCircle);
+            this.Controls.Add(this.btnDemo);
             this.Controls.Add(this.btnConnectToSTM);
             this.Controls.Add(this.btnSavePos);
             this.Controls.Add(this.txb_status_system);
@@ -819,6 +855,9 @@
         private System.Windows.Forms.Timer timer_send_tomatlab;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button btnDemo;
+        private System.Windows.Forms.Button btnCircle;
+        private System.Windows.Forms.Button btnReset;
     }
 }
 

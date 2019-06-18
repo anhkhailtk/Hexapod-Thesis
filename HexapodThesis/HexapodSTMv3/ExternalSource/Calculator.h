@@ -39,7 +39,9 @@ float vector_3_norm(float v[3]);
 
 float q_calculate(float t,float a[6]);
 
-uint32_t pulse_pp_cal(float a[6],float pre_t,float t,uint8_t motor_num);
+uint32_t pulse_pp_cal(float a[MATRIX_ORDER],float pre_t,float t,uint8_t motor_num);
+
+uint32_t pulse_pp_cal_trapezoidpp(float pre_t,float t,uint8_t motor_num, float tf);
 
 float pul2pos(int32_t pul, uint8_t motor_num);
 

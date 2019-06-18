@@ -18,6 +18,8 @@ namespace HexapodGUI
             InitializeComponent();
             isConnectSTM = false;
             isFirstRun = false;
+            isDemoMode = false;
+            isCircleMode = false;
 
         }
         int intlen = 0;
@@ -25,6 +27,8 @@ namespace HexapodGUI
         string CmdFrStm;
         bool isConnectSTM = false;
         bool isFirstRun = false;
+        bool isDemoMode = false;
+        bool isCircleMode = false;
         float[] float_pos_to_matlab = new float[6];
         float[] float_pos_to_matlab_temp = new float[6];
 
@@ -51,6 +55,10 @@ namespace HexapodGUI
                     lb_ConnectStatus.ForeColor = Color.Red;
                     btnComOpen.Text = "Open";
                     btnConnectToSTM.Text = "Connect to STM";
+                    btnCircle.Text = "START CIRCLE";
+                    btnDemo.Text = "START DEMO";
+                    isDemoMode = false;
+                    isCircleMode = false;
                     txb_status_system.Clear();
 
                 }
@@ -252,6 +260,37 @@ namespace HexapodGUI
                                             isConnectSTM = false;
                                             break;
                                         }
+                                    case "I am in Demo Mode":
+                                        {
+                                            btnDemo.Text = "STOP DEMO";
+                                            isDemoMode = true;
+                                            break;
+                                        }
+                                    case "I quit Demo Mode":
+                                        {
+                                            btnDemo.Text = "START DEMO";
+                                            isDemoMode = false;
+                                            break;
+                                        }
+                                    case "I am in Circle Mode":
+                                        {
+                                            btnCircle.Text = "STOP CIRCLE";
+                                            isCircleMode = true;
+                                            break;
+                                        }
+                                    case "I quit Circle Mode":
+                                        {
+                                            btnCircle.Text = "START CIRCLE";
+                                            isCircleMode = false;
+                                            break;
+                                        }
+                                    case "STM Ready":
+                                        {
+                                            isConnectSTM = false;
+                                            break;
+                                        }
+
+
                                 }
 
                                 txb_status_system.AppendText(System.DateTime.Now.ToShortTimeString() + ": " + multiline_text + "\r\n");
@@ -451,6 +490,75 @@ namespace HexapodGUI
                 s += string.Format("{0:000000}", float_pos_to_matlab[i]*1000); 
             if(s.Length == 37 )
                 COMMatlab.Write(s);
+        }
+
+        private void btnDemo_Click(object sender, EventArgs e)
+        {
+            if (isDemoMode == false)
+            {
+                try
+                {
+                    COM.Write(SendMsgProcessing("p-ds"));
+                }
+                catch
+                {
+                    lb_ConnectStatus.ForeColor = Color.Red;
+                    lb_ConnectStatus.Text = "Error Sending";
+                }
+            }
+            else
+            {
+                try
+                {
+                    COM.Write(SendMsgProcessing("p-de"));
+                }
+                catch
+                {
+                    lb_ConnectStatus.ForeColor = Color.Red;
+                    lb_ConnectStatus.Text = "Error Sending";
+                }
+            }
+        }
+
+        private void btnCircle_Click(object sender, EventArgs e)
+        {
+            if (isCircleMode == false)
+            {
+                try
+                {
+                    COM.Write(SendMsgProcessing("p-es"));
+                }
+                catch
+                {
+                    lb_ConnectStatus.ForeColor = Color.Red;
+                    lb_ConnectStatus.Text = "Error Sending";
+                }
+            }
+            else
+            {
+                try
+                {
+                    COM.Write(SendMsgProcessing("p-ee"));
+                }
+                catch
+                {
+                    lb_ConnectStatus.ForeColor = Color.Red;
+                    lb_ConnectStatus.Text = "Error Sending";
+                }
+            }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                COM.Write(SendMsgProcessing("p-r"));
+            }
+            catch
+            {
+                lb_ConnectStatus.ForeColor = Color.Red;
+                lb_ConnectStatus.Text = "Error Sending";
+            }
         }
     }
 }

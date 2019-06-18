@@ -12,7 +12,224 @@
 #include <math.h>
 uint32_t ui_delay;
 uint8_t Mode;
+bool isDemoMode;
+bool isCircleMode;
 
+void CircleMode(void)
+{
+	Uart_Cmd_Update("lI am in Circle Mode-");
+	Uart_Cmd_Update_android("s_lIAICM-"); //I am in Demo Mode
+  TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
+	TIM_Cmd(TIM2, ENABLE);
+	const float R = 2.0f;
+	float rad = 0.0f;
+	while(isCircleMode)
+	{
+		st_hexapod_data.x = R * cos(rad);
+		st_hexapod_data.y = R * sin(rad);
+		st_hexapod_data.z = 18.0f;
+		st_hexapod_data.roll = 0.0f;
+		st_hexapod_data.pitch = 0.0f;
+		st_hexapod_data.yaw = 0.0f;
+		InverseKinematicMode(false);
+		rad += PI / 100000.0f;
+		
+	}
+	Mode = IDLE;
+}
+
+void DemoMode(void)
+{	
+	Uart_Cmd_Update("lI am in Demo Mode-");
+	Uart_Cmd_Update_android("s_lIAIDM-"); //I am in Demo Mode
+  TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
+	TIM_Cmd(TIM2, ENABLE);
+	while(isDemoMode)
+	{
+		if(isDemoMode)
+		{
+			st_hexapod_data.x = 0.0f;
+			st_hexapod_data.y = 0.0f;
+			st_hexapod_data.z = 15.0f;
+			st_hexapod_data.roll = 0.0f;
+			st_hexapod_data.pitch = 0.0f;
+			st_hexapod_data.yaw = 0.0f;
+			InverseKinematicMode(false);
+		}
+		if(isDemoMode)
+		{		
+			st_hexapod_data.x = 0.0f;
+			st_hexapod_data.y = 0.0f;
+			st_hexapod_data.z = 20.0f;
+			st_hexapod_data.roll = 0.0f;
+			st_hexapod_data.pitch = 0.0f;
+			st_hexapod_data.yaw = 0.0f;
+			InverseKinematicMode(false);
+		}
+		if(isDemoMode)
+		{		
+			st_hexapod_data.x = 0.0f;
+			st_hexapod_data.y = 0.0f;
+			st_hexapod_data.z = 18.0f;
+			st_hexapod_data.roll = 0.0f;
+			st_hexapod_data.pitch = 0.0f;
+			st_hexapod_data.yaw = 0.0f;
+			InverseKinematicMode(false);
+		}
+		if(isDemoMode)
+		{		
+			st_hexapod_data.x = -4.0f;
+			st_hexapod_data.y = 0.0f;
+			st_hexapod_data.z = 18.0f;
+			st_hexapod_data.roll = 0.0f;
+			st_hexapod_data.pitch = 0.0f;
+			st_hexapod_data.yaw = 0.0f;
+			InverseKinematicMode(false);
+		}	
+		if(isDemoMode)
+		{	
+		if(Mode == DEMO)
+		{		
+		if(Mode == DEMO)
+		{		
+			st_hexapod_data.x = 0.0f;
+			st_hexapod_data.y = -4.0f;
+			st_hexapod_data.z = 18.0f;
+			st_hexapod_data.roll = 0.0f;
+			st_hexapod_data.pitch = 0.0f;
+			st_hexapod_data.yaw = 0.0f;
+			InverseKinematicMode(false);
+		}	
+		if(Mode == DEMO)
+		{		
+			st_hexapod_data.x = 0.0f;
+			st_hexapod_data.y = 4.0f;
+			st_hexapod_data.z = 18.0f;
+			st_hexapod_data.roll = 0.0f;
+			st_hexapod_data.pitch = 0.0f;
+			st_hexapod_data.yaw = 0.0f;
+			InverseKinematicMode(false);
+		}	
+		if(Mode == DEMO)
+		{	
+		if(Mode == DEMO)
+		{		
+			st_hexapod_data.x = 0.0f;
+			st_hexapod_data.y = 0.0f;
+			st_hexapod_data.z = 18.0f;
+			st_hexapod_data.roll = -6.0f;
+			st_hexapod_data.pitch = 0.0f;
+			st_hexapod_data.yaw = 0.0f;
+			InverseKinematicMode(false);
+		}			
+		if(Mode == DEMO)
+		{		
+			st_hexapod_data.x = 0.0f;
+			st_hexapod_data.y = 0.0f;
+			st_hexapod_data.z = 18.0f;
+			st_hexapod_data.roll = 6.0f;
+			st_hexapod_data.pitch = 0.0f;
+			st_hexapod_data.yaw = 0.0f;
+			InverseKinematicMode(false);
+		}	
+		if(Mode == DEMO)
+		{		
+			st_hexapod_data.x = 0.0f;
+			st_hexapod_data.y = 0.0f;
+			st_hexapod_data.z = 18.0f;
+			st_hexapod_data.roll = 0.0f;
+			st_hexapod_data.pitch = 0.0f;
+			st_hexapod_data.yaw = 0.0f;
+			InverseKinematicMode(false);
+		}			
+		if(Mode == DEMO)
+		{		
+			st_hexapod_data.x = 0.0f;
+			st_hexapod_data.y = 0.0f;
+			st_hexapod_data.z = 18.0f;
+			st_hexapod_data.roll = 0.0f;
+			st_hexapod_data.pitch = -6.0f;
+			st_hexapod_data.yaw = 0.0f;
+			InverseKinematicMode(false);
+		}	
+		if(Mode == DEMO)
+		{		
+			st_hexapod_data.x = 0.0f;
+			st_hexapod_data.y = 0.0f;
+			st_hexapod_data.z = 18.0f;
+			st_hexapod_data.roll = 0.0f;
+			st_hexapod_data.pitch = 6.0f;
+			st_hexapod_data.yaw = 0.0f;
+			InverseKinematicMode(false);
+		}	
+		if(Mode == DEMO)
+		{		
+			st_hexapod_data.x = 0.0f;
+			st_hexapod_data.y = 0.0f;
+			st_hexapod_data.z = 18.0f;
+			st_hexapod_data.roll = 0.0f;
+			st_hexapod_data.pitch = 0.0f;
+			st_hexapod_data.yaw = 0.0f;
+			InverseKinematicMode(false);
+		}	
+		if(Mode == DEMO)
+		{		
+			st_hexapod_data.x = 0.0f;
+			st_hexapod_data.y = 0.0f;
+			st_hexapod_data.z = 18.0f;
+			st_hexapod_data.roll = 0.0f;
+			st_hexapod_data.pitch = 0.0f;
+			st_hexapod_data.yaw = -6.0f;
+			InverseKinematicMode(false);
+		}	
+		if(Mode == DEMO)
+		{		
+			st_hexapod_data.x = 0.0f;
+			st_hexapod_data.y = 0.0f;
+			st_hexapod_data.z = 18.0f;
+			st_hexapod_data.roll = 0.0f;
+			st_hexapod_data.pitch = 0.0f;
+			st_hexapod_data.yaw = 6.0f;
+			InverseKinematicMode(false);
+		}	
+		if(Mode == DEMO)
+		{		
+			st_hexapod_data.x = 0.0f;
+			st_hexapod_data.y = 0.0f;
+			st_hexapod_data.z = 18.0f;
+			st_hexapod_data.roll = 0.0f;
+			st_hexapod_data.pitch = 0.0f;
+			st_hexapod_data.yaw = 0.0f;
+			InverseKinematicMode(false);
+		}	
+		
+			st_hexapod_data.x = 0.0f;
+			st_hexapod_data.y = 0.0f;
+			st_hexapod_data.z = 18.0f;
+			st_hexapod_data.roll = 0.0f;
+			st_hexapod_data.pitch = 0.0f;
+			st_hexapod_data.yaw = 0.0f;
+			InverseKinematicMode(false);
+		}	
+			st_hexapod_data.x = 0.0f;
+			st_hexapod_data.y = 0.0f;
+			st_hexapod_data.z = 18.0f;
+			st_hexapod_data.roll = 0.0f;
+			st_hexapod_data.pitch = 0.0f;
+			st_hexapod_data.yaw = 0.0f;
+			InverseKinematicMode(false);
+		}				
+			st_hexapod_data.x = 4.0f;
+			st_hexapod_data.y = 0.0f;
+			st_hexapod_data.z = 18.0f;
+			st_hexapod_data.roll = 0.0f;
+			st_hexapod_data.pitch = 0.0f;
+			st_hexapod_data.yaw = 0.0f;
+			InverseKinematicMode(false);
+		}			
+	}
+	Mode = IDLE;
+}
 void TestingMode(void)
 {
 	Uart_Cmd_Update("lI am in Testing Mode-");
@@ -29,7 +246,7 @@ void TestingMode(void)
 	}
 
 	Calcu_Pos(Servo_pos_cur,Servo_pos_pre);
-	Pos_servo_all(Servo_pos_distance,Servo_dir);
+	Pos_servo_all(Servo_pos_distance,Servo_dir, false);
 	for(int j=0;j<6;j++)
 	{
 		Servo_pos_pre[j] = st_servo_data[j].enc_cur_pos;
@@ -48,11 +265,11 @@ void HomeScanMode(void)
 				//Release Home switch if it's pressed
 				float Servo_pos_init[6]={5,5,5,5,5,5};
 				uint8_t Servo_dir_init[6]={0,0,0,0,0,0};
-				Pos_servo_all(Servo_pos_init,Servo_dir_init);
+				Pos_servo_all(Servo_pos_init,Servo_dir_init, true);
 				
 				//pull all nuts to Home switch
 				Calcu_Pos(Servo_pos_cur,Servo_pos_pre);
-				Pos_servo_all(Servo_pos_distance,Servo_dir);	
+				Pos_servo_all(Servo_pos_distance,Servo_dir, true);	
 //----------------------------------------------------------------------------------------------				
 				
 				/*
@@ -76,13 +293,13 @@ void HomeScanMode(void)
 				
 				float Servo_pos_offset[6]={10,10,10,10,10,10};
 				uint8_t Servo_dir_offset[6]={0,0,0,0,0,0};
-				Pos_servo_all(Servo_pos_offset,Servo_dir_offset);
+				Pos_servo_all(Servo_pos_offset,Servo_dir_offset, true);
 				
 				delay_01ms(50);
 				
 				float Servo_pos_offset2[6]={10,10,10,10,10,10};
 				uint8_t Servo_dir_offset2[6]={1,1,1,1,1,1};
-				Pos_servo_all(Servo_pos_offset2,Servo_dir_offset2);
+				Pos_servo_all(Servo_pos_offset2,Servo_dir_offset2, true);
 				
 				delay_01ms(50);
 				
@@ -96,7 +313,7 @@ void HomeScanMode(void)
 					Servo_pos_pre[i] = st_servo_data[i].enc_cur_pos;
 				}
 				Calcu_Pos(Servo_pos_cur,Servo_pos_pre);
-				Pos_servo_all(Servo_pos_distance,Servo_dir);
+				Pos_servo_all(Servo_pos_distance,Servo_dir, true);
 				
 				//Clear string buffer Tx
 				memset(str_tx_uart, 0, strlen(str_tx_uart));
@@ -109,10 +326,13 @@ void HomeScanMode(void)
 				TIM_Cmd(TIM2, DISABLE);
 //----------------------------------------------------------------------------------------------								
 }
-void InverseKinematicMode(void)
+void InverseKinematicMode(bool isInvereKinematicMode)
 {
-	Uart_Cmd_Update("lI am in Inverse Kinematic Mode-");
-	Uart_Cmd_Update_android("s_lIAIIKM-"); // I am in Inverse Kinematic Mode
+	if(isInvereKinematicMode)
+	{
+		Uart_Cmd_Update("lI am in Inverse Kinematic Mode-");
+		Uart_Cmd_Update_android("s_lIAIIKM-"); // I am in Inverse Kinematic Mode
+	}
   TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
 	TIM_Cmd(TIM2, ENABLE);
 	float pos[3];
@@ -140,7 +360,7 @@ void InverseKinematicMode(void)
 		}
 
 		Calcu_Pos(Servo_pos_cur,Servo_pos_pre);
-		Pos_servo_all(Servo_pos_distance,Servo_dir);
+		Pos_servo_all(Servo_pos_distance,Servo_dir, false);
 		for(int j=0;j<6;j++)
 		{
 			Servo_pos_pre[j] = st_servo_data[j].enc_cur_pos;
@@ -148,13 +368,21 @@ void InverseKinematicMode(void)
 	}
 	else
 	{
-		Uart_Cmd_Update("lI can not calculate inverse kinematic-");
-		Uart_Cmd_Update_android("s_lICNCIK-"); //I can not calculate inverse kinematic
+		if(isInvereKinematicMode)
+		{
+			Uart_Cmd_Update("lI can not calculate inverse kinematic-");
+			Uart_Cmd_Update_android("s_lICNCIK-"); //I can not calculate inverse kinematic
+		}
 	}
-	Uart_Cmd_Update("lI am in Idle Mode-");
-	Uart_Cmd_Update_android("s_lIAIIM-"); //I am in Idle Mode
-	
-	Mode = IDLE;
+	if(isInvereKinematicMode)
+	{	
+		Uart_Cmd_Update("lI am in Idle Mode-");
+		Uart_Cmd_Update_android("s_lIAIIM-"); //I am in Idle Mode
+	}
+	if(isInvereKinematicMode)
+	{	
+		Mode = IDLE;
+	}
 }
 void IdleMode(void)
 {

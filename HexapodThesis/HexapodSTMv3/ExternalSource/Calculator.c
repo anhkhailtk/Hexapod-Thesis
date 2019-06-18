@@ -27,9 +27,9 @@ float pul2pos(int32_t pul, uint8_t motor_num)
 	else
 		return (((float)pul * 8) / 100000);
 }
-uint32_t pos2pul_redundance(float pos,uint8_t motor_num)
+uint32_t pos2pul_redundance(float pos, uint8_t motor_num)
 {
-	float pulse_raw = (pos*50000)/8;
+	float pulse_raw = (pos * 50000) / 8;
 	float pulse_redundance_temp = pulse_raw - (uint32_t)pulse_raw + st_servo_data[motor_num].pulse_redundance;
 	if(pulse_redundance_temp < 0.5f)
 	{
@@ -88,10 +88,39 @@ uint32_t pulse_pp_cal(float a[MATRIX_ORDER],float pre_t,float t,uint8_t motor_nu
 		return pos2pul_redundance(delta_q/2,motor_num);
 	}
 }
+
+uint32_t pulse_pp_cal_trapezoidpp(float pre_t,float t,uint8_t motor_num, float tf)
+{
+	float delta_q;
+	float a = (80.0f / tf);
+	if((t > 0.0f) && (t <= 0.1f * tf))
+	{
+		delta_q = 0.5f * a * (t * t - pre_t * pre_t); // 1/2*a*t^2
+	}
+	else if((t > 0.1f * tf) && (t <= 0.9f * tf))
+	{
+		delta_q = 8 * (t - pre_t); // 8t
+	}
+	else if((t > 0.9f * tf) && (t <= tf))
+	{
+		delta_q = (8.0f + 0.9f * 80.0f) * (t - pre_t) - 0.5f * a * (t * t - pre_t * pre_t); // (8 + 0.9tfa)t - 1/2at^2 		
+	}
+	
+	if(motor_num!=1)
+	{
+		return pos2pul_redundance(delta_q, motor_num);
+	}
+	else
+	{
+		return pos2pul_redundance(delta_q / 2, motor_num);
+	}
+}
+
 float q_calculate(float t,float a[MATRIX_ORDER])
 {
 	return a[0]+a[1]*t+a[2]*t*t+a[3]*t*t*t+a[4]*t*t*t*t+a[5]*t*t*t*t*t;
 }
+
 void find_a_factor(float* a,float d, float tf)
 {
 		float m[MATRIX_ORDER][MATRIX_ORDER]; //ve trai

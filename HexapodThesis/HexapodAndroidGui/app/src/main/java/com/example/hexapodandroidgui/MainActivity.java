@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_HomeScan;
     private Button btn_InvKinetic;
     private Button btn_SavePos;
+    private Button btn_Demo;
 
     private String str_mqtt_cmd = "";
     private String[] str_mqtt_msg;
@@ -51,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean isMqttMsgProcessingFinished = true;
     private boolean isConnectSTM;
     private boolean allow_write_log_flag = false;
+    private boolean isDemoMode = false;
     MqttHelper mqttHelper;
 
     DateFormat df;
@@ -77,12 +79,15 @@ public class MainActivity extends AppCompatActivity {
         btn_HomeScan = (Button) findViewById(R.id.btnHomeScanStart);
         btn_InvKinetic = (Button) findViewById(R.id.btnInvKinematicStart);
         btn_SavePos = (Button) findViewById(R.id.btnSavePosition);
+        btn_Demo = (Button) findViewById(R.id.btnDemo);
 
         tv_HexaStatus.setMovementMethod(new ScrollingMovementMethod());
         str_mqtt_msg = new String[10];
         str_tv = new String();
         isLogShowEnabled = false;
         isMotorPosShowEnabled = false;
+        isDemoMode = false;
+
         timer = new Timer();
         timerTask = new TimerTask() {
             @Override
@@ -201,6 +206,22 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        btn_Demo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        if(isDemoMode == false)
+                            mqttHelper.publish("androidcontrol", "a-ds");
+                        else
+                            mqttHelper.publish("androidcontrol", "a-de");
+                    }
+                }).start();
+            }
+        });
+
         mqttHelper.setCallback(new MqttCallbackExtended() {
             @Override
             public void connectComplete(boolean reconnect, String serverURI) {
@@ -344,6 +365,28 @@ public class MainActivity extends AppCompatActivity {
                         }
                         case "ICNCIK": {
                             msg_display = "I can not calculate inverse kinematic";
+                            break;
+                        }
+                        case "IQDM": {
+                            msg_display = "I quit Demo Mode";
+                            isDemoMode = false;
+                            btn_Demo.post(new Runnable() {
+                                @Override
+                                public void run() {
+                                    btn_Demo.setText("START DEMO");
+                                }
+                            });
+                            break;
+                        }
+                        case "IAIDM": {
+                            msg_display = "I am in Demo Mode";
+                            isDemoMode = true;
+                            btn_Demo.post(new Runnable() {
+                                @Override
+                                public void run() {
+                                    btn_Demo.setText("STOP DEMO");
+                                }
+                            });
                             break;
                         }
 

@@ -25,14 +25,16 @@ void setup()
   Serial.begin(115200);
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
+    Serial.println("Wifi is connecting...");
     delay(500);
   }
+  Serial.println("Wifi connected");
   client.setServer(mqttServer, mqttPort);
   client.setCallback(callback);
   while (!client.connected()) {
     if (client.connect("ESP8266Client", mqttUser, mqttPassword ))
     {
-      //Serial2.println("MQTT connected");
+      Serial.println("MQTT connected");
     } else {
       delay(2000);
     }

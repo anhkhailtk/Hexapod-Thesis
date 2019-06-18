@@ -37,7 +37,7 @@ I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5CD3BB5D)
 I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5CD3BB5D)
 I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5CD3BB5D)
 F (.\startup_stm32f40_41xxx.s)(0x5CD3BB5D)(--cpu Cortex-M4.fp -g --apcs=interwork -I.\RTE\_Target_1-ID:\Software\Keil5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Software\Keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include--pd "__UVISION_VERSION SETA 525" --pd "_RTE_ SETA 1" --pd "STM32F407xx SETA 1"--list .\listings\startup_stm32f40_41xxx.lst --xref -o .\objects\startup_stm32f40_41xxx.o --depend .\objects\startup_stm32f40_41xxx.d)
-F (.\main.c)(0x5CECA062)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\STM32F4xx_StdPeriph_Driver\src -I .\STM32F4xx_StdPeriph_Driver\inc -I .\ExternalSource -I ..\HexapodSTMv3-I.\RTE\_Target_1-ID:\Software\Keil5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Software\Keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx -DHSE_VALUE="8000000"-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (.\main.c)(0x5D06253E)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\STM32F4xx_StdPeriph_Driver\src -I .\STM32F4xx_StdPeriph_Driver\inc -I .\ExternalSource -I ..\HexapodSTMv3-I.\RTE\_Target_1-ID:\Software\Keil5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Software\Keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx -DHSE_VALUE="8000000"-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (stm32f4xx.h)(0x5CD3BB5D)
 I (D:\Software\Keil5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\core_cm4.h)(0x5A8E2DF2)
 I (D:\Software\Keil5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
@@ -83,10 +83,10 @@ I (.\ExternalSource\FSMC.h)(0x5CD3BB5D)
 I (D:\Software\Keil5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
 I (D:\Software\Keil5\ARM\ARMCC\include\stdlib.h)(0x599EDB3C)
 I (.\ExternalSource\eeprom.h)(0x5CD3BB5D)
-I (.\ExternalSource\Servo.h)(0x5CEB9C7E)
-I (.\ExternalSource\Calculator.h)(0x5CD3BB5D)
+I (.\ExternalSource\Servo.h)(0x5D0621E7)
+I (.\ExternalSource\Calculator.h)(0x5CFF7839)
 I (D:\Software\Keil5\ARM\ARMCC\include\math.h)(0x599EDB3E)
-I (.\ExternalSource\OperationMode.h)(0x5CEB940D)
+I (.\ExternalSource\OperationMode.h)(0x5D06245C)
 I (.\ExternalSource\HomeSwitch.h)(0x5CD3BB5D)
 I (.\ExternalSource\Kinematic.h)(0x5CE0E60B)
 I (.\ExternalSource\Encoder.h)(0x5CEB9CFB)
@@ -486,7 +486,7 @@ I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5CD3BB5D)
 I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5CD3BB5D)
 I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5CD3BB5D)
 I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5CD3BB5D)
-F (.\ExternalSource\Calculator.c)(0x5CD3BB5D)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\STM32F4xx_StdPeriph_Driver\src -I .\STM32F4xx_StdPeriph_Driver\inc -I .\ExternalSource -I ..\HexapodSTMv3-I.\RTE\_Target_1-ID:\Software\Keil5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Software\Keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx -DHSE_VALUE="8000000"-o .\objects\calculator.o --omf_browse .\objects\calculator.crf --depend .\objects\calculator.d)
+F (.\ExternalSource\Calculator.c)(0x5CFFD83D)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\STM32F4xx_StdPeriph_Driver\src -I .\STM32F4xx_StdPeriph_Driver\inc -I .\ExternalSource -I ..\HexapodSTMv3-I.\RTE\_Target_1-ID:\Software\Keil5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Software\Keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx -DHSE_VALUE="8000000"-o .\objects\calculator.o --omf_browse .\objects\calculator.crf --depend .\objects\calculator.d)
 I (D:\Software\Keil5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
 I (D:\Software\Keil5\ARM\ARMCC\include\stdbool.h)(0x599EDB3E)
 I (..\HexapodSTMv3\stm32f4xx.h)(0x5CD3BB5D)
@@ -523,7 +523,7 @@ I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5CD3BB5D)
 I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5CD3BB5D)
 I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5CD3BB5D)
 I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5CD3BB5D)
-I (ExternalSource\Calculator.h)(0x5CD3BB5D)
+I (ExternalSource\Calculator.h)(0x5CFF7839)
 I (D:\Software\Keil5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
 I (D:\Software\Keil5\ARM\ARMCC\include\math.h)(0x599EDB3E)
 I (ExternalSource\HomeSwitch.h)(0x5CD3BB5D)
@@ -531,7 +531,7 @@ I (ExternalSource\UART.h)(0x5CEB6905)
 I (D:\Software\Keil5\ARM\ARMCC\include\string.h)(0x599EDB3C)
 I (ExternalSource\utils.h)(0x5CD3BB5D)
 I (ExternalSource\eeprom.h)(0x5CD3BB5D)
-I (ExternalSource\Servo.h)(0x5CEB9C7E)
+I (ExternalSource\Servo.h)(0x5D0621E7)
 F (.\ExternalSource\eeprom.c)(0x5CD3BB5D)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\STM32F4xx_StdPeriph_Driver\src -I .\STM32F4xx_StdPeriph_Driver\inc -I .\ExternalSource -I ..\HexapodSTMv3-I.\RTE\_Target_1-ID:\Software\Keil5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Software\Keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx -DHSE_VALUE="8000000"-o .\objects\eeprom.o --omf_browse .\objects\eeprom.crf --depend .\objects\eeprom.d)
 I (D:\Software\Keil5\ARM\ARMCC\include\stdbool.h)(0x599EDB3E)
 I (..\HexapodSTMv3\stm32f4xx.h)(0x5CD3BB5D)
@@ -612,9 +612,9 @@ I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5CD3BB5D)
 I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5CD3BB5D)
 I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5CD3BB5D)
 I (ExternalSource\FSMC.h)(0x5CD3BB5D)
-I (ExternalSource\Calculator.h)(0x5CD3BB5D)
+I (ExternalSource\Calculator.h)(0x5CFF7839)
 I (D:\Software\Keil5\ARM\ARMCC\include\math.h)(0x599EDB3E)
-I (ExternalSource\Servo.h)(0x5CEB9C7E)
+I (ExternalSource\Servo.h)(0x5D0621E7)
 I (ExternalSource\HomeSwitch.h)(0x5CD3BB5D)
 I (ExternalSource\UART.h)(0x5CEB6905)
 I (ExternalSource\utils.h)(0x5CD3BB5D)
@@ -662,11 +662,11 @@ I (ExternalSource\UART.h)(0x5CEB6905)
 I (D:\Software\Keil5\ARM\ARMCC\include\string.h)(0x599EDB3C)
 I (ExternalSource\utils.h)(0x5CD3BB5D)
 I (ExternalSource\eeprom.h)(0x5CD3BB5D)
-I (ExternalSource\Calculator.h)(0x5CD3BB5D)
+I (ExternalSource\Calculator.h)(0x5CFF7839)
 I (D:\Software\Keil5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
 I (D:\Software\Keil5\ARM\ARMCC\include\math.h)(0x599EDB3E)
-I (ExternalSource\Servo.h)(0x5CEB9C7E)
-F (.\ExternalSource\OperationMode.c)(0x5CECA5F4)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\STM32F4xx_StdPeriph_Driver\src -I .\STM32F4xx_StdPeriph_Driver\inc -I .\ExternalSource -I ..\HexapodSTMv3-I.\RTE\_Target_1-ID:\Software\Keil5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Software\Keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx -DHSE_VALUE="8000000"-o .\objects\operationmode.o --omf_browse .\objects\operationmode.crf --depend .\objects\operationmode.d)
+I (ExternalSource\Servo.h)(0x5D0621E7)
+F (.\ExternalSource\OperationMode.c)(0x5D0621E7)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\STM32F4xx_StdPeriph_Driver\src -I .\STM32F4xx_StdPeriph_Driver\inc -I .\ExternalSource -I ..\HexapodSTMv3-I.\RTE\_Target_1-ID:\Software\Keil5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Software\Keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx -DHSE_VALUE="8000000"-o .\objects\operationmode.o --omf_browse .\objects\operationmode.crf --depend .\objects\operationmode.d)
 I (D:\Software\Keil5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
 I (D:\Software\Keil5\ARM\ARMCC\include\string.h)(0x599EDB3C)
 I (D:\Software\Keil5\ARM\ARMCC\include\stdlib.h)(0x599EDB3C)
@@ -706,16 +706,16 @@ I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5CD3BB5D)
 I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5CD3BB5D)
 I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5CD3BB5D)
 I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5CD3BB5D)
-I (ExternalSource\OperationMode.h)(0x5CEB940D)
-I (ExternalSource\Servo.h)(0x5CEB9C7E)
+I (ExternalSource\OperationMode.h)(0x5D06245C)
+I (ExternalSource\Servo.h)(0x5D0621E7)
 I (ExternalSource\HomeSwitch.h)(0x5CD3BB5D)
 I (ExternalSource\UART.h)(0x5CEB6905)
 I (ExternalSource\utils.h)(0x5CD3BB5D)
 I (ExternalSource\eeprom.h)(0x5CD3BB5D)
-I (ExternalSource\Calculator.h)(0x5CD3BB5D)
+I (ExternalSource\Calculator.h)(0x5CFF7839)
 I (D:\Software\Keil5\ARM\ARMCC\include\math.h)(0x599EDB3E)
 I (ExternalSource\Kinematic.h)(0x5CE0E60B)
-F (.\ExternalSource\Servo.c)(0x5CEB9CFB)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\STM32F4xx_StdPeriph_Driver\src -I .\STM32F4xx_StdPeriph_Driver\inc -I .\ExternalSource -I ..\HexapodSTMv3-I.\RTE\_Target_1-ID:\Software\Keil5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Software\Keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx -DHSE_VALUE="8000000"-o .\objects\servo.o --omf_browse .\objects\servo.crf --depend .\objects\servo.d)
+F (.\ExternalSource\Servo.c)(0x5D0621E7)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\STM32F4xx_StdPeriph_Driver\src -I .\STM32F4xx_StdPeriph_Driver\inc -I .\ExternalSource -I ..\HexapodSTMv3-I.\RTE\_Target_1-ID:\Software\Keil5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Software\Keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx -DHSE_VALUE="8000000"-o .\objects\servo.o --omf_browse .\objects\servo.crf --depend .\objects\servo.d)
 I (D:\Software\Keil5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
 I (D:\Software\Keil5\ARM\ARMCC\include\stdbool.h)(0x599EDB3E)
 I (..\HexapodSTMv3\stm32f4xx.h)(0x5CD3BB5D)
@@ -752,8 +752,8 @@ I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x5CD3BB5D)
 I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x5CD3BB5D)
 I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x5CD3BB5D)
 I (.\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x5CD3BB5D)
-I (ExternalSource\Servo.h)(0x5CEB9C7E)
-I (ExternalSource\Calculator.h)(0x5CD3BB5D)
+I (ExternalSource\Servo.h)(0x5D0621E7)
+I (ExternalSource\Calculator.h)(0x5CFF7839)
 I (D:\Software\Keil5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
 I (D:\Software\Keil5\ARM\ARMCC\include\math.h)(0x599EDB3E)
 I (ExternalSource\FSMC.h)(0x5CD3BB5D)
@@ -805,10 +805,10 @@ I (D:\Software\Keil5\ARM\ARMCC\include\string.h)(0x599EDB3C)
 I (ExternalSource\utils.h)(0x5CD3BB5D)
 I (ExternalSource\HomeSwitch.h)(0x5CD3BB5D)
 I (ExternalSource\eeprom.h)(0x5CD3BB5D)
-I (ExternalSource\Calculator.h)(0x5CD3BB5D)
+I (ExternalSource\Calculator.h)(0x5CFF7839)
 I (D:\Software\Keil5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
 I (D:\Software\Keil5\ARM\ARMCC\include\math.h)(0x599EDB3E)
-I (ExternalSource\Servo.h)(0x5CEB9C7E)
+I (ExternalSource\Servo.h)(0x5D0621E7)
 F (.\ExternalSource\utils.c)(0x5CD3BB5D)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\STM32F4xx_StdPeriph_Driver\src -I .\STM32F4xx_StdPeriph_Driver\inc -I .\ExternalSource -I ..\HexapodSTMv3-I.\RTE\_Target_1-ID:\Software\Keil5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Software\Keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx -DHSE_VALUE="8000000"-o .\objects\utils.o --omf_browse .\objects\utils.crf --depend .\objects\utils.d)
 I (D:\Software\Keil5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
 I (D:\Software\Keil5\ARM\ARMCC\include\math.h)(0x599EDB3E)
@@ -890,10 +890,10 @@ I (ExternalSource\UART.h)(0x5CEB6905)
 I (D:\Software\Keil5\ARM\ARMCC\include\string.h)(0x599EDB3C)
 I (ExternalSource\utils.h)(0x5CD3BB5D)
 I (ExternalSource\eeprom.h)(0x5CD3BB5D)
-I (ExternalSource\Calculator.h)(0x5CD3BB5D)
+I (ExternalSource\Calculator.h)(0x5CFF7839)
 I (D:\Software\Keil5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
 I (D:\Software\Keil5\ARM\ARMCC\include\math.h)(0x599EDB3E)
-I (ExternalSource\Servo.h)(0x5CEB9C7E)
+I (ExternalSource\Servo.h)(0x5D0621E7)
 F (.\ExternalSource\Encoder.c)(0x5CEB9CFA)(--c99 --gnu -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I .\STM32F4xx_StdPeriph_Driver\src -I .\STM32F4xx_StdPeriph_Driver\inc -I .\ExternalSource -I ..\HexapodSTMv3-I.\RTE\_Target_1-ID:\Software\Keil5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-ID:\Software\Keil5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="525" -D_RTE_ -DSTM32F407xx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx -DHSE_VALUE="8000000"-o .\objects\encoder.o --omf_browse .\objects\encoder.crf --depend .\objects\encoder.d)
 I (..\HexapodSTMv3\stm32f4xx.h)(0x5CD3BB5D)
 I (D:\Software\Keil5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\core_cm4.h)(0x5A8E2DF2)
@@ -937,9 +937,9 @@ I (D:\Software\Keil5\ARM\ARMCC\include\stdlib.h)(0x599EDB3C)
 I (D:\Software\Keil5\ARM\ARMCC\include\stdbool.h)(0x599EDB3E)
 I (ExternalSource\Encoder.h)(0x5CEB9CFB)
 I (ExternalSource\eeprom.h)(0x5CD3BB5D)
-I (ExternalSource\Calculator.h)(0x5CD3BB5D)
+I (ExternalSource\Calculator.h)(0x5CFF7839)
 I (D:\Software\Keil5\ARM\ARMCC\include\math.h)(0x599EDB3E)
 I (ExternalSource\HomeSwitch.h)(0x5CD3BB5D)
 I (ExternalSource\UART.h)(0x5CEB6905)
 I (ExternalSource\utils.h)(0x5CD3BB5D)
-I (ExternalSource\Servo.h)(0x5CEB9C7E)
+I (ExternalSource\Servo.h)(0x5D0621E7)

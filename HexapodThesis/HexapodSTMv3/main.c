@@ -41,7 +41,7 @@ char p;
 HEXAPOD_DATA_STRUCT st_hexapod_data;
 
 int main()
-{		
+{
 	Mode = IDLE;
 	update_cmd_busy_flag = 0;
 	update_cmd_busy_flag_android = 0;
@@ -127,6 +127,7 @@ int main()
 	//State machine loop.....................................................
 	rx_flag = 0;
 	rx_flag_android = 0;
+	isDemoMode = 0;
 	
 	while(1)
 	{
@@ -145,7 +146,16 @@ int main()
 						HomeScanMode();
 						break;
 					case INVERSEKINEMATIC:
-						InverseKinematicMode();
+						InverseKinematicMode(true);
+						break;
+					case DEMO:
+						DemoMode();
+						break;
+					case CIRCLE:
+						CircleMode();
+						break;
+					case RESET:
+						//NVIC_SystemReset();	
 						break;
 					default:
 						break;
@@ -153,27 +163,33 @@ int main()
 				rx_flag=0;
 			}
 		else if(rx_flag_android)
-	{
-			switch(Mode)
-			{
-				case IDLE:
-					//Meanwhile, Timer2 keeps counting and update to GUI
-					IdleMode();
-					break;
-				case TESTING:
-					TestingMode();
-					break;
-				case HOMESCAN:
-					HomeScanMode();
-					break;
-				case INVERSEKINEMATIC:
-					InverseKinematicMode();
-					break;
-				default:
-					break;
+		{
+				switch(Mode)
+				{
+					case IDLE:
+						//Meanwhile, Timer2 keeps counting and update to GUI
+						IdleMode();
+						break;
+					case TESTING:
+						TestingMode();
+						break;
+					case HOMESCAN:
+						HomeScanMode();
+						break;
+					case INVERSEKINEMATIC:
+						InverseKinematicMode(true);
+						break;
+					case DEMO:
+						DemoMode();
+						break;
+					case CIRCLE:
+						CircleMode();
+						break;
+					default:
+						break;
+				}
+				rx_flag_android = 0;
 			}
-			rx_flag_android = 0;
-		}
 	}
 }
 
@@ -403,7 +419,53 @@ void ApplyCmd(void)
 			Mode = IDLE;
 			break;
 		}
+		case 'd': // Demo Mode // p-d[x]
+		{
+			switch(rxbuff[3])
+			{
+				case 's':
+				{
+					Mode = DEMO;
+					isDemoMode = true;
+					break;
+				}
+				case 'e':
+				{
+					Uart_Cmd_Update("lI quit Demo Mode-");
+					Uart_Cmd_Update_android("s_lIQDM-"); //I quit Demo Mode-					
+					isDemoMode = false;
+					break;
+				}
+			}
+			break;
+		}
 		
+		case 'e': // Circle Mode // p-e[x]
+		{
+			switch(rxbuff[3])
+			{
+				case 's':
+				{
+					Mode = CIRCLE;
+					isCircleMode = true;
+					break;
+				}
+				case 'e':
+				{
+					Uart_Cmd_Update("lI quit Circle Mode-");
+					Uart_Cmd_Update_android("s_lIQCM-"); //I quit Demo Mode-					
+					isCircleMode = false;
+					break;
+				}
+			}
+			break;
+		}					
+		case 'r': // Reset // p-r
+		{
+			Mode = RESET;
+			NVIC_SystemReset();	
+			break;
+		}
 	}
 }
 
@@ -553,6 +615,46 @@ void ApplyCmd_android(void)
 			Mode = IDLE;
 			break;
 		}
+		case 'd': // Demo Mode // a-d[x]
+		{
+			switch(rxbuff_android[3])
+			{
+				case 's':
+				{
+					Mode = DEMO;
+					isDemoMode = true;
+					break;
+				}
+				case 'e':
+				{
+					Uart_Cmd_Update("lI quit Demo Mode-");
+					Uart_Cmd_Update_android("s_lIQDM-"); //I quit Demo Mode-					
+					isDemoMode = false;
+					break;
+				}
+			}
+			break;
+		}
 		
+		case 'e': // Circle Mode // a-e[x]
+		{
+			switch(rxbuff_android[3])
+			{
+				case 's':
+				{
+					Mode = CIRCLE;
+					isCircleMode = true;
+					break;
+				}
+				case 'e':
+				{
+					Uart_Cmd_Update("lI quit Circle Mode-");
+					Uart_Cmd_Update_android("s_lIQCM-"); //I quit Demo Mode-					
+					isCircleMode = false;
+					break;
+				}
+			}
+			break;
+		}					
 	}
 }

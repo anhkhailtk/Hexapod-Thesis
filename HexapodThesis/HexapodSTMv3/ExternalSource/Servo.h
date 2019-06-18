@@ -15,6 +15,10 @@
 #define SERVO4 4
 #define SERVO5 5
 
+#define CUBIC_PATH 0
+#define TRAPEZOID_PATH 1
+#define NOT_PATH 2
+
 extern float Servo_pos_pre[6];
 extern float Servo_pos_cur[6];
 extern float Servo_pos_distance[6];
@@ -27,7 +31,7 @@ extern bool pulse_empty[6];
 void Servo_Control_Timer_Init(void);
 void TIM3_IRQHandler(void);
 void Calcu_Pos(float pos_cur[6],float pos_pre[6]);
-void Pos_servo_all(float q[6],uint8_t dir[6]);
+void Pos_servo_all(float q[6],uint8_t dir[6], bool path_type);
 void Servo_pos_per_cycle(void);
 
 #ifdef __cplusplus
